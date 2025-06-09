@@ -4,6 +4,7 @@
 
 运行依赖：
     需要安装requirements.txt的依赖
+    需要把引擎g170e-b20c256x2.bin.gz放到katago-v1.16.2-eigenavx2-windows-x64下
 
 目前开发进度:
 - [x] 集成了开源的katago
