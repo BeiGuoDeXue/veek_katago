@@ -1,0 +1,177 @@
+# KataGo C++分析引擎配置文件（即"./katago.exe analysis"）
+# 重要提示：关于性能与内存使用的说明请参考gtp_example.cfg
+# 关于numSearchThreads等关键参数的说明见下文！
+
+### 日志设置 ------------------------------------------------------------------------------------
+# 日志输出位置
+logDir = analysis_logs  # 每次运行在指定目录生成独立日志文件
+# logDirDated = analysis_logs  # 使用此参数将日志按日期分目录存储
+# logFile = analysis.log        # 指定单一日志文件路径
+# logToStderr = true            # 同时在控制台输出日志内容
+# logAllRequests = false        # 记录所有输入命令
+# logAllResponses = false       # 记录所有输出响应
+# logErrorsAndWarnings = true   # 记录错误和警告信息
+# logSearchInfo = false         # 记录每次搜索的调试信息
+
+# 当查询包含未使用字段时发出警告（防止参数拼写错误）
+# warnUnusedFields = true
+
+### 分析设置 ------------------------------------------------------------------------------------
+# 控制分析变体展示的后续步数
+# analysisPVLen = 15
+
+# 胜率报告视角（BLACK|WHITE|SIDETOMOVE）
+reportAnalysisWinratesAs = BLACK
+
+# 探索广度控制（默认0.04，适用于分析场景）：
+# 值越大，探索更多非最优走法（极端值1将评估所有走法）
+# 若用于对弈，建议设为0.0以最大化强度
+# wideRootNoise = 0.04
+
+# 忽略历史着法影响（防止历史非法着法干扰当前预测）
+# ignorePreRootHistory = true
+
+### 引擎行为 --------------------------------------------------------------------------------
+# 让子规则处理 ---------
+# 默认开启：若开局黑方连续落子，视为让子棋
+# assumeMultipleStartingBlackMovesAreHandicap = true
+
+# 虚手与终局 ---------
+# 永不假设虚手会结束棋局（适用于非Tromp-Taylor计分规则）
+# conservativePass = true
+# 领土计分规则下禁用特殊终局阶段（防止人类玩家困惑）
+# preventCleanupPhase = true
+
+### 搜索限制 ---------------------------------------------------------------------------------
+# 默认单次搜索最大访问次数（未单独指定时生效）
+maxVisits = 500
+# 单次搜索最长时间（秒）
+# maxTime = 60
+
+### 搜索线程/批处理/GPU配置 ----------------------------------------------------------------------
+# 适用场景：少量并发查询 + 快速响应 + 可接受轻度质量下降
+numAnalysisThreads = 2               # 并行分析位置数
+numSearchThreadsPerAnalysisThread = 16 # 单位置搜索线程数
+
+# 适用场景：高并发批处理 + 最大化吞吐量 + 不关心单次响应延迟
+# numAnalysisThreads = 32
+# numSearchThreadsPerAnalysisThread = 1
+
+# 总线程数 ≈ numAnalysisThreads * numSearchThreadsPerAnalysisThread
+# 建议范围：
+#   弱GPU：4-32线程 | 中端GPU：16-64线程 | 强GPU：32-256线程
+# 注：最优线程数可能与CPU核心数无关，GPU批处理能力是关键
+
+# GPU批处理参数 ---------
+# 单次GPU计算最大位置数（需满足：GPU数量 * nnMaxBatchSize >= 总线程数）
+nnMaxBatchSize = 64
+
+# 小棋盘优化（专用于小棋盘或运行多实例时启用）
+# maxBoardXSizeForNNBuffer = 19   # 最大棋盘宽度
+# maxBoardYSizeForNNBuffer = 19   # 最大棋盘高度
+# requireMaxBoardSize = true      # 强制固定棋盘尺寸（可提升性能）
+
+### 多GPU配置（按需取消注释）----------------------------------------------
+# 启用多GPU（需同时配置下方对应加速后端参数）
+# numNNServerThreadsPerModel = 2  # GPU数量
+
+### 通用GPU设置 -----------------------------------------------------------------------------
+# 神经网络缓存大小（2的N次幂）
+nnCacheSizePowerOfTwo = 23
+# 缓存互斥池大小（2的N次幂）
+nnMutexPoolSizePowerOfTwo = 17
+# 随机旋转棋盘方向（增强泛化能力）
+nnRandomize = true
+
+### 后端专属设置（按需取消注释）-------------------------------------------
+# ------- TensorRT后端（NVIDIA GPU）-------
+# trtDeviceToUse = 0        # 单GPU设备ID
+# trtDeviceToUseThread0 = 0 # 多GPU设备ID（需配合numNNServerThreadsPerModel）
+# trtDeviceToUseThread1 = 1 
+
+# ------- CUDA后端（NVIDIA GPU）-----------
+# cudaDeviceToUse = 0
+# cudaDeviceToUseThread0 = 0 
+# cudaDeviceToUseThread1 = 1
+# cudaUseFP16 = auto       # 强制FP16模式（auto|true|false）
+# cudaUseNHWC = auto       # 数据格式优化
+
+# ------- Metal后端（Apple GPU）-----------
+# metalDeviceToUse = 0
+# metalDeviceToUseThread0 = 0
+# metalDeviceToUseThread1 = 1
+
+# ------- OpenCL后端（跨平台GPU）----------
+# openclReTunePerBoardSize = true # 按棋盘尺寸单独调优
+# openclDeviceToUse = 0            # 设备ID（启动时查看日志确认）
+# openclDeviceToUseThread0 = X     # 多设备ID
+# openclDeviceToUseThread1 = Y
+# openclUseFP16 = auto
+
+# ------- Eigen后端（纯CPU）--------------
+# 神经网络计算线程数（默认自动匹配核心数）
+# numEigenThreadsPerModel = X
+
+### 行为优化参数 ----------------------------------------------------------
+# 启用棋盘对称剪枝（提升搜索效率）
+# rootSymmetryPruning = true
+# 规避特定定式误判（针对特定网络）
+# avoidMYTDaggerHack = false
+# 规避重复棋型倾向性（推荐值0.005）
+# avoidRepeatedPatternUtility = 0.0
+# 虚手处理优化（解决深度搜索问题）
+# enablePassingHacks = true
+
+### 高级搜索参数（专家级调整）-------------------------------------------
+# 走法随机化温度控制
+# chosenMoveTemperatureEarly = 0.5   # 开局温度
+# chosenMoveTemperatureHalflife = 19  # 温度衰减半衰期
+# chosenMoveTemperature = 0.10        # 终局温度
+# chosenMoveSubtract = 0              # 走法访问次数修正
+# chosenMovePrune = 1                 # 低访问走法剪枝
+
+# LCB（置信下限）走法选择
+# useLcbForSelection = true         # 启用LCB
+# lcbStdevs = 5.0                   # 标准差倍数阈值
+# minVisitPropForLCB = 0.15          # 最小访问比例
+
+### 内部参数（通常无需修改）---------------------------------------------
+# 胜率/得分效用因子
+# winLossUtilityFactor = 1.0         # 胜败效用系数
+# staticScoreUtilityFactor = 0.10    # 静态得分效用
+# dynamicScoreUtilityFactor = 0.30   # 动态得分效用
+# 无结果局处理（如循环棋）
+# noResultUtilityForWhite = 0.0      # 白方无结果效用
+# drawEquivalentWinsForWhite = 0.5   # 和局等价胜率
+
+# MCTS探索参数
+# cpuctExploration = 1.0             # 探索常数
+# cpuctExplorationLog = 0.45         # 探索对数因子
+# 局势波动性适配
+# cpuctUtilityStdevPrior = 0.40      # 先验标准差
+# cpuctUtilityStdevPriorWeight = 2.0 # 先验权重
+# FPU（先验效用）调整
+# fpuReductionMax = 0.2              # FPU削减上限
+# rootFpuReductionMax = 0.1          # 根节点FPU削减
+
+# 其他技术优化
+# useGraphSearch = true              # 图搜索（替代树搜索）
+# nodeTableShardsPowerOfTwo = 16     # 节点表分片
+# useNoisePruning = true             # 噪声剪枝
+
+### 规避SGF模式（高级功能）---------------------------------------------
+# 加载SGF文件目录（仅启动时加载）
+# avoidSgfPatternDirs = "路径/含SGF文件的目录"
+# 模式惩罚系数（负值则变为偏好）
+# avoidSgfPatternUtility = 0.001     # 效用惩罚值
+# 文件加载限制
+# avoidSgfPatternMaxFiles = 20       # 最大文件数
+# avoidSgfPatternLambda = 0.90       # 新旧文件权重衰减
+# 指定玩家名称（如"my-bot-name"）
+# avoidSgfPatternAllowedNames = 玩家名称1,玩家名称2
+# 忽略早期着法
+# avoidSgfPatternMinTurnNumber = 0   # 最小着手号
+
+# 多模式组配置（添加编号2,3...）
+# avoidSgf2PatternDirs = ...
+# avoidSgf2PatternUtility = ...

@@ -1,0 +1,2006 @@
+2025-06-08 22:38:25,365 - go_analysis.utils.logging_config - ERROR - 程序执行错误: KataGo可执行文件不存在: c:\Users\Eurekaa\Desktop\围棋分析\go_analysis\katago-v1.16.2-eigenavx2-windows-x64\katago.exe
+2025-06-08 22:40:45,007 - go_analysis.core.serial_handler - ERROR - 串口连接失败: could not open port 'COM4': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-08 22:40:45,007 - go_analysis.utils.logging_config - ERROR - 串口初始化失败
+2025-06-08 22:45:00,149 - go_analysis.core.serial_handler - ERROR - 串口连接失败: could not open port 'COM4': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-08 22:45:00,151 - go_analysis.utils.logging_config - WARNING - 串口初始化失败，将只输出坐标信息
+2025-06-08 22:45:00,242 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:45:00+0800: Running with following config:
+
+2025-06-08 22:45:00,343 - go_analysis.core.katago_engine - INFO - KataGo: logDir = analysis_logs
+
+2025-06-08 22:45:00,445 - go_analysis.core.katago_engine - INFO - KataGo: maxVisits = 500
+
+2025-06-08 22:45:00,546 - go_analysis.core.katago_engine - INFO - KataGo: nnCacheSizePowerOfTwo = 23
+
+2025-06-08 22:45:00,647 - go_analysis.core.katago_engine - INFO - KataGo: nnMaxBatchSize = 64
+
+2025-06-08 22:45:00,748 - go_analysis.core.katago_engine - INFO - KataGo: nnMutexPoolSizePowerOfTwo = 17
+
+2025-06-08 22:45:00,849 - go_analysis.core.katago_engine - INFO - KataGo: nnRandomize = true
+
+2025-06-08 22:45:00,950 - go_analysis.core.katago_engine - INFO - KataGo: numAnalysisThreads = 2
+
+2025-06-08 22:45:01,051 - go_analysis.core.katago_engine - INFO - KataGo: numSearchThreads = 16
+
+2025-06-08 22:45:01,153 - go_analysis.core.katago_engine - INFO - KataGo: reportAnalysisWinratesAs = BLACK
+
+2025-06-08 22:45:01,254 - go_analysis.core.katago_engine - INFO - KataGo: 
+
+2025-06-08 22:45:01,356 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:45:00+0800: Analysis Engine starting...
+
+2025-06-08 22:45:01,457 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:45:00+0800: KataGo v1.16.2
+
+2025-06-08 22:45:01,558 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:45:00+0800: nnRandSeed0 = 15555349389342434211
+
+2025-06-08 22:45:01,659 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:45:00+0800: After dedups: nnModelFile0 = c:\Users\Eurekaa\Desktop\围棋分析\go_analysis\katago-v1.16.2-eigenavx2-windows-x64\g170e-b20c256x2.bin.gz useFP16 auto useNHWC auto
+
+2025-06-08 22:45:01,761 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:45:00+0800: Initializing neural net buffer to be size 19 * 19 allowing smaller boards
+
+2025-06-08 22:45:01,862 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:45:01+0800: Eigen (CPU) backend thread 4: Model version 8
+
+2025-06-08 22:45:01,964 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:45:01+0800: Eigen (CPU) backend thread 4: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-08 22:45:02,065 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:45:01+0800: Eigen (CPU) backend thread 0: Model version 8
+
+2025-06-08 22:45:02,158 - go_analysis.core.katago_engine - INFO - KataGo引擎启动成功
+2025-06-08 22:45:02,159 - go_analysis.utils.logging_config - INFO - 
+=== 当前棋盘状态 ===
+2025-06-08 22:45:02,221 - go_analysis.core.katago_engine - INFO - KataGo引擎已关闭
+2025-06-08 22:45:02,222 - go_analysis.utils.logging_config - ERROR - 程序执行错误: module 'sgfmill' has no attribute 'ascii_boards'
+2025-06-08 22:45:53,818 - go_analysis.core.serial_handler - ERROR - 串口连接失败: could not open port 'COM4': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-08 22:45:53,818 - go_analysis.utils.logging_config - WARNING - 串口初始化失败，将只输出坐标信息
+2025-06-08 22:45:53,982 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:45:53+0800: Running with following config:
+
+2025-06-08 22:45:54,084 - go_analysis.core.katago_engine - INFO - KataGo: logDir = analysis_logs
+
+2025-06-08 22:45:54,185 - go_analysis.core.katago_engine - INFO - KataGo: maxVisits = 500
+
+2025-06-08 22:45:54,285 - go_analysis.core.katago_engine - INFO - KataGo: nnCacheSizePowerOfTwo = 23
+
+2025-06-08 22:45:54,386 - go_analysis.core.katago_engine - INFO - KataGo: nnMaxBatchSize = 64
+
+2025-06-08 22:45:54,487 - go_analysis.core.katago_engine - INFO - KataGo: nnMutexPoolSizePowerOfTwo = 17
+
+2025-06-08 22:45:54,589 - go_analysis.core.katago_engine - INFO - KataGo: nnRandomize = true
+
+2025-06-08 22:45:54,690 - go_analysis.core.katago_engine - INFO - KataGo: numAnalysisThreads = 2
+
+2025-06-08 22:45:54,790 - go_analysis.core.katago_engine - INFO - KataGo: numSearchThreads = 16
+
+2025-06-08 22:45:54,892 - go_analysis.core.katago_engine - INFO - KataGo: reportAnalysisWinratesAs = BLACK
+
+2025-06-08 22:45:54,993 - go_analysis.core.katago_engine - INFO - KataGo: 
+
+2025-06-08 22:45:55,094 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:45:53+0800: Analysis Engine starting...
+
+2025-06-08 22:45:55,196 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:45:53+0800: KataGo v1.16.2
+
+2025-06-08 22:45:55,297 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:45:54+0800: nnRandSeed0 = 669636528265778066
+
+2025-06-08 22:45:55,399 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:45:54+0800: After dedups: nnModelFile0 = c:\Users\Eurekaa\Desktop\围棋分析\go_analysis\katago-v1.16.2-eigenavx2-windows-x64\g170e-b20c256x2.bin.gz useFP16 auto useNHWC auto
+
+2025-06-08 22:45:55,500 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:45:54+0800: Initializing neural net buffer to be size 19 * 19 allowing smaller boards
+
+2025-06-08 22:45:55,601 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:45:55+0800: Eigen (CPU) backend thread 11: Model version 8
+
+2025-06-08 22:45:55,702 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:45:55+0800: Eigen (CPU) backend thread 4: Model version 8
+
+2025-06-08 22:45:55,804 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:45:55+0800: Eigen (CPU) backend thread 4: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-08 22:45:55,824 - go_analysis.core.katago_engine - INFO - KataGo引擎启动成功
+2025-06-08 22:45:55,825 - go_analysis.utils.logging_config - INFO - 
+=== 当前棋盘状态 ===
+2025-06-08 22:45:55,826 - go_analysis.utils.logging_config - INFO - 19  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+18  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+17  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+16  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+15  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+14  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+13  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+12  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+11  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+10  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 9  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 8  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 7  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 6  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 5  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 4  .  .  .  #  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 3  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 2  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 1  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+    A  B  C  D  E  F  G  H  J  K  L  M  N  O  P  Q  R  S  T
+2025-06-08 22:45:55,828 - go_analysis.utils.logging_config - INFO - 
+=== 分析结果 ===
+2025-06-08 22:45:55,828 - go_analysis.core.katago_engine - ERROR - KataGo查询错误: name 'select' is not defined
+2025-06-08 22:45:55,828 - go_analysis.utils.logging_config - ERROR - 获取分析结果失败
+2025-06-08 22:45:55,958 - go_analysis.core.katago_engine - INFO - KataGo引擎已关闭
+2025-06-08 22:46:35,068 - go_analysis.core.serial_handler - ERROR - 串口连接失败: could not open port 'COM4': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-08 22:46:35,069 - go_analysis.utils.logging_config - WARNING - 串口初始化失败，将只输出坐标信息
+2025-06-08 22:46:35,236 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:46:35+0800: Running with following config:
+
+2025-06-08 22:46:35,337 - go_analysis.core.katago_engine - INFO - KataGo: logDir = analysis_logs
+
+2025-06-08 22:46:35,438 - go_analysis.core.katago_engine - INFO - KataGo: maxVisits = 500
+
+2025-06-08 22:46:35,539 - go_analysis.core.katago_engine - INFO - KataGo: nnCacheSizePowerOfTwo = 23
+
+2025-06-08 22:46:35,640 - go_analysis.core.katago_engine - INFO - KataGo: nnMaxBatchSize = 64
+
+2025-06-08 22:46:35,741 - go_analysis.core.katago_engine - INFO - KataGo: nnMutexPoolSizePowerOfTwo = 17
+
+2025-06-08 22:46:35,842 - go_analysis.core.katago_engine - INFO - KataGo: nnRandomize = true
+
+2025-06-08 22:46:35,943 - go_analysis.core.katago_engine - INFO - KataGo: numAnalysisThreads = 2
+
+2025-06-08 22:46:36,044 - go_analysis.core.katago_engine - INFO - KataGo: numSearchThreads = 16
+
+2025-06-08 22:46:36,145 - go_analysis.core.katago_engine - INFO - KataGo: reportAnalysisWinratesAs = BLACK
+
+2025-06-08 22:46:36,246 - go_analysis.core.katago_engine - INFO - KataGo: 
+
+2025-06-08 22:46:36,348 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:46:35+0800: Analysis Engine starting...
+
+2025-06-08 22:46:36,449 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:46:35+0800: KataGo v1.16.2
+
+2025-06-08 22:46:36,551 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:46:35+0800: nnRandSeed0 = 13804495230725145583
+
+2025-06-08 22:46:36,652 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:46:35+0800: After dedups: nnModelFile0 = c:\Users\Eurekaa\Desktop\围棋分析\go_analysis\katago-v1.16.2-eigenavx2-windows-x64\g170e-b20c256x2.bin.gz useFP16 auto useNHWC auto
+
+2025-06-08 22:46:36,753 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:46:35+0800: Initializing neural net buffer to be size 19 * 19 allowing smaller boards
+
+2025-06-08 22:46:36,854 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:46:36+0800: Eigen (CPU) backend thread 12: Model version 8
+
+2025-06-08 22:46:36,955 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:46:36+0800: Eigen (CPU) backend thread 12: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-08 22:46:37,057 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:46:36+0800: Eigen (CPU) backend thread 4: Model version 8
+
+2025-06-08 22:46:37,073 - go_analysis.core.katago_engine - INFO - KataGo引擎启动成功
+2025-06-08 22:46:37,074 - go_analysis.utils.logging_config - INFO - 
+=== 当前棋盘状态 ===
+2025-06-08 22:46:37,075 - go_analysis.utils.logging_config - INFO - 19  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+18  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+17  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+16  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+15  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+14  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+13  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+12  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+11  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+10  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 9  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 8  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 7  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 6  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 5  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 4  .  .  .  #  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 3  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 2  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 1  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+    A  B  C  D  E  F  G  H  J  K  L  M  N  O  P  Q  R  S  T
+2025-06-08 22:46:37,076 - go_analysis.utils.logging_config - INFO - 
+=== 分析结果 ===
+2025-06-08 22:46:37,077 - go_analysis.core.katago_engine - ERROR - KataGo查询错误: name 'select' is not defined
+2025-06-08 22:46:37,077 - go_analysis.utils.logging_config - ERROR - 获取分析结果失败
+2025-06-08 22:46:37,212 - go_analysis.core.katago_engine - INFO - KataGo引擎已关闭
+2025-06-08 22:47:50,482 - go_analysis.core.serial_handler - ERROR - 串口连接失败: could not open port 'COM4': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-08 22:47:50,483 - go_analysis.utils.logging_config - WARNING - 串口初始化失败，将只输出坐标信息
+2025-06-08 22:47:50,526 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:47:50+0800: Running with following config:
+
+2025-06-08 22:47:50,627 - go_analysis.core.katago_engine - INFO - KataGo: logDir = analysis_logs
+
+2025-06-08 22:47:50,729 - go_analysis.core.katago_engine - INFO - KataGo: maxVisits = 500
+
+2025-06-08 22:47:50,830 - go_analysis.core.katago_engine - INFO - KataGo: nnCacheSizePowerOfTwo = 23
+
+2025-06-08 22:47:50,931 - go_analysis.core.katago_engine - INFO - KataGo: nnMaxBatchSize = 64
+
+2025-06-08 22:47:51,032 - go_analysis.core.katago_engine - INFO - KataGo: nnMutexPoolSizePowerOfTwo = 17
+
+2025-06-08 22:47:51,133 - go_analysis.core.katago_engine - INFO - KataGo: nnRandomize = true
+
+2025-06-08 22:47:51,234 - go_analysis.core.katago_engine - INFO - KataGo: numAnalysisThreads = 2
+
+2025-06-08 22:47:51,335 - go_analysis.core.katago_engine - INFO - KataGo: numSearchThreads = 16
+
+2025-06-08 22:47:51,436 - go_analysis.core.katago_engine - INFO - KataGo: reportAnalysisWinratesAs = BLACK
+
+2025-06-08 22:47:51,537 - go_analysis.core.katago_engine - INFO - KataGo: 
+
+2025-06-08 22:47:51,639 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:47:50+0800: Analysis Engine starting...
+
+2025-06-08 22:47:51,740 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:47:50+0800: KataGo v1.16.2
+
+2025-06-08 22:47:51,841 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:47:50+0800: nnRandSeed0 = 10292982762668234258
+
+2025-06-08 22:47:51,942 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:47:50+0800: After dedups: nnModelFile0 = c:\Users\Eurekaa\Desktop\围棋分析\go_analysis\katago-v1.16.2-eigenavx2-windows-x64\g170e-b20c256x2.bin.gz useFP16 auto useNHWC auto
+
+2025-06-08 22:47:52,044 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:47:50+0800: Initializing neural net buffer to be size 19 * 19 allowing smaller boards
+
+2025-06-08 22:47:52,146 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:47:51+0800: Eigen (CPU) backend thread 0: Model version 8
+
+2025-06-08 22:47:52,247 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:47:51+0800: Eigen (CPU) backend thread 0: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-08 22:47:52,348 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:47:51+0800: Eigen (CPU) backend thread 3: Model version 8
+
+2025-06-08 22:47:52,450 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:47:51+0800: Eigen (CPU) backend thread 3: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-08 22:47:52,488 - go_analysis.core.katago_engine - INFO - KataGo引擎启动成功
+2025-06-08 22:47:52,489 - go_analysis.utils.logging_config - INFO - 
+=== 当前棋盘状态 ===
+2025-06-08 22:47:52,490 - go_analysis.utils.logging_config - INFO - 19  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+18  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+17  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+16  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+15  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+14  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+13  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+12  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+11  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+10  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 9  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 8  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 7  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 6  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 5  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 4  .  .  .  #  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 3  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 2  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 1  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+    A  B  C  D  E  F  G  H  J  K  L  M  N  O  P  Q  R  S  T
+2025-06-08 22:47:52,492 - go_analysis.utils.logging_config - INFO - 
+=== 分析结果 ===
+2025-06-08 22:47:52,492 - go_analysis.core.katago_engine - ERROR - KataGo查询错误: name 'select' is not defined
+2025-06-08 22:47:52,492 - go_analysis.utils.logging_config - ERROR - 获取分析结果失败
+2025-06-08 22:47:52,604 - go_analysis.core.katago_engine - INFO - KataGo引擎已关闭
+2025-06-08 22:48:37,662 - go_analysis.core.serial_handler - ERROR - 串口连接失败: could not open port 'COM4': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-08 22:48:37,663 - go_analysis.utils.logging_config - WARNING - 串口初始化失败，将只输出坐标信息
+2025-06-08 22:48:37,714 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:48:37+0800: Running with following config:
+
+2025-06-08 22:48:37,816 - go_analysis.core.katago_engine - INFO - KataGo: logDir = analysis_logs
+
+2025-06-08 22:48:37,917 - go_analysis.core.katago_engine - INFO - KataGo: maxVisits = 500
+
+2025-06-08 22:48:38,019 - go_analysis.core.katago_engine - INFO - KataGo: nnCacheSizePowerOfTwo = 23
+
+2025-06-08 22:48:38,120 - go_analysis.core.katago_engine - INFO - KataGo: nnMaxBatchSize = 64
+
+2025-06-08 22:48:38,221 - go_analysis.core.katago_engine - INFO - KataGo: nnMutexPoolSizePowerOfTwo = 17
+
+2025-06-08 22:48:38,322 - go_analysis.core.katago_engine - INFO - KataGo: nnRandomize = true
+
+2025-06-08 22:48:38,423 - go_analysis.core.katago_engine - INFO - KataGo: numAnalysisThreads = 2
+
+2025-06-08 22:48:38,524 - go_analysis.core.katago_engine - INFO - KataGo: numSearchThreads = 16
+
+2025-06-08 22:48:38,625 - go_analysis.core.katago_engine - INFO - KataGo: reportAnalysisWinratesAs = BLACK
+
+2025-06-08 22:48:38,726 - go_analysis.core.katago_engine - INFO - KataGo: 
+
+2025-06-08 22:48:38,827 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:48:37+0800: Analysis Engine starting...
+
+2025-06-08 22:48:38,929 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:48:37+0800: KataGo v1.16.2
+
+2025-06-08 22:48:39,030 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:48:37+0800: nnRandSeed0 = 2324570840152516987
+
+2025-06-08 22:48:39,131 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:48:37+0800: After dedups: nnModelFile0 = c:\Users\Eurekaa\Desktop\围棋分析\go_analysis\katago-v1.16.2-eigenavx2-windows-x64\g170e-b20c256x2.bin.gz useFP16 auto useNHWC auto
+
+2025-06-08 22:48:39,232 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:48:37+0800: Initializing neural net buffer to be size 19 * 19 allowing smaller boards
+
+2025-06-08 22:48:39,333 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:48:38+0800: Eigen (CPU) backend thread 1: Model version 8
+
+2025-06-08 22:48:39,434 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:48:38+0800: Eigen (CPU) backend thread 1: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-08 22:48:39,536 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:48:38+0800: Eigen (CPU) backend thread 0: Model version 8
+
+2025-06-08 22:48:39,637 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:48:38+0800: Eigen (CPU) backend thread 0: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-08 22:48:39,667 - go_analysis.core.katago_engine - INFO - KataGo引擎启动成功
+2025-06-08 22:48:39,668 - go_analysis.utils.logging_config - INFO - 
+=== 当前棋盘状态 ===
+2025-06-08 22:48:39,669 - go_analysis.utils.logging_config - INFO - 19  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+18  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+17  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+16  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+15  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+14  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+13  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+12  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+11  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+10  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 9  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 8  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 7  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 6  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 5  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 4  .  .  .  #  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 3  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 2  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 1  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+    A  B  C  D  E  F  G  H  J  K  L  M  N  O  P  Q  R  S  T
+2025-06-08 22:48:39,671 - go_analysis.utils.logging_config - INFO - 
+=== 分析结果 ===
+2025-06-08 22:48:39,671 - go_analysis.core.katago_engine - ERROR - KataGo查询错误: name 'select' is not defined
+2025-06-08 22:48:39,671 - go_analysis.utils.logging_config - ERROR - 获取分析结果失败
+2025-06-08 22:48:39,791 - go_analysis.core.katago_engine - INFO - KataGo引擎已关闭
+2025-06-08 22:49:56,223 - go_analysis.core.serial_handler - ERROR - 串口连接失败: could not open port 'COM4': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-08 22:49:56,223 - go_analysis.utils.logging_config - WARNING - 串口初始化失败，将只输出坐标信息
+2025-06-08 22:49:56,276 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:49:56+0800: Running with following config:
+
+2025-06-08 22:49:56,377 - go_analysis.core.katago_engine - INFO - KataGo: logDir = analysis_logs
+
+2025-06-08 22:49:56,479 - go_analysis.core.katago_engine - INFO - KataGo: maxVisits = 500
+
+2025-06-08 22:49:56,580 - go_analysis.core.katago_engine - INFO - KataGo: nnCacheSizePowerOfTwo = 23
+
+2025-06-08 22:49:56,681 - go_analysis.core.katago_engine - INFO - KataGo: nnMaxBatchSize = 64
+
+2025-06-08 22:49:56,782 - go_analysis.core.katago_engine - INFO - KataGo: nnMutexPoolSizePowerOfTwo = 17
+
+2025-06-08 22:49:56,883 - go_analysis.core.katago_engine - INFO - KataGo: nnRandomize = true
+
+2025-06-08 22:49:56,984 - go_analysis.core.katago_engine - INFO - KataGo: numAnalysisThreads = 2
+
+2025-06-08 22:49:57,085 - go_analysis.core.katago_engine - INFO - KataGo: numSearchThreads = 16
+
+2025-06-08 22:49:57,186 - go_analysis.core.katago_engine - INFO - KataGo: reportAnalysisWinratesAs = BLACK
+
+2025-06-08 22:49:57,287 - go_analysis.core.katago_engine - INFO - KataGo: 
+
+2025-06-08 22:49:57,388 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:49:56+0800: Analysis Engine starting...
+
+2025-06-08 22:49:57,490 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:49:56+0800: KataGo v1.16.2
+
+2025-06-08 22:49:57,591 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:49:56+0800: nnRandSeed0 = 9896531403294459145
+
+2025-06-08 22:49:57,692 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:49:56+0800: After dedups: nnModelFile0 = c:\Users\Eurekaa\Desktop\围棋分析\go_analysis\katago-v1.16.2-eigenavx2-windows-x64\g170e-b20c256x2.bin.gz useFP16 auto useNHWC auto
+
+2025-06-08 22:49:57,794 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:49:56+0800: Initializing neural net buffer to be size 19 * 19 allowing smaller boards
+
+2025-06-08 22:49:57,894 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:49:57+0800: Eigen (CPU) backend thread 1: Model version 8
+
+2025-06-08 22:49:57,996 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:49:57+0800: Eigen (CPU) backend thread 1: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-08 22:49:58,097 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:49:57+0800: Eigen (CPU) backend thread 3: Model version 8
+
+2025-06-08 22:49:58,200 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:49:57+0800: Eigen (CPU) backend thread 4: Model version 8
+
+2025-06-08 22:49:58,228 - go_analysis.core.katago_engine - INFO - KataGo引擎启动成功
+2025-06-08 22:49:58,354 - go_analysis.core.katago_engine - INFO - KataGo引擎已关闭
+2025-06-08 22:49:58,354 - go_analysis.utils.logging_config - ERROR - 程序执行错误: 
+2025-06-08 22:51:48,312 - go_analysis.core.serial_handler - ERROR - 串口连接失败: could not open port 'COM4': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-08 22:51:48,314 - go_analysis.utils.logging_config - WARNING - 串口初始化失败，将只输出坐标信息
+2025-06-08 22:51:48,356 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:51:48+0800: Running with following config:
+
+2025-06-08 22:51:48,458 - go_analysis.core.katago_engine - INFO - KataGo: logDir = analysis_logs
+
+2025-06-08 22:51:48,560 - go_analysis.core.katago_engine - INFO - KataGo: maxVisits = 500
+
+2025-06-08 22:51:48,661 - go_analysis.core.katago_engine - INFO - KataGo: nnCacheSizePowerOfTwo = 23
+
+2025-06-08 22:51:48,761 - go_analysis.core.katago_engine - INFO - KataGo: nnMaxBatchSize = 64
+
+2025-06-08 22:51:48,862 - go_analysis.core.katago_engine - INFO - KataGo: nnMutexPoolSizePowerOfTwo = 17
+
+2025-06-08 22:51:48,963 - go_analysis.core.katago_engine - INFO - KataGo: nnRandomize = true
+
+2025-06-08 22:51:49,064 - go_analysis.core.katago_engine - INFO - KataGo: numAnalysisThreads = 2
+
+2025-06-08 22:51:49,165 - go_analysis.core.katago_engine - INFO - KataGo: numSearchThreads = 16
+
+2025-06-08 22:51:49,266 - go_analysis.core.katago_engine - INFO - KataGo: reportAnalysisWinratesAs = BLACK
+
+2025-06-08 22:51:49,367 - go_analysis.core.katago_engine - INFO - KataGo: 
+
+2025-06-08 22:51:49,468 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:51:48+0800: Analysis Engine starting...
+
+2025-06-08 22:51:49,569 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:51:48+0800: KataGo v1.16.2
+
+2025-06-08 22:51:49,670 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:51:48+0800: nnRandSeed0 = 6392085526048105032
+
+2025-06-08 22:51:49,771 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:51:48+0800: After dedups: nnModelFile0 = c:\Users\Eurekaa\Desktop\围棋分析\go_analysis\katago-v1.16.2-eigenavx2-windows-x64\g170e-b20c256x2.bin.gz useFP16 auto useNHWC auto
+
+2025-06-08 22:51:49,873 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:51:48+0800: Initializing neural net buffer to be size 19 * 19 allowing smaller boards
+
+2025-06-08 22:51:49,974 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:51:49+0800: Eigen (CPU) backend thread 0: Model version 8
+
+2025-06-08 22:51:50,075 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:51:49+0800: Eigen (CPU) backend thread 0: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-08 22:51:50,176 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:51:49+0800: Eigen (CPU) backend thread 2: Model version 8
+
+2025-06-08 22:51:50,277 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:51:49+0800: Eigen (CPU) backend thread 2: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-08 22:51:50,317 - go_analysis.core.katago_engine - INFO - KataGo引擎启动成功
+2025-06-08 22:51:50,319 - go_analysis.utils.logging_config - INFO - 
+=== 当前棋盘状态 ===
+2025-06-08 22:51:50,319 - go_analysis.utils.logging_config - INFO - 19  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+18  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+17  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+16  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+15  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+14  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+13  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+12  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+11  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+10  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 9  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 8  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 7  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 6  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 5  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 4  .  .  .  #  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 3  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 2  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 1  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+    A  B  C  D  E  F  G  H  J  K  L  M  N  O  P  Q  R  S  T
+2025-06-08 22:51:50,321 - go_analysis.utils.logging_config - INFO - 
+=== 分析结果 ===
+2025-06-08 22:51:50,321 - go_analysis.core.katago_engine - ERROR - KataGo查询错误: name 'select' is not defined
+2025-06-08 22:51:50,321 - go_analysis.utils.logging_config - ERROR - 获取分析结果失败
+2025-06-08 22:51:50,432 - go_analysis.core.katago_engine - INFO - KataGo引擎已关闭
+2025-06-08 22:54:43,272 - go_analysis.core.serial_handler - ERROR - 串口连接失败: could not open port 'COM4': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-08 22:54:43,273 - go_analysis.utils.logging_config - WARNING - 串口初始化失败，将只输出坐标信息
+2025-06-08 22:54:43,317 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:54:43+0800: Running with following config:
+2025-06-08 22:54:45,277 - go_analysis.core.katago_engine - INFO - KataGo引擎启动成功
+2025-06-08 22:54:45,278 - go_analysis.utils.logging_config - INFO - 
+=== 当前棋盘状态 ===
+2025-06-08 22:54:45,279 - go_analysis.utils.logging_config - INFO - 19  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+18  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+17  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+16  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+15  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+14  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+13  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+12  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+11  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+10  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 9  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 8  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 7  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 6  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 5  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 4  .  .  .  #  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 3  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 2  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 1  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+    A  B  C  D  E  F  G  H  J  K  L  M  N  O  P  Q  R  S  T
+2025-06-08 22:54:45,280 - go_analysis.utils.logging_config - INFO - 
+=== 分析结果 ===
+2025-06-08 22:55:06,723 - go_analysis.utils.logging_config - INFO - 
+原始分析结果已保存到: analysis_result.json
+2025-06-08 22:55:06,723 - go_analysis.utils.logging_config - INFO - === 当前局面分析 ===
+当前玩家: 白方
+总节点搜索深度: 515
+当前胜率: 56.16%
+领先分数: 0.20目
+自对弈得分: 0.73目
+得分标准差: 18.85目
+
+=== 最佳着法分析 ===
+
+1. E10点:
+   走这一步后的胜率: 70.47%
+   节点搜索深度: 1
+   先验概率: 0.0000
+   置信区间下界: 195.47%
+   效用值: 0.4402
+   得分期望: 2.66目
+   得分标准差: 19.70目
+   机械臂坐标: MP X 0 Y 90 Z 0 A 0 S 100#
+
+   后续变化:
+     1. E10
+
+2. K5点:
+   走这一步后的胜率: 70.47%
+   节点搜索深度: 1
+   先验概率: 0.0000
+   置信区间下界: 195.47%
+   效用值: 0.4402
+   得分期望: 2.66目
+   得分标准差: 19.70目
+   机械臂坐标: MP X 0 Y 40 Z 0 A 0 S 100#
+
+   后续变化:
+     1. K5
+
+3. E11点:
+   走这一步后的胜率: 70.17%
+   节点搜索深度: 1
+   先验概率: 0.0000
+   置信区间下界: 195.17%
+   效用值: 0.4342
+   得分期望: 2.59目
+   得分标准差: 19.66目
+   机械臂坐标: MP X 0 Y 100 Z 0 A 0 S 100#
+
+   后续变化:
+     1. E11
+
+4. L5点:
+   走这一步后的胜率: 70.17%
+   节点搜索深度: 1
+   先验概率: 0.0000
+   置信区间下界: 195.17%
+   效用值: 0.4342
+   得分期望: 2.59目
+   得分标准差: 19.66目
+   机械臂坐标: MP X 0 Y 40 Z 0 A 0 S 100#
+
+   后续变化:
+     1. L5
+
+5. D5点:
+   走这一步后的胜率: 69.71%
+   节点搜索深度: 1
+   先验概率: 0.0000
+   置信区间下界: 194.71%
+   效用值: 0.4212
+   得分期望: 2.28目
+   得分标准差: 19.45目
+   机械臂坐标: MP X 0 Y 40 Z 0 A 0 S 100#
+
+   后续变化:
+     1. D5
+2025-06-08 22:55:06,730 - go_analysis.utils.logging_config - INFO - 
+最佳着法坐标: E10
+2025-06-08 22:55:06,730 - go_analysis.utils.logging_config - INFO - 机械臂坐标: MP X 0 Y 90 Z 0 A 0 S 100#
+
+2025-06-08 22:55:06,882 - go_analysis.core.katago_engine - INFO - KataGo引擎已关闭
+2025-06-08 22:57:02,615 - go_analysis.core.serial_handler - ERROR - 串口连接失败: could not open port 'COM4': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-08 22:57:02,616 - go_analysis.utils.logging_config - WARNING - 串口初始化失败，将只输出坐标信息
+2025-06-08 22:57:02,660 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:57:02+0800: Running with following config:
+2025-06-08 22:57:04,619 - go_analysis.core.katago_engine - INFO - KataGo引擎启动成功
+2025-06-08 22:57:04,620 - go_analysis.utils.logging_config - INFO - 
+=== 当前棋盘状态 ===
+2025-06-08 22:57:04,620 - go_analysis.utils.logging_config - INFO - 19  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+18  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+17  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+16  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+15  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+14  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+13  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+12  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+11  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+10  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 9  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 8  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 7  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 6  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 5  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 4  .  .  .  #  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 3  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 2  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 1  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+    A  B  C  D  E  F  G  H  J  K  L  M  N  O  P  Q  R  S  T
+2025-06-08 22:57:04,622 - go_analysis.utils.logging_config - INFO - 
+=== 分析结果 ===
+2025-06-08 22:57:24,601 - go_analysis.utils.logging_config - INFO - 
+原始分析结果已保存到: analysis_result.json
+2025-06-08 22:57:24,602 - go_analysis.utils.logging_config - INFO - === 当前局面分析 ===
+当前玩家: 白方
+总节点搜索深度: 515
+当前胜率: 56.24%
+领先分数: 0.20目
+自对弈得分: 0.74目
+得分标准差: 18.85目
+
+=== 最佳着法分析 ===
+
+1. D10点:
+   走这一步后的胜率: 68.04%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 193.04%
+   效用值: 0.3872
+   得分期望: 2.20目
+   得分标准差: 19.51目
+   机械臂坐标: MP X 0 Y 90 Z 0 A 0 S 100#
+
+   后续变化:
+     3. D10
+
+2. K4点:
+   走这一步后的胜率: 68.04%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 193.04%
+   效用值: 0.3872
+   得分期望: 2.20目
+   得分标准差: 19.51目
+   机械臂坐标: MP X 0 Y 30 Z 0 A 0 S 100#
+
+   后续变化:
+     3. K4
+
+3. C10点:
+   走这一步后的胜率: 67.07%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 192.07%
+   效用值: 0.3661
+   得分期望: 1.97目
+   得分标准差: 19.59目
+   机械臂坐标: MP X 97 Y -86 Z 0 A 0 S 100#
+
+   后续变化:
+     3. C10
+
+4. K3点:
+   走这一步后的胜率: 67.07%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 192.07%
+   效用值: 0.3661
+   得分期望: 1.97目
+   得分标准差: 19.59目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化:
+     3. K3
+
+5. C11点:
+   走这一步后的胜率: 66.84%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 191.84%
+   效用值: 0.3607
+   得分期望: 1.88目
+   得分标准差: 19.46目
+   机械臂坐标: MP X 97 Y -76 Z 0 A 0 S 100#
+
+   后续变化:
+     3. C11
+2025-06-08 22:57:24,607 - go_analysis.utils.logging_config - INFO - 
+最佳着法坐标: D10
+2025-06-08 22:57:24,607 - go_analysis.utils.logging_config - INFO - 机械臂坐标: MP X 0 Y 90 Z 0 A 0 S 100#
+
+2025-06-08 22:57:24,792 - go_analysis.core.katago_engine - INFO - KataGo引擎已关闭
+2025-06-08 22:59:02,456 - go_analysis.core.serial_handler - ERROR - 串口连接失败: could not open port 'COM4': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-08 22:59:02,456 - go_analysis.utils.logging_config - WARNING - 串口初始化失败，将只输出坐标信息
+2025-06-08 22:59:02,501 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:59:02+0800: Running with following config:
+2025-06-08 22:59:04,461 - go_analysis.core.katago_engine - INFO - KataGo引擎启动成功
+2025-06-08 22:59:04,462 - go_analysis.utils.logging_config - INFO - 
+=== 当前棋盘状态 ===
+2025-06-08 22:59:04,462 - go_analysis.utils.logging_config - INFO - 19  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+18  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+17  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+16  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+15  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+14  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+13  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+12  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+11  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+10  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 9  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 8  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 7  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 6  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 5  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 4  .  .  .  #  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 3  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 2  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 1  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+    A  B  C  D  E  F  G  H  J  K  L  M  N  O  P  Q  R  S  T
+2025-06-08 22:59:04,464 - go_analysis.utils.logging_config - INFO - 
+=== 分析结果 ===
+2025-06-08 22:59:23,717 - go_analysis.utils.logging_config - INFO - 
+原始分析结果已保存到: analysis_result.json
+2025-06-08 22:59:23,718 - go_analysis.utils.logging_config - INFO - === 当前局面分析 ===
+当前玩家: 白方
+总节点搜索深度: 514
+当前胜率: 56.21%
+领先分数: 0.20目
+自对弈得分: 0.73目
+得分标准差: 18.87目
+
+=== 最佳着法分析 ===
+
+1. D12点:
+   走这一步后的胜率: 67.74%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 192.74%
+   效用值: 0.3791
+   得分期望: 1.99目
+   得分标准差: 19.49目
+   机械臂坐标: MP X 0 Y 110 Z 0 A 0 S 100#
+
+   后续变化: 3.D12
+
+2. M4点:
+   走这一步后的胜率: 67.74%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 192.74%
+   效用值: 0.3791
+   得分期望: 1.99目
+   得分标准差: 19.49目
+   机械臂坐标: MP X 0 Y 30 Z 0 A 0 S 100#
+
+   后续变化: 3.M4
+
+3. C9点:
+   走这一步后的胜率: 67.24%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 192.24%
+   效用值: 0.3687
+   得分期望: 1.98目
+   得分标准差: 19.56目
+   机械臂坐标: MP X 97 Y -96 Z 0 A 0 S 100#
+
+   后续变化: 3.C9
+
+4. J3点:
+   走这一步后的胜率: 67.24%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 192.24%
+   效用值: 0.3687
+   得分期望: 1.98目
+   得分标准差: 19.56目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化: 3.J3
+
+5. C12点:
+   走这一步后的胜率: 67.20%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 192.20%
+   效用值: 0.3679
+   得分期望: 1.96目
+   得分标准差: 19.41目
+   机械臂坐标: MP X 97 Y -66 Z 0 A 0 S 100#
+
+   后续变化: 3.C12
+2025-06-08 22:59:23,723 - go_analysis.utils.logging_config - INFO - 
+最佳着法坐标: D12
+2025-06-08 22:59:23,723 - go_analysis.utils.logging_config - INFO - 机械臂坐标: MP X 0 Y 110 Z 0 A 0 S 100#
+
+2025-06-08 22:59:23,871 - go_analysis.core.katago_engine - INFO - KataGo引擎已关闭
+2025-06-08 22:59:42,563 - go_analysis.core.serial_handler - ERROR - 串口连接失败: could not open port 'COM4': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-08 22:59:42,563 - go_analysis.utils.logging_config - WARNING - 串口初始化失败，将只输出坐标信息
+2025-06-08 22:59:42,607 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 22:59:42+0800: Running with following config:
+2025-06-08 22:59:44,567 - go_analysis.core.katago_engine - INFO - KataGo引擎启动成功
+2025-06-08 22:59:44,569 - go_analysis.utils.logging_config - INFO - 
+=== 当前棋盘状态 ===
+2025-06-08 22:59:44,570 - go_analysis.utils.logging_config - INFO - 19  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+18  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+17  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+16  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+15  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+14  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+13  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+12  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+11  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+10  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 9  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 8  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 7  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 6  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 5  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 4  .  .  .  #  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 3  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 2  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 1  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+    A  B  C  D  E  F  G  H  J  K  L  M  N  O  P  Q  R  S  T
+2025-06-08 22:59:44,572 - go_analysis.utils.logging_config - INFO - 
+=== 分析结果 ===
+2025-06-08 23:00:04,693 - go_analysis.utils.logging_config - INFO - 
+原始分析结果已保存到: analysis_result.json
+2025-06-08 23:00:04,694 - go_analysis.utils.logging_config - INFO - === 当前局面分析 ===
+当前玩家: 白方
+总节点搜索深度: 515
+当前胜率: 56.14%
+领先分数: 0.20目
+自对弈得分: 0.72目
+得分标准差: 18.87目
+
+=== 最佳着法分析 ===
+
+1. C11点:
+   走这一步后的胜率: 66.84%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 191.84%
+   效用值: 0.3602
+   得分期望: 1.88目
+   得分标准差: 19.46目
+   机械臂坐标: MP X 97 Y -76 Z 0 A 0 S 100#
+
+   后续变化: 1.C11
+
+2. L3点:
+   走这一步后的胜率: 66.84%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 191.84%
+   效用值: 0.3602
+   得分期望: 1.88目
+   得分标准差: 19.46目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化: 1.L3
+
+3. C13点:
+   走这一步后的胜率: 66.32%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 191.32%
+   效用值: 0.3476
+   得分期望: 1.75目
+   得分标准差: 19.39目
+   机械臂坐标: MP X 97 Y -56 Z 0 A 0 S 100#
+
+   后续变化: 1.C13
+
+4. N3点:
+   走这一步后的胜率: 66.32%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 191.32%
+   效用值: 0.3476
+   得分期望: 1.75目
+   得分标准差: 19.39目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化: 1.N3
+
+5. C12点:
+   走这一步后的胜率: 66.20%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 191.20%
+   效用值: 0.3455
+   得分期望: 1.64目
+   得分标准差: 19.23目
+   机械臂坐标: MP X 97 Y -66 Z 0 A 0 S 100#
+
+   后续变化: 1.C12
+2025-06-08 23:00:04,699 - go_analysis.utils.logging_config - INFO - 
+最佳着法坐标: C11
+2025-06-08 23:00:04,700 - go_analysis.utils.logging_config - INFO - 机械臂坐标: MP X 97 Y -76 Z 0 A 0 S 100#
+
+2025-06-08 23:00:04,851 - go_analysis.core.katago_engine - INFO - KataGo引擎已关闭
+2025-06-08 23:08:18,874 - go_analysis.core.serial_handler - ERROR - 串口连接失败: could not open port 'COM4': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-08 23:08:18,874 - go_analysis.utils.logging_config - WARNING - 串口初始化失败，将只输出坐标信息
+2025-06-08 23:08:18,926 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 23:08:18+0800: Running with following config:
+2025-06-08 23:08:20,879 - go_analysis.core.katago_engine - INFO - KataGo引擎启动成功
+2025-06-08 23:08:20,880 - go_analysis.utils.logging_config - INFO - 
+=== 当前棋盘状态 ===
+2025-06-08 23:08:20,880 - go_analysis.utils.logging_config - INFO - 19  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+18  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+17  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+16  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+15  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+14  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+13  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+12  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+11  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+10  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 9  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 8  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 7  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 6  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 5  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 4  .  .  .  #  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 3  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 2  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 1  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+    A  B  C  D  E  F  G  H  J  K  L  M  N  O  P  Q  R  S  T
+2025-06-08 23:08:20,882 - go_analysis.utils.logging_config - INFO - 
+=== 分析结果 ===
+2025-06-08 23:08:40,654 - go_analysis.utils.logging_config - INFO - 
+原始分析结果已保存到: analysis_result.json
+2025-06-08 23:08:40,655 - go_analysis.utils.logging_config - INFO - === 当前局面分析 ===
+当前玩家: 白方
+总节点搜索深度: 515
+当前胜率: 56.16%
+领先分数: 0.20目
+自对弈得分: 0.72目
+得分标准差: 18.84目
+
+=== 最佳着法分析 ===
+
+1. D7点:
+   走这一步后的胜率: 68.07%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 193.07%
+   效用值: 0.3878
+   得分期望: 2.38目
+   得分标准差: 19.94目
+   机械臂坐标: MP X 0 Y 60 Z 0 A 0 S 100#
+
+   后续变化: 1.D7
+
+2. G4点:
+   走这一步后的胜率: 68.07%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 193.07%
+   效用值: 0.3878
+   得分期望: 2.38目
+   得分标准差: 19.94目
+   机械臂坐标: MP X 0 Y 30 Z 0 A 0 S 100#
+
+   后续变化: 1.G4
+
+3. G16点:
+   走这一步后的胜率: 67.04%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 192.04%
+   效用值: 0.3639
+   得分期望: 1.97目
+   得分标准差: 19.39目
+   机械臂坐标: MP X 0 Y 150 Z 0 A 0 S 100#
+
+   后续变化: 1.G16
+
+4. Q7点:
+   走这一步后的胜率: 67.04%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 192.04%
+   效用值: 0.3639
+   得分期望: 1.97目
+   得分标准差: 19.39目
+   机械臂坐标: MP X 0 Y 60 Z 0 A 0 S 100#
+
+   后续变化: 1.Q7
+
+5. C10点:
+   走这一步后的胜率: 67.01%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 192.01%
+   效用值: 0.3645
+   得分期望: 1.95目
+   得分标准差: 19.49目
+   机械臂坐标: MP X 97 Y -86 Z 0 A 0 S 100#
+
+   后续变化: 1.C10
+2025-06-08 23:08:40,660 - go_analysis.utils.logging_config - INFO - 
+最佳着法坐标: D7
+2025-06-08 23:08:40,660 - go_analysis.utils.logging_config - INFO - 机械臂坐标: MP X 0 Y 60 Z 0 A 0 S 100#
+
+2025-06-08 23:08:40,832 - go_analysis.core.katago_engine - INFO - KataGo引擎已关闭
+2025-06-08 23:09:35,196 - go_analysis.core.serial_handler - ERROR - 串口连接失败: could not open port 'COM4': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-08 23:09:35,197 - go_analysis.utils.logging_config - WARNING - 串口初始化失败，将只输出坐标信息
+2025-06-08 23:09:35,241 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 23:09:35+0800: Running with following config:
+2025-06-08 23:09:37,201 - go_analysis.core.katago_engine - INFO - KataGo引擎启动成功
+2025-06-08 23:09:37,202 - go_analysis.utils.logging_config - INFO - 
+=== 当前棋盘状态 ===
+2025-06-08 23:09:37,203 - go_analysis.utils.logging_config - INFO - 19  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+18  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+17  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+16  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+15  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+14  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+13  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+12  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+11  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+10  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 9  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 8  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 7  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 6  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 5  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 4  .  .  .  #  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 3  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 2  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 1  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+    A  B  C  D  E  F  G  H  J  K  L  M  N  O  P  Q  R  S  T
+2025-06-08 23:09:37,205 - go_analysis.utils.logging_config - INFO - 
+=== 分析结果 ===
+2025-06-08 23:09:56,830 - go_analysis.utils.logging_config - INFO - 
+原始分析结果已保存到: analysis_result.json
+2025-06-08 23:09:56,830 - go_analysis.utils.logging_config - INFO - === 当前局面分析 ===
+当前玩家: 白方
+总节点搜索深度: 515
+当前胜率: 56.21%
+领先分数: 0.20目
+自对弈得分: 0.73目
+得分标准差: 18.84目
+
+=== 最佳着法分析 ===
+
+1. D13点:
+   走这一步后的胜率: 68.09%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 193.09%
+   效用值: 0.3863
+   得分期望: 2.08目
+   得分标准差: 19.41目
+   机械臂坐标: MP X 0 Y 120 Z 0 A 0 S 100#
+
+   后续变化: 1.D13
+
+2. N4点:
+   走这一步后的胜率: 68.09%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 193.09%
+   效用值: 0.3863
+   得分期望: 2.08目
+   得分标准差: 19.41目
+   机械臂坐标: MP X 0 Y 30 Z 0 A 0 S 100#
+
+   后续变化: 1.N4
+
+3. O16点:
+   走这一步后的胜率: 67.14%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 192.14%
+   效用值: 0.3658
+   得分期望: 1.86目
+   得分标准差: 19.31目
+   机械臂坐标: MP X 0 Y 150 Z 0 A 0 S 100#
+
+   后续变化: 1.O16
+
+4. Q14点:
+   走这一步后的胜率: 67.14%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 192.14%
+   效用值: 0.3658
+   得分期望: 1.86目
+   得分标准差: 19.31目
+   机械臂坐标: MP X 0 Y 130 Z 0 A 0 S 100#
+
+   后续变化: 1.Q14
+
+5. D7点:
+   走这一步后的胜率: 67.14%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 192.14%
+   效用值: 0.3661
+   得分期望: 2.11目
+   得分标准差: 19.78目
+   机械臂坐标: MP X 0 Y 60 Z 0 A 0 S 100#
+
+   后续变化: 1.D7
+2025-06-08 23:09:56,835 - go_analysis.utils.logging_config - INFO - 
+最佳着法坐标: D13
+2025-06-08 23:09:56,836 - go_analysis.utils.logging_config - INFO - 机械臂坐标: MP X 0 Y 120 Z 0 A 0 S 100#
+
+2025-06-08 23:09:56,984 - go_analysis.core.katago_engine - INFO - KataGo引擎已关闭
+2025-06-08 23:11:45,602 - go_analysis.core.serial_handler - ERROR - 串口连接失败: could not open port 'COM4': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-08 23:11:45,603 - go_analysis.utils.logging_config - WARNING - 串口初始化失败，将只输出坐标信息
+2025-06-08 23:11:45,649 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 23:11:45+0800: Running with following config:
+2025-06-08 23:11:47,608 - go_analysis.core.katago_engine - INFO - KataGo引擎启动成功
+2025-06-08 23:11:47,609 - go_analysis.utils.logging_config - INFO - 
+=== 当前棋盘状态 ===
+2025-06-08 23:11:47,610 - go_analysis.utils.logging_config - INFO - 19  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+18  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+17  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+16  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+15  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+14  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+13  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+12  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+11  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+10  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 9  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 8  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 7  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 6  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 5  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 4  .  .  .  #  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 3  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 2  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 1  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+    A  B  C  D  E  F  G  H  J  K  L  M  N  O  P  Q  R  S  T
+2025-06-08 23:11:47,612 - go_analysis.utils.logging_config - INFO - 
+=== 分析结果 ===
+2025-06-08 23:12:07,698 - go_analysis.utils.logging_config - INFO - 
+原始分析结果已保存到: analysis_result.json
+2025-06-08 23:12:07,699 - go_analysis.utils.logging_config - INFO - === 当前局面分析 ===
+当前玩家: 白方
+总节点搜索深度: 515
+当前胜率: 56.13%
+领先分数: 0.19目
+自对弈得分: 0.72目
+得分标准差: 18.86目
+
+=== 最佳着法分析 ===
+
+1. E10点:
+   走这一步后的胜率: 70.37%
+   节点搜索深度: 1
+   先验概率: 0.0000
+   置信区间下界: 195.37%
+   效用值: 0.4379
+   得分期望: 2.52目
+   得分标准差: 19.61目
+   机械臂坐标: MP X 0 Y 90 Z 0 A 0 S 100#
+
+   后续变化: ['E10']
+
+2. K5点:
+   走这一步后的胜率: 70.37%
+   节点搜索深度: 1
+   先验概率: 0.0000
+   置信区间下界: 195.37%
+   效用值: 0.4379
+   得分期望: 2.52目
+   得分标准差: 19.61目
+   机械臂坐标: MP X 0 Y 40 Z 0 A 0 S 100#
+
+   后续变化: ['K5']
+
+3. E12点:
+   走这一步后的胜率: 69.97%
+   节点搜索深度: 1
+   先验概率: 0.0000
+   置信区间下界: 194.97%
+   效用值: 0.4285
+   得分期望: 2.41目
+   得分标准差: 19.59目
+   机械臂坐标: MP X 0 Y 110 Z 0 A 0 S 100#
+
+   后续变化: ['E12']
+
+4. M5点:
+   走这一步后的胜率: 69.97%
+   节点搜索深度: 1
+   先验概率: 0.0000
+   置信区间下界: 194.97%
+   效用值: 0.4285
+   得分期望: 2.41目
+   得分标准差: 19.59目
+   机械臂坐标: MP X 0 Y 40 Z 0 A 0 S 100#
+
+   后续变化: ['M5']
+
+5. D5点:
+   走这一步后的胜率: 69.71%
+   节点搜索深度: 1
+   先验概率: 0.0000
+   置信区间下界: 194.71%
+   效用值: 0.4212
+   得分期望: 2.28目
+   得分标准差: 19.45目
+   机械臂坐标: MP X 0 Y 40 Z 0 A 0 S 100#
+
+   后续变化: ['D5']
+2025-06-08 23:12:07,704 - go_analysis.utils.logging_config - INFO - 
+最佳着法坐标: E10
+2025-06-08 23:12:07,704 - go_analysis.utils.logging_config - INFO - 机械臂坐标: MP X 0 Y 90 Z 0 A 0 S 100#
+
+2025-06-08 23:12:07,852 - go_analysis.core.katago_engine - INFO - KataGo引擎已关闭
+2025-06-08 23:22:29,501 - go_analysis.core.serial_handler - ERROR - 串口连接失败: could not open port 'COM4': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-08 23:22:29,501 - go_analysis.utils.logging_config - WARNING - 串口初始化失败，将只输出坐标信息
+2025-06-08 23:22:29,545 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 23:22:29+0800: Running with following config:
+2025-06-08 23:22:31,505 - go_analysis.core.katago_engine - INFO - KataGo引擎启动成功
+2025-06-08 23:22:31,507 - go_analysis.utils.logging_config - INFO - 
+=== 当前棋盘状态 ===
+2025-06-08 23:22:31,507 - go_analysis.utils.logging_config - INFO - 19  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+18  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+17  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+16  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+15  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+14  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+13  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+12  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+11  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+10  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 9  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 8  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 7  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 6  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 5  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 4  .  .  .  #  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 3  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 2  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 1  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+    A  B  C  D  E  F  G  H  J  K  L  M  N  O  P  Q  R  S  T
+2025-06-08 23:22:31,510 - go_analysis.utils.logging_config - INFO - 
+=== 分析结果 ===
+2025-06-08 23:22:36,881 - go_analysis.core.katago_engine - INFO - KataGo: logDir = analysis_logs
+2025-06-08 23:22:36,982 - go_analysis.core.katago_engine - INFO - KataGo: maxVisits = 500
+2025-06-08 23:22:37,083 - go_analysis.core.katago_engine - INFO - KataGo: nnCacheSizePowerOfTwo = 23
+2025-06-08 23:22:37,184 - go_analysis.core.katago_engine - INFO - KataGo: nnMaxBatchSize = 64
+2025-06-08 23:22:37,285 - go_analysis.core.katago_engine - INFO - KataGo: nnMutexPoolSizePowerOfTwo = 17
+2025-06-08 23:22:37,386 - go_analysis.core.katago_engine - INFO - KataGo: nnRandomize = true
+2025-06-08 23:22:37,488 - go_analysis.core.katago_engine - INFO - KataGo: numAnalysisThreads = 2
+2025-06-08 23:22:37,588 - go_analysis.core.katago_engine - INFO - KataGo: numSearchThreads = 16
+2025-06-08 23:22:37,690 - go_analysis.core.katago_engine - INFO - KataGo: reportAnalysisWinratesAs = BLACK
+2025-06-08 23:22:37,791 - go_analysis.core.katago_engine - INFO - KataGo: 
+2025-06-08 23:22:37,893 - go_analysis.core.katago_engine - ERROR - 读取KataGo输出错误: 'gbk' codec can't decode byte 0xa3 in position 243: illegal multibyte sequence
+2025-06-08 23:23:01,517 - go_analysis.core.katago_engine - INFO - KataGo引擎已关闭
+2025-06-08 23:23:20,668 - go_analysis.core.serial_handler - ERROR - 串口连接失败: could not open port 'COM4': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-08 23:23:20,669 - go_analysis.utils.logging_config - WARNING - 串口初始化失败，将只输出坐标信息
+2025-06-08 23:23:20,715 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 23:23:20+0800: Running with following config:
+2025-06-08 23:23:22,673 - go_analysis.core.katago_engine - INFO - KataGo引擎启动成功
+2025-06-08 23:23:22,675 - go_analysis.utils.logging_config - INFO - 
+=== 当前棋盘状态 ===
+2025-06-08 23:23:22,676 - go_analysis.utils.logging_config - INFO - 19  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+18  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+17  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+16  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+15  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+14  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+13  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+12  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+11  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+10  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 9  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 8  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 7  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 6  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 5  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 4  .  .  .  #  o  #  o  .  .  .  .  .  .  .  .  .  .  .  .
+ 3  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 2  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 1  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+    A  B  C  D  E  F  G  H  J  K  L  M  N  O  P  Q  R  S  T
+2025-06-08 23:23:22,678 - go_analysis.utils.logging_config - INFO - 
+=== 分析结果 ===
+2025-06-08 23:23:42,265 - go_analysis.utils.logging_config - INFO - 
+原始分析结果已保存到: analysis_result.json
+2025-06-08 23:23:42,266 - go_analysis.utils.logging_config - INFO - === 当前局面分析 ===
+当前玩家: 黑方
+总节点搜索深度: 515
+当前胜率: 85.77%
+领先分数: 5.45目
+自对弈得分: 8.42目
+得分标准差: 18.83目
+
+=== 最佳着法分析 ===
+
+1. E5点:
+   走这一步后的胜率: 86.55%
+   节点搜索深度: 212
+   先验概率: 0.5431
+   置信区间下界: 84.63%
+   效用值: 0.7720
+   得分期望: 5.70目
+   得分标准差: 18.86目
+   机械臂坐标: MP X 0 Y 40 Z 0 A 0 S 100#
+
+   后续变化: ['E5', 'E3', 'F3', 'D3', 'F5', 'C4', 'D5', 'B3', 'B5', 'F2', 'G2', 'E2', 'G3', 'Q4', 'D16', 'Q16']
+
+2. E3点:
+   走这一步后的胜率: 82.79%
+   节点搜索深度: 113
+   先验概率: 0.4265
+   置信区间下界: 80.64%
+   效用值: 0.6740
+   得分期望: 4.49目
+   得分标准差: 18.63目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化: ['E3', 'E5', 'F5', 'D5', 'G3', 'C4', 'D3', 'C3', 'Q4', 'D16', 'Q16', 'R17']
+
+3. F3点:
+   走这一步后的胜率: 78.83%
+   节点搜索深度: 27
+   先验概率: 0.0249
+   置信区间下界: 77.38%
+   效用值: 0.5955
+   得分期望: 3.54目
+   得分标准差: 18.54目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化: ['F3', 'Q4', 'E5', 'D16', 'R16']
+
+4. F5点:
+   走这一步后的胜率: 68.13%
+   节点搜索深度: 1
+   先验概率: 0.0033
+   置信区间下界: -56.87%
+   效用值: 0.3548
+   得分期望: 1.61目
+   得分标准差: 18.35目
+   机械臂坐标: MP X 0 Y 40 Z 0 A 0 S 100#
+
+   后续变化: ['F5']
+
+5. D3点:
+   走这一步后的胜率: 58.73%
+   节点搜索深度: 2
+   先验概率: 0.0001
+   置信区间下界: 5.53%
+   效用值: 0.1466
+   得分期望: 0.37目
+   得分标准差: 18.77目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化: ['D3', 'F3']
+2025-06-08 23:23:42,271 - go_analysis.utils.logging_config - INFO - 
+最佳着法坐标: E5
+2025-06-08 23:23:42,271 - go_analysis.utils.logging_config - INFO - 机械臂坐标: MP X 0 Y 40 Z 0 A 0 S 100#
+
+2025-06-08 23:23:42,418 - go_analysis.core.katago_engine - INFO - KataGo引擎已关闭
+2025-06-08 23:29:21,681 - go_analysis.core.serial_handler - ERROR - 串口连接失败: could not open port 'COM4': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-08 23:29:21,681 - go_analysis.utils.logging_config - WARNING - 串口初始化失败，将只输出坐标信息
+2025-06-08 23:29:21,833 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 23:29:21+0800: Running with following config:
+2025-06-08 23:29:23,687 - go_analysis.core.katago_engine - INFO - KataGo引擎启动成功
+2025-06-08 23:29:23,688 - go_analysis.utils.logging_config - INFO - 
+=== 当前棋盘状态 ===
+2025-06-08 23:29:23,688 - go_analysis.utils.logging_config - INFO - 19  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+18  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+17  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+16  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+15  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+14  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+13  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+12  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+11  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+10  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 9  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 8  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 7  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 6  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 5  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 4  .  .  .  #  o  #  o  .  .  .  .  .  .  .  .  .  .  .  .
+ 3  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 2  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 1  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+    A  B  C  D  E  F  G  H  J  K  L  M  N  O  P  Q  R  S  T
+2025-06-08 23:29:23,690 - go_analysis.utils.logging_config - INFO - 
+=== 分析结果 ===
+2025-06-08 23:29:45,437 - go_analysis.utils.logging_config - INFO - 
+原始分析结果已保存到: analysis_result.json
+2025-06-08 23:29:45,438 - go_analysis.utils.logging_config - INFO - === 当前局面分析 ===
+当前玩家: 黑方
+总节点搜索深度: 515
+当前胜率: 85.70%
+领先分数: 5.47目
+自对弈得分: 8.42目
+得分标准差: 18.81目
+
+=== 最佳着法分析 ===
+
+1. E5点:
+   走这一步后的胜率: 86.48%
+   节点搜索深度: 171
+   先验概率: 0.4471
+   置信区间下界: 84.68%
+   效用值: 0.7720
+   得分期望: 5.65目
+   得分标准差: 18.85目
+   机械臂坐标: MP X 0 Y 40 Z 0 A 0 S 100#
+
+   后续变化: ['E5', 'E3', 'F3', 'D3', 'F5', 'C4', 'D5', 'B3', 'B5', 'F2', 'G2', 'E2', 'G3', 'Q4', 'D17', 'Q16']
+
+2. E3点:
+   走这一步后的胜率: 84.32%
+   节点搜索深度: 158
+   先验概率: 0.5411
+   置信区间下界: 81.81%
+   效用值: 0.7200
+   得分期望: 5.15目
+   得分标准差: 18.74目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化: ['E3', 'E5', 'F5', 'D5', 'G3', 'C4', 'D3', 'C3', 'Q4', 'Q16', 'D16']
+
+3. F3点:
+   走这一步后的胜率: 78.80%
+   节点搜索深度: 28
+   先验概率: 0.0081
+   置信区间下界: 69.94%
+   效用值: 0.6187
+   得分期望: 3.62目
+   得分标准差: 19.05目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化: ['F3', 'E3', 'E5', 'D3', 'F5', 'C4', 'D5', 'B3', 'B5', 'F2', 'G2', 'E2', 'G3', 'Q4', 'D17', 'Q16']
+
+4. F5点:
+   走这一步后的胜率: 68.13%
+   节点搜索深度: 1
+   先验概率: 0.0016
+   置信区间下界: -56.87%
+   效用值: 0.3551
+   得分期望: 1.61目
+   得分标准差: 18.35目
+   机械臂坐标: MP X 0 Y 40 Z 0 A 0 S 100#
+
+   后续变化: ['F5']
+
+5. D3点:
+   走这一步后的胜率: 55.32%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: -69.68%
+   效用值: 0.0763
+   得分期望: 0.01目
+   得分标准差: 19.01目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化: ['D3']
+2025-06-08 23:29:45,443 - go_analysis.utils.logging_config - INFO - 
+最佳着法坐标: E5
+2025-06-08 23:29:45,443 - go_analysis.utils.logging_config - INFO - 机械臂坐标: MP X 0 Y 40 Z 0 A 0 S 100#
+
+2025-06-08 23:29:45,624 - go_analysis.core.katago_engine - INFO - KataGo引擎已关闭
+2025-06-08 23:36:04,330 - go_analysis.core.serial_handler - ERROR - 串口连接失败: could not open port 'COM4': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-08 23:36:04,331 - go_analysis.utils.logging_config - WARNING - 串口初始化失败，将只输出坐标信息
+2025-06-08 23:36:04,375 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 23:36:04+0800: Running with following config:
+2025-06-08 23:36:06,335 - go_analysis.core.katago_engine - INFO - KataGo引擎启动成功
+2025-06-08 23:36:06,336 - go_analysis.utils.logging_config - INFO - 
+=== 当前棋盘状态 ===
+2025-06-08 23:36:06,337 - go_analysis.utils.logging_config - INFO - 19  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+18  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+17  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+16  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+15  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+14  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+13  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+12  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+11  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+10  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 9  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 8  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 7  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 6  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 5  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 4  .  .  .  #  o  #  o  .  .  .  .  .  .  .  .  .  .  .  .
+ 3  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 2  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 1  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+    A  B  C  D  E  F  G  H  J  K  L  M  N  O  P  Q  R  S  T
+2025-06-08 23:36:06,339 - go_analysis.utils.logging_config - INFO - 
+=== 分析结果 ===
+2025-06-08 23:36:26,945 - go_analysis.utils.logging_config - INFO - 
+原始分析结果已保存到: analysis_result.json
+2025-06-08 23:36:26,946 - go_analysis.utils.logging_config - INFO - === 当前局面分析 ===
+当前玩家: 黑方
+总节点搜索深度: 515
+当前胜率: 85.01%
+领先分数: 5.23目
+自对弈得分: 8.12目
+得分标准差: 18.81目
+
+=== 最佳着法分析 ===
+
+1. E5点:
+   走这一步后的胜率: 86.38%
+   节点搜索深度: 185
+   先验概率: 0.3384
+   置信区间下界: 84.60%
+   效用值: 0.7671
+   得分期望: 5.60目
+   得分标准差: 18.77目
+   机械臂坐标: MP X 0 Y 40 Z 0 A 0 S 100#
+
+   后续变化: ['E5', 'E3', 'F3', 'D3', 'F5', 'C4', 'D5', 'F2', 'G2', 'E2', 'C5', 'B4', 'G3', 'Q4', 'B5', 'A5']
+
+2. E3点:
+   走这一步后的胜率: 81.24%
+   节点搜索深度: 139
+   先验概率: 0.6351
+   置信区间下界: 78.81%
+   效用值: 0.6437
+   得分期望: 4.22目
+   得分标准差: 18.82目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化: ['E3', 'E5', 'F5', 'D5', 'G3', 'D3', 'C4', 'C3', 'C5', 'E2', 'F3', 'D7', 'B7', 'C8']
+
+3. F3点:
+   走这一步后的胜率: 79.96%
+   节点搜索深度: 33
+   先验概率: 0.0246
+   置信区间下界: 68.66%
+   效用值: 0.6378
+   得分期望: 4.07目
+   得分标准差: 19.04目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化: ['F3', 'E3', 'E5', 'D3', 'F5', 'C4', 'D5', 'F2', 'G2', 'E2', 'C5', 'B4', 'G3', 'Q4', 'B5', 'A5']
+
+4. F5点:
+   走这一步后的胜率: 67.71%
+   节点搜索深度: 2
+   先验概率: 0.0005
+   置信区间下界: 14.51%
+   效用值: 0.3349
+   得分期望: 1.38目
+   得分标准差: 18.65目
+   机械臂坐标: MP X 0 Y 40 Z 0 A 0 S 100#
+
+   后续变化: ['F5', 'E3']
+
+5. D3点:
+   走这一步后的胜率: 58.89%
+   节点搜索深度: 1
+   先验概率: 0.0000
+   置信区间下界: -66.11%
+   效用值: 0.1504
+   得分期望: 0.49目
+   得分标准差: 18.67目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化: ['D3']
+2025-06-08 23:36:26,951 - go_analysis.utils.logging_config - INFO - 
+最佳着法坐标: E5
+2025-06-08 23:36:26,951 - go_analysis.utils.logging_config - INFO - 机械臂坐标: MP X 0 Y 40 Z 0 A 0 S 100#
+
+2025-06-08 23:36:27,104 - go_analysis.core.katago_engine - INFO - KataGo引擎已关闭
+2025-06-08 23:41:15,879 - go_analysis.core.serial_handler - ERROR - 串口连接失败: could not open port 'COM4': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-08 23:41:15,879 - go_analysis.utils.logging_config - WARNING - 串口初始化失败，将只输出坐标信息
+2025-06-08 23:41:15,925 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 23:41:15+0800: Running with following config:
+2025-06-08 23:41:17,884 - go_analysis.core.katago_engine - INFO - KataGo引擎启动成功
+2025-06-08 23:41:17,886 - go_analysis.utils.logging_config - INFO - 
+=== 当前棋盘状态 ===
+2025-06-08 23:41:17,886 - go_analysis.utils.logging_config - INFO - 19  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+18  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+17  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+16  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+15  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+14  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+13  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+12  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+11  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+10  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 9  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 8  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 7  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 6  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 5  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 4  .  .  .  #  o  #  o  .  .  .  .  .  .  .  .  .  .  .  .
+ 3  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 2  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 1  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+    A  B  C  D  E  F  G  H  J  K  L  M  N  O  P  Q  R  S  T
+2025-06-08 23:41:17,888 - go_analysis.utils.logging_config - INFO - 
+=== 分析结果 ===
+2025-06-08 23:41:38,612 - go_analysis.utils.logging_config - INFO - 
+原始分析结果已保存到: analysis_result.json
+2025-06-08 23:41:38,613 - go_analysis.utils.logging_config - INFO - === 当前局面分析 ===
+当前玩家: 黑方
+总节点搜索深度: 515
+当前胜率: 85.78%
+领先分数: 5.58目
+自对弈得分: 8.55目
+得分标准差: 18.89目
+
+=== 最佳着法分析 ===
+
+1. E5点:
+   走这一步后的胜率: 86.71%
+   节点搜索深度: 189
+   先验概率: 0.3788
+   置信区间下界: 84.72%
+   效用值: 0.7745
+   得分期望: 5.83目
+   得分标准差: 18.98目
+   机械臂坐标: MP X 0 Y 40 Z 0 A 0 S 100#
+
+   后续变化: ['E5', 'E3', 'F3', 'D3', 'F5', 'C4', 'D5', 'B3', 'B5', 'F2', 'G2', 'E2', 'G3', 'Q4', 'D17', 'Q16']
+
+2. E3点:
+   走这一步后的胜率: 84.19%
+   节点搜索深度: 149
+   先验概率: 0.6109
+   置信区间下界: 81.57%
+   效用值: 0.7131
+   得分期望: 5.13目
+   得分标准差: 18.71目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化: ['E3', 'E5', 'F5', 'D5', 'G3', 'C4', 'D3', 'C3', 'Q4', 'D16', 'Q16']
+
+3. F3点:
+   走这一步后的胜率: 78.71%
+   节点搜索深度: 25
+   先验概率: 0.0065
+   置信区间下界: 72.71%
+   效用值: 0.6047
+   得分期望: 3.62目
+   得分标准差: 18.78目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化: ['F3', 'E3', 'E5', 'D3', 'F5', 'C4', 'D5', 'B3', 'B5', 'F2', 'G2', 'E2', 'G3', 'Q4', 'D17', 'Q16']
+
+4. F5点:
+   走这一步后的胜率: 69.23%
+   节点搜索深度: 2
+   先验概率: 0.0015
+   置信区间下界: 16.04%
+   效用值: 0.3766
+   得分期望: 1.57目
+   得分标准差: 18.72目
+   机械臂坐标: MP X 0 Y 40 Z 0 A 0 S 100#
+
+   后续变化: ['F5', 'E3']
+
+5. D3点:
+   走这一步后的胜率: 58.89%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: -66.11%
+   效用值: 0.1533
+   得分期望: 0.49目
+   得分标准差: 18.67目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化: ['D3']
+2025-06-08 23:41:38,618 - go_analysis.utils.logging_config - INFO - 
+最佳着法坐标: E5
+2025-06-08 23:41:38,618 - go_analysis.utils.logging_config - INFO - 机械臂坐标: MP X 0 Y 40 Z 0 A 0 S 100#
+
+2025-06-08 23:41:38,768 - go_analysis.core.katago_engine - INFO - KataGo引擎已关闭
+2025-06-08 23:44:05,731 - go_analysis.core.serial_handler - ERROR - 串口连接失败: could not open port 'COM4': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-08 23:44:05,731 - go_analysis.utils.logging_config - WARNING - 串口初始化失败，将只输出坐标信息
+2025-06-08 23:44:05,776 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-08 23:44:05+0800: Running with following config:
+2025-06-08 23:44:07,736 - go_analysis.core.katago_engine - INFO - KataGo引擎启动成功
+2025-06-08 23:44:07,737 - go_analysis.utils.logging_config - INFO - 
+=== 当前棋盘状态 ===
+2025-06-08 23:44:07,738 - go_analysis.utils.logging_config - INFO - 19  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+18  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+17  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+16  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+15  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+14  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+13  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+12  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+11  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+10  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 9  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 8  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 7  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 6  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 5  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 4  .  .  .  #  o  #  o  .  .  .  .  .  .  .  .  .  .  .  .
+ 3  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 2  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 1  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+    A  B  C  D  E  F  G  H  J  K  L  M  N  O  P  Q  R  S  T
+2025-06-08 23:44:07,739 - go_analysis.utils.logging_config - INFO - 
+=== 分析结果 ===
+2025-06-08 23:44:27,833 - go_analysis.utils.logging_config - INFO - 
+原始分析结果已保存到: analysis_result.json
+2025-06-08 23:44:27,834 - go_analysis.utils.logging_config - INFO - === 当前局面分析 ===
+当前玩家: 黑方
+总节点搜索深度: 515
+当前胜率: 86.20%
+领先分数: 5.65目
+自对弈得分: 8.67目
+得分标准差: 18.91目
+
+=== 最佳着法分析 ===
+
+1. E5点:
+   走这一步后的胜率: 86.62%
+   节点搜索深度: 238
+   先验概率: 0.7521
+   置信区间下界: 84.56%
+   效用值: 0.7735
+   得分期望: 5.79目
+   得分标准差: 18.91目
+   机械臂坐标: MP X 0 Y 40 Z 0 A 0 S 100#
+
+   后续变化: ['E5', 'E3', 'F3', 'D3', 'F5', 'C4', 'D5', 'B3', 'B5', 'F2', 'G2', 'E2', 'G3', 'Q4', 'Q16', 'D16']
+
+2. E3点:
+   走这一步后的胜率: 83.22%
+   节点搜索深度: 86
+   先验概率: 0.2408
+   置信区间下界: 80.48%
+   效用值: 0.6939
+   得分期望: 4.63目
+   得分标准差: 18.83目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化: ['E3', 'E5', 'F5', 'D5', 'G3', 'D3', 'C4', 'C3', 'C5', 'D7', 'B7', 'B3']
+
+3. F3点:
+   走这一步后的胜率: 79.13%
+   节点搜索深度: 24
+   先验概率: 0.0026
+   置信区间下界: 73.04%
+   效用值: 0.6240
+   得分期望: 3.76目
+   得分标准差: 18.81目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化: ['F3', 'E3', 'E5', 'D3', 'F5', 'C4', 'D5', 'B3', 'B5', 'F2', 'G2', 'E2', 'G3', 'Q4', 'Q16', 'D16']
+
+4. F5点:
+   走这一步后的胜率: 67.00%
+   节点搜索深度: 2
+   先验概率: 0.0031
+   置信区间下界: 13.80%
+   效用值: 0.3248
+   得分期望: 1.35目
+   得分标准差: 18.93目
+   机械臂坐标: MP X 0 Y 40 Z 0 A 0 S 100#
+
+   后续变化: ['F5', 'E3', 'E5', 'F3']
+
+5. D3点:
+   走这一步后的胜率: 56.61%
+   节点搜索深度: 2
+   先验概率: 0.0001
+   置信区间下界: 3.39%
+   效用值: 0.1173
+   得分期望: 0.06目
+   得分标准差: 18.99目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化: ['D3', 'F3']
+2025-06-08 23:44:27,839 - go_analysis.utils.logging_config - INFO - 
+最佳着法坐标: E5
+2025-06-08 23:44:27,839 - go_analysis.utils.logging_config - INFO - 机械臂坐标: MP X 174.38 Y -131.00 Z 0 A 0 S 100 #
+
+2025-06-08 23:44:27,986 - go_analysis.core.katago_engine - INFO - KataGo引擎已关闭
+2025-06-09 00:06:27,969 - go_analysis.core.serial_handler - INFO - 串口 COM4 连接成功
+2025-06-09 00:06:27,969 - go_analysis.core.serial_handler - INFO - 发送 HOME 指令...
+2025-06-09 00:06:32,993 - go_analysis.core.serial_handler - WARNING - 命令超时: HOME#
+
+2025-06-09 00:06:32,993 - go_analysis.core.serial_handler - WARNING - HOME 指令未收到响应
+2025-06-09 00:06:32,994 - go_analysis.utils.logging_config - WARNING - 初始化命令发送失败，将只输出坐标信息
+2025-06-09 00:06:32,996 - go_analysis.core.serial_handler - INFO - 串口已关闭
+2025-06-09 00:06:33,041 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-09 00:06:33+0800: Running with following config:
+2025-06-09 00:06:35,000 - go_analysis.core.katago_engine - INFO - KataGo引擎启动成功
+2025-06-09 00:06:35,001 - go_analysis.utils.logging_config - INFO - 
+=== 当前棋盘状态 ===
+2025-06-09 00:06:35,001 - go_analysis.utils.logging_config - INFO - 19  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+18  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+17  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+16  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+15  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+14  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+13  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+12  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+11  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+10  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 9  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 8  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 7  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 6  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 5  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 4  .  .  .  #  o  #  o  .  .  .  .  .  .  .  .  .  .  .  .
+ 3  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 2  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 1  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+    A  B  C  D  E  F  G  H  J  K  L  M  N  O  P  Q  R  S  T
+2025-06-09 00:06:35,003 - go_analysis.utils.logging_config - INFO - 
+=== 分析结果 ===
+2025-06-09 00:06:36,336 - go_analysis.core.katago_engine - INFO - KataGo: logDir = analysis_logs
+2025-06-09 00:06:36,438 - go_analysis.core.katago_engine - INFO - KataGo: maxVisits = 500
+2025-06-09 00:06:36,539 - go_analysis.core.katago_engine - INFO - KataGo: nnCacheSizePowerOfTwo = 23
+2025-06-09 00:06:36,639 - go_analysis.core.katago_engine - INFO - KataGo: nnMaxBatchSize = 64
+2025-06-09 00:06:36,740 - go_analysis.core.katago_engine - INFO - KataGo: nnMutexPoolSizePowerOfTwo = 17
+2025-06-09 00:06:36,841 - go_analysis.core.katago_engine - INFO - KataGo: nnRandomize = true
+2025-06-09 00:06:36,943 - go_analysis.core.katago_engine - INFO - KataGo: numAnalysisThreads = 2
+2025-06-09 00:06:37,043 - go_analysis.core.katago_engine - INFO - KataGo: numSearchThreads = 16
+2025-06-09 00:06:37,145 - go_analysis.core.katago_engine - INFO - KataGo: reportAnalysisWinratesAs = BLACK
+2025-06-09 00:06:37,246 - go_analysis.core.katago_engine - INFO - KataGo: 
+2025-06-09 00:06:37,347 - go_analysis.core.katago_engine - ERROR - 读取KataGo输出错误: 'gbk' codec can't decode byte 0xa3 in position 242: illegal multibyte sequence
+2025-06-09 00:07:05,098 - go_analysis.core.katago_engine - INFO - KataGo引擎已关闭
+2025-06-09 00:10:33,026 - go_analysis.core.serial_handler - INFO - 串口 COM4 连接成功
+2025-06-09 00:10:33,027 - go_analysis.core.serial_handler - INFO - 发送 HOME 指令...
+2025-06-09 00:10:38,057 - go_analysis.core.serial_handler - WARNING - 命令超时: HOME#
+
+2025-06-09 00:10:38,057 - go_analysis.core.serial_handler - WARNING - HOME 指令未收到响应
+2025-06-09 00:10:38,102 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-09 00:10:38+0800: Running with following config:
+2025-06-09 00:10:40,062 - go_analysis.core.katago_engine - INFO - KataGo引擎启动成功
+2025-06-09 00:10:40,064 - go_analysis.utils.logging_config - INFO - 
+=== 当前棋盘状态 ===
+2025-06-09 00:10:40,064 - go_analysis.utils.logging_config - INFO - 19  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+18  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+17  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+16  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+15  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+14  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+13  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+12  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+11  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+10  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 9  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 8  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 7  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 6  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 5  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 4  .  .  .  #  o  #  o  .  .  .  .  .  .  .  .  .  .  .  .
+ 3  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 2  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 1  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+    A  B  C  D  E  F  G  H  J  K  L  M  N  O  P  Q  R  S  T
+2025-06-09 00:10:40,066 - go_analysis.utils.logging_config - INFO - 
+=== 分析结果 ===
+2025-06-09 00:11:01,627 - go_analysis.utils.logging_config - INFO - 
+原始分析结果已保存到: analysis_result.json
+2025-06-09 00:11:01,628 - go_analysis.utils.logging_config - INFO - === 当前局面分析 ===
+当前玩家: 黑方
+总节点搜索深度: 515
+当前胜率: 84.78%
+领先分数: 5.25目
+自对弈得分: 8.11目
+得分标准差: 18.85目
+
+=== 最佳着法分析 ===
+
+1. E5点:
+   走这一步后的胜率: 87.39%
+   节点搜索深度: 136
+   先验概率: 0.1086
+   置信区间下界: 85.33%
+   效用值: 0.7915
+   得分期望: 5.96目
+   得分标准差: 18.95目
+   机械臂坐标: MP X 0 Y 40 Z 0 A 0 S 100#
+
+   后续变化: ['E5', 'E3', 'F3', 'D3', 'F5', 'C4', 'D5', 'B3', 'B5', 'F2', 'G2', 'E2', 'G3', 'Q4', 'D17', 'Q17']
+
+2. E3点:
+   走这一步后的胜率: 82.90%
+   节点搜索深度: 184
+   先验概率: 0.8763
+   置信区间下界: 80.66%
+   效用值: 0.6810
+   得分期望: 4.74目
+   得分标准差: 18.74目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化: ['E3', 'E5', 'F5', 'D5', 'G3', 'C4', 'D3', 'C3', 'Q4', 'D16', 'Q16', 'O3']
+
+3. F3点:
+   走这一步后的胜率: 78.46%
+   节点搜索深度: 32
+   先验概率: 0.0121
+   置信区间下界: 74.75%
+   效用值: 0.5892
+   得分期望: 3.47目
+   得分标准差: 18.70目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化: ['F3', 'E5', 'E3', 'F5', 'G5', 'D3', 'C3', 'D2', 'H4', 'C4', 'D5', 'B3', 'C5', 'C2']
+
+4. F5点:
+   走这一步后的胜率: 68.56%
+   节点搜索深度: 2
+   先验概率: 0.0008
+   置信区间下界: 15.34%
+   效用值: 0.3427
+   得分期望: 1.53目
+   得分标准差: 18.61目
+   机械臂坐标: MP X 0 Y 40 Z 0 A 0 S 100#
+
+   后续变化: ['F5', 'E3']
+
+5. D3点:
+   走这一步后的胜率: 59.83%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: -65.17%
+   效用值: 0.1696
+   得分期望: 0.69目
+   得分标准差: 18.92目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化: ['D3']
+2025-06-09 00:11:01,633 - go_analysis.utils.logging_config - INFO - 
+最佳着法坐标: E5
+2025-06-09 00:11:01,634 - go_analysis.utils.logging_config - INFO - 机械臂坐标: MP X 199.15 Y -108.75 Z 0 A 0 S 100 #
+
+2025-06-09 00:11:01,634 - go_analysis.utils.logging_config - INFO - 正在发送坐标到串口...
+2025-06-09 00:11:01,634 - go_analysis.core.serial_handler - INFO - 发送移动命令: MP X 199.15 Y -108.75 Z 0 A 0 S 100 #
+
+2025-06-09 00:11:01,721 - go_analysis.core.katago_engine - INFO - KataGo: logDir = analysis_logs
+2025-06-09 00:11:02,038 - go_analysis.core.serial_handler - INFO - 移动命令返回值: <:X 199.1 Y -108.8 Z 0.0 A 0.0 a-72.3 b 97.6 c 0.0 d -25.3 m 15 n 0 e 0 ok
+2025-06-09 00:11:02,038 - go_analysis.utils.logging_config - INFO - 等待5秒后继续...
+2025-06-09 00:11:08,111 - go_analysis.core.katago_engine - INFO - KataGo引擎已关闭
+2025-06-09 00:11:08,129 - go_analysis.core.serial_handler - INFO - 串口已关闭
+2025-06-09 00:31:25,453 - go_analysis.core.serial_handler - ERROR - 串口连接失败: could not open port 'COM4': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-09 00:31:25,453 - go_analysis.core.serial_handler - INFO - 发送 HOME 指令...
+2025-06-09 00:31:25,454 - go_analysis.core.serial_handler - WARNING - HOME 指令未收到响应
+2025-06-09 00:31:25,595 - go_analysis.core.katago_engine - INFO - KataGo: 2025-06-09 00:31:25+0800: Running with following config:
+2025-06-09 00:31:27,531 - go_analysis.core.katago_engine - INFO - KataGo引擎启动成功
+2025-06-09 00:31:27,532 - go_analysis.utils.logging_config - INFO - 
+=== 当前棋盘状态 ===
+2025-06-09 00:31:27,532 - go_analysis.utils.logging_config - INFO - 19  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+18  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+17  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+16  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+15  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+14  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+13  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+12  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+11  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+10  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 9  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 8  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 7  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 6  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 5  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 4  .  .  .  #  o  #  o  .  .  .  .  .  .  .  .  .  .  .  .
+ 3  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 2  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 1  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+    A  B  C  D  E  F  G  H  J  K  L  M  N  O  P  Q  R  S  T
+2025-06-09 00:31:27,532 - go_analysis.utils.logging_config - INFO - 
+=== 分析结果 ===
+2025-06-09 00:31:38,840 - go_analysis.utils.logging_config - INFO - 
+原始分析结果已保存到: analysis_result.json
+2025-06-09 00:31:38,840 - go_analysis.utils.logging_config - INFO - === 当前局面分析 ===
+当前玩家: 黑方
+总节点搜索深度: 515
+当前胜率: 84.82%
+领先分数: 5.19目
+自对弈得分: 8.05目
+得分标准差: 18.87目
+
+=== 最佳着法分析 ===
+
+1. E5点:
+   走这一步后的胜率: 85.66%
+   节点搜索深度: 167
+   先验概率: 0.3788
+   置信区间下界: 83.64%
+   效用值: 0.7499
+   得分期望: 5.45目
+   得分标准差: 18.93目
+   机械臂坐标: MP X 0 Y 40 Z 0 A 0 S 100#
+
+   后续变化: ['E5', 'E3', 'F3', 'D3', 'F5', 'C4', 'D5', 'B3', 'B5', 'F2', 'G2', 'E2', 'G3', 'Q4', 'D16', 'Q16']
+
+2. E3点:
+   走这一步后的胜率: 83.70%
+   节点搜索深度: 163
+   先验概率: 0.6109
+   置信区间下界: 81.83%
+   效用值: 0.7084
+   得分期望: 4.83目
+   得分标准差: 18.77目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化: ['E3', 'E5', 'F5', 'D5', 'G3', 'D3', 'C4', 'C3', 'C5', 'E2', 'F3', 'D7', 'B7', 'C8', 'B8', 'C10']
+
+3. F3点:
+   走这一步后的胜率: 79.26%
+   节点搜索深度: 27
+   先验概率: 0.0065
+   置信区间下界: 73.62%
+   效用值: 0.6175
+   得分期望: 3.66目
+   得分标准差: 18.86目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化: ['F3', 'E3', 'E5', 'D3', 'F5', 'C4', 'D5', 'B3', 'B5', 'F2', 'G2', 'E2', 'G3', 'Q4', 'D16', 'Q16']
+
+4. F5点:
+   走这一步后的胜率: 65.12%
+   节点搜索深度: 2
+   先验概率: 0.0015
+   置信区间下界: 11.83%
+   效用值: 0.2632
+   得分期望: 1.05目
+   得分标准差: 18.84目
+   机械臂坐标: MP X 0 Y 40 Z 0 A 0 S 100#
+
+   后续变化: ['F5', 'E3']
+
+5. D3点:
+   走这一步后的胜率: 59.83%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: -65.17%
+   效用值: 0.1750
+   得分期望: 0.69目
+   得分标准差: 18.92目
+   机械臂坐标: MP X 0 Y 20 Z 0 A 0 S 100#
+
+   后续变化: ['D3']
+2025-06-09 00:31:38,841 - go_analysis.utils.logging_config - INFO - 
+最佳着法坐标: E5
+2025-06-09 00:31:38,841 - go_analysis.utils.logging_config - INFO - 机械臂坐标: MP X 199.15 Y -108.75 Z 0 A 0 S 100 #
+
+2025-06-09 00:31:38,841 - go_analysis.utils.logging_config - INFO - 正在发送坐标到串口...
+2025-06-09 00:31:38,841 - go_analysis.core.serial_handler - INFO - 发送移动命令: MP X 199.15 Y -108.75 Z 0 A 0 S 100 #
+
+2025-06-09 00:31:38,842 - go_analysis.core.serial_handler - WARNING - 移动命令未收到响应
+2025-06-09 00:31:38,842 - go_analysis.utils.logging_config - ERROR - 发送着法失败
+2025-06-09 00:31:39,005 - go_analysis.core.katago_engine - INFO - KataGo引擎已关闭

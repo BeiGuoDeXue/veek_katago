@@ -1,0 +1,46 @@
+2025-06-08 15:10:18+0800: Running with following config:
+allowResignation = true
+lagBuffer = 1.0
+logAllGTPCommunication = true
+logDir = gtp_logs
+logSearchInfo = true
+logSearchInfoForChosenMove = false
+logToStderr = false
+maxTimePondering = 60.0
+maxVisits = 500
+numSearchThreads = 6
+ponderingEnabled = false
+resignConsecTurns = 3
+resignThreshold = -0.90
+rules = tromp-taylor
+searchFactorAfterOnePass = 0.50
+searchFactorAfterTwoPass = 0.25
+searchFactorWhenWinning = 0.40
+searchFactorWhenWinningThreshold = 0.95
+
+2025-06-08 15:10:18+0800: Loading model and initializing benchmark...
+2025-06-08 15:10:18+0800: Testing with default positions for board size: 19
+2025-06-08 15:10:18+0800: nnRandSeed0 = 14915254513700301674
+2025-06-08 15:10:18+0800: After dedups: nnModelFile0 = .\g170e-b20c256x2.bin.gz useFP16 auto useNHWC auto
+2025-06-08 15:10:18+0800: Initializing neural net buffer to be size 19 * 19 exactly
+2025-06-08 15:10:19+0800: Eigen (CPU) backend thread 0: Model version 8
+2025-06-08 15:10:19+0800: Eigen (CPU) backend thread 0: Model name: g170-b20c256x2-s5303129600-d1228401921
+2025-06-08 15:10:19+0800: Eigen (CPU) backend thread 1: Model version 8
+2025-06-08 15:10:19+0800: Eigen (CPU) backend thread 1: Model name: g170-b20c256x2-s5303129600-d1228401921
+2025-06-08 15:10:21+0800: Loaded config C:\Users\Eurekaa\Desktop\新建文件夹\katago-v1.16.2-eigenavx2-windows-x64/default_gtp.cfg
+2025-06-08 15:10:21+0800: Loaded model .\g170e-b20c256x2.bin.gz
+2025-06-08 15:10:21+0800: GPU -1 finishing, processed 4 rows 4 batches
+2025-06-08 15:10:21+0800: GPU -1 finishing, processed 1 rows 1 batches
+2025-06-08 15:10:21+0800: nnRandSeed0 = 6571850474405236921
+2025-06-08 15:10:21+0800: After dedups: nnModelFile0 = .\g170e-b20c256x2.bin.gz useFP16 auto useNHWC auto
+2025-06-08 15:10:21+0800: Initializing neural net buffer to be size 19 * 19 exactly
+2025-06-08 15:10:21+0800: Eigen (CPU) backend thread 0: Model version 8
+2025-06-08 15:10:21+0800: Eigen (CPU) backend thread 1: Model version 8
+2025-06-08 15:10:21+0800: Eigen (CPU) backend thread 0: Model name: g170-b20c256x2-s5303129600-d1228401921
+2025-06-08 15:10:21+0800: Eigen (CPU) backend thread 1: Model name: g170-b20c256x2-s5303129600-d1228401921
+2025-06-08 15:14:10+0800: GPU -1 finishing, processed 137 rows 137 batches
+2025-06-08 15:14:10+0800: GPU -1 finishing, processed 136 rows 133 batches
+2025-06-08 15:14:10+0800: GPU -1 finishing, processed 139 rows 136 batches
+2025-06-08 15:14:10+0800: GPU -1 finishing, processed 135 rows 132 batches
+2025-06-08 15:14:10+0800: GPU -1 finishing, processed 142 rows 142 batches
+2025-06-08 15:14:10+0800: GPU -1 finishing, processed 140 rows 138 batches
