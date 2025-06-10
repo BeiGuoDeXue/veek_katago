@@ -476,21 +476,16 @@ def send_move_to_serial(move: str, uart: Serial) -> bool:
     """发送着法坐标到串口"""
     try:
         # 发送指令前，先清空串口的输入缓冲区，防止读取到旧的残留数据
-        uart.reset_input_buffer()
-        uart.write(b"MP X 97 Y -200 Z 0 A 0 S 100#\r\n")
-        time.sleep(10)
-        response = uart.readline()
-        if response:
-           logger.info(f"指令返回值: {response.decode('utf-8', 'ignore').strip()}")
-        
+        uart.reset_input_buffer()  
+        # 吸气阀开启
         uart.write(b"Set 1 #\r\n")
-        time.sleep(10)
+        time.sleep(1)
         response = uart.readline()
         if response:
            logger.info(f"Set 1指令返回值: {response.decode('utf-8', 'ignore').strip()}")
 
-        uart.write(b"MP X 97 Y -200 Z 32.5 A 0 S 100#\r\n")
-        time.sleep(15)
+        uart.write(b"MP X 97 Y -200 Z 35 A 0 S 100#\r\n")
+        time.sleep(5)
         response = uart.readline()
         if response:
            logger.info(f"指令返回值: {response.decode('utf-8', 'ignore').strip()}")     
@@ -501,7 +496,7 @@ def send_move_to_serial(move: str, uart: Serial) -> bool:
         time.sleep(5)
         response = uart.readline()
         if response:
-            logger.info(f"指令返回值: {response.decode('utf-8', 'ignore').strip()}")
+            logger.info(f"移动指令返回值: {response.decode('utf-8', 'ignore').strip()}")
             # 检查响应中是否包含"ok"，如果有就认为执行成功
             response_str = response.decode('utf-8', 'ignore').strip()
             if "ok" in response_str.lower():
@@ -512,8 +507,41 @@ def send_move_to_serial(move: str, uart: Serial) -> bool:
             logger.warning("未收到响应")
             return False
         
+        # 机械臂下降到指定深度
+        logger.info("机械臂下降到放棋子位置...")
+        # 从当前移动命令中提取X和Y坐标，设置Z为33
+        if "MP X" in mp_command and "Y" in mp_command:
+            # 解析当前坐标
+            parts = mp_command.strip().split()
+            x_coord = parts[2]  # X坐标值
+            y_coord = parts[4]  # Y坐标值
+            down_command = f"MP X {x_coord} Y {y_coord} Z 33 A 0 S 100#\r\n"
+            
+            uart.write(down_command.encode())
+            time.sleep(5)
+            response = uart.readline()
+            if response:
+                logger.info(f"下降指令返回值: {response.decode('utf-8', 'ignore').strip()}")
+            else:
+                logger.warning("下降指令未收到响应")
+
+        # 换气阀开启
+        uart.write(b"Set 2 #\r\n")
+        time.sleep(1)
+        response = uart.readline()
+        if response:
+           logger.info(f"Set 1指令返回值: {response.decode('utf-8', 'ignore').strip()}")
+        
+        # 换气阀关闭
+        uart.write(b"Reset 2 #\r\n")
+        time.sleep(1)
+        response = uart.readline()
+        if response:
+           logger.info(f"指令返回值: {response.decode('utf-8', 'ignore').strip()}")  
+
+        # 吸气阀关闭
         uart.write(b"Reset 1 #\r\n")
-        time.sleep(5)
+        time.sleep(1)
         response = uart.readline()
         if response:
            logger.info(f"指令返回值: {response.decode('utf-8', 'ignore').strip()}")     
@@ -523,8 +551,9 @@ def send_move_to_serial(move: str, uart: Serial) -> bool:
         logger.info("发送HOME指令，让机械臂回到原点...")
         time.sleep(5)
         logger.info("发送指令: HOME#")
+        # 回到原点
         uart.write(b"HOME#\r\n")
-        time.sleep(10)
+        time.sleep(5)
         response = uart.readline()
         if response:
             logger.info(f"HOME指令返回值: {response.decode('utf-8', 'ignore').strip()}")
