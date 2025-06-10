@@ -24,3 +24,7 @@ python query_analysis_engine_example.py --use-vision --template-file .\go_board_
 - [ ] 拣棋盘上的棋子
 - [ ] 判断谁胜利
 
+bug:
+- [ ] 有的地方已经有棋子了，还往里面下
+
+

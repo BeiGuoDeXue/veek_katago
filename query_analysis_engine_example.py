@@ -334,8 +334,10 @@ def convert_to_robot_coordinates(board_x: int, board_y: int) -> Tuple[float, flo
 def convert_to_mp_format(move: str) -> str:
     """将围棋坐标转换为机械臂能识别的格式"""
     try:
-        if move == "pass":
-            return "MP X 0 Y 0 Z 0 A 0 S 100#\r\n"
+        if move.lower() == "pass":
+            # pass应该在调用此函数前被处理，这里返回安全位置
+            logger.warning("convert_to_mp_format收到pass指令，返回安全待机位置")
+            return "MP X 97 Y -200 Z 20 A 0 S 100#\r\n"  # 安全的待机位置
         
         # 将字母转换为数字 (A=0, B=1, ..., Z=25)
         x = ord(move[0]) - ord('A')
@@ -645,6 +647,24 @@ class KataGo:
             # 如果提供了initial_stones，直接使用
             if initial_stones:
                 query["initialStones"] = initial_stones
+                logger.info(f"\n=== 发送给KataGo的查询数据 ===")
+                logger.info(f"棋盘大小: {query['boardXSize']}x{query['boardYSize']}")
+                logger.info(f"贴目: {query['komi']}")
+                logger.info(f"着法序列: {len(query['moves'])}个")
+                logger.info(f"初始棋子: {len(query['initialStones'])}个")
+                
+                # 统计初始棋子
+                black_stones = [pos for color, pos in query['initialStones'] if color == 'b']
+                white_stones = [pos for color, pos in query['initialStones'] if color == 'w']
+                logger.info(f"  黑子: {len(black_stones)}个")
+                logger.info(f"  白子: {len(white_stones)}个")
+                
+                # 显示前10个棋子
+                logger.info("前10个初始棋子:")
+                for i, (color, pos) in enumerate(query['initialStones'][:10]):
+                    logger.info(f"  {i+1}. {color}: {pos}")
+                if len(query['initialStones']) > 10:
+                    logger.info(f"  ... 还有{len(query['initialStones'])-10}个")
             else:
                 # 否则从棋盘状态提取
                 for y in range(initial_board.side):
@@ -719,23 +739,56 @@ def execute_one_round(katago, camera_index: int, template_file: str, board_size:
         logger.info(f"黑子: {vision_result.get('black_stones', [])}")
         logger.info(f"白子: {vision_result.get('white_stones', [])}")
         
-        # 创建显示棋盘
-        displayboard = board.copy()
+        # 显示转换后的 initial_stones 数据
+        logger.info(f"\n=== 传递给KataGo的initial_stones数据 ===")
+        logger.info(f"总数: {len(initial_stones)}")
+        black_count = len([s for c, s in initial_stones if c == 'b'])
+        white_count = len([s for c, s in initial_stones if c == 'w'])
+        logger.info(f"黑子: {black_count}个, 白子: {white_count}个")
+        
+        # 显示前20个initial_stones
+        logger.info("前20个initial_stones:")
+        for i, (color, pos) in enumerate(initial_stones[:20]):
+            logger.info(f"  {i+1}. {color}: {pos}")
+        if len(initial_stones) > 20:
+            logger.info(f"  ... 还有{len(initial_stones)-20}个")
+        
+        # 创建显示棋盘 - 使用更简单的方法
+        logger.info(f"\n=== 第{round_count}轮当前棋盘状态 ===")
+        
+        # 使用简单数组来显示棋盘，避免sgfmill的问题
+        simple_board = [['.' for _ in range(board_size)] for _ in range(board_size)]
+        placed_count = 0
+        conflict_count = 0
+        
         for color, pos_str in initial_stones:
-            # pos_str 已经是sgfmill格式，需要转换为数组坐标显示
             try:
                 if len(pos_str) >= 2:
                     col_idx = ord(pos_str[0]) - ord('A')
                     if col_idx > 8:  # 跳过I
                         col_idx -= 1
                     row_idx = int(pos_str[1:]) - 1
+                    
                     if 0 <= row_idx < board_size and 0 <= col_idx < board_size:
-                        displayboard.play(row_idx, col_idx, color)
+                        if simple_board[row_idx][col_idx] != '.':
+                            logger.warning(f"坐标冲突: {pos_str} 位置已被占用")
+                            conflict_count += 1
+                        simple_board[row_idx][col_idx] = '#' if color == 'b' else 'O'
+                        placed_count += 1
+                    else:
+                        logger.warning(f"坐标超出范围: {pos_str} -> row={row_idx}, col={col_idx}")
             except Exception as e:
                 logger.warning(f"棋盘显示时坐标转换失败 {pos_str}: {e}")
         
-        logger.info(f"\n=== 第{round_count}轮当前棋盘状态 ===")
-        logger.info(f"\n{sgfmill.ascii_boards.render_board(displayboard)}")
+        logger.info(f"成功放置 {placed_count}/{len(initial_stones)} 个棋子，冲突 {conflict_count} 个")
+        
+        # 显示棋盘
+        logger.info("\n棋盘状态:")
+        for i in range(board_size-1, -1, -1):
+            row_display = f"{i+1:2} " + "  ".join(simple_board[i])
+            logger.info(row_display)
+        col_labels = "   " + "  ".join("ABCDEFGHJKLMNOPQRSTUVWXYZ"[:board_size])
+        logger.info(col_labels)
         
         # 获取分析结果
         logger.info(f"\n[分析] 第{round_count}轮：KataGo分析中...")
@@ -757,12 +810,17 @@ def execute_one_round(katago, camera_index: int, template_file: str, board_size:
             sorted_moves = sorted(move_infos, key=lambda x: x.get('winrate', 0), reverse=True)
             best_move = sorted_moves[0].get('move', '')
             if best_move:
-                logger.info(f"\n[机械臂] 第{round_count}轮：执行最佳着法 {best_move}...")
-                if not send_move_to_serial(best_move, serial_port):
-                    logger.error(f"第{round_count}轮：发送着法失败")
-                    return None
+                if best_move.lower() == "pass":
+                    logger.info(f"\n[跳过] 第{round_count}轮：KataGo建议pass（跳过这一手）")
+                    logger.info("这通常表示游戏接近结束或没有好的着法，机械臂保持待机状态")
+                    logger.info(f"[完成] 第{round_count}轮：pass执行完成")
                 else:
-                    logger.info(f"[完成] 第{round_count}轮：机械臂执行完成")
+                    logger.info(f"\n[机械臂] 第{round_count}轮：执行最佳着法 {best_move}...")
+                    if not send_move_to_serial(best_move, serial_port):
+                        logger.error(f"第{round_count}轮：发送着法失败")
+                        return None
+                    else:
+                        logger.info(f"[完成] 第{round_count}轮：机械臂执行完成")
             else:
                 logger.warning(f"第{round_count}轮：未找到有效着法")
                 return None
@@ -981,9 +1039,13 @@ def main():
                 sorted_moves = sorted(move_infos, key=lambda x: x.get('winrate', 0), reverse=True)
                 best_move = sorted_moves[0].get('move', '')
                 if best_move:
-                    logger.info(f"\n发送最佳着法坐标 {best_move} 到串口...")
-                    if not send_move_to_serial(best_move, serial_port):
-                        logger.error("发送着法失败")
+                    if best_move.lower() == "pass":
+                        logger.info(f"\nKataGo建议pass（跳过这一手）")
+                        logger.info("这通常表示游戏接近结束或没有好的着法，机械臂保持待机状态")
+                    else:
+                        logger.info(f"\n发送最佳着法坐标 {best_move} 到串口...")
+                        if not send_move_to_serial(best_move, serial_port):
+                            logger.error("发送着法失败")
             else:
                 logger.warning("未找到最佳着法")
 
