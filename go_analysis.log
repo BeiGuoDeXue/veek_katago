@@ -7865,3 +7865,247 @@
 2025-06-09 20:33:23,866 - INFO - 正在关闭KataGo进程...
 2025-06-09 20:33:23,932 - INFO - 正在关闭串口...
 2025-06-09 20:33:23,937 - INFO - 正在关闭KataGo进程...
+2025-06-09 22:07:40,121 - ERROR - 串口初始化错误: could not open port 'COM6': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-09 22:07:40,126 - ERROR - 串口初始化失败，程序退出
+2025-06-09 22:08:16,861 - ERROR - 串口初始化错误: could not open port 'COM6': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-09 22:08:16,863 - ERROR - 串口初始化失败，程序退出
+2025-06-09 22:09:00,728 - INFO - 串口 COM5 初始化成功
+2025-06-09 22:09:21,736 - INFO - 指令返回值: <:X 343.0 Y 0.0 Z 0.0 A 0.0 a0.0 b 0.0 c 0.0 d 0.0 m 15 n 0 e 0 ok
+2025-06-09 22:09:31,739 - INFO - 拿棋子指令返回值: <:X 97.0 Y -200.0 Z 0.0 A 0.0 a-108.6 b 99.6 c 0.0 d 9.0 m 15 n 0 e 0 ok
+2025-06-09 22:09:33,895 - INFO - KataGo: 2025-06-09 22:09:33+0800: Running with following config:
+
+2025-06-09 22:09:33,895 - INFO - KataGo: logDir = analysis_logs
+
+2025-06-09 22:09:33,895 - INFO - KataGo: maxVisits = 500
+
+2025-06-09 22:09:33,895 - INFO - KataGo: nnCacheSizePowerOfTwo = 23
+
+2025-06-09 22:09:33,895 - INFO - KataGo: nnMaxBatchSize = 64
+
+2025-06-09 22:09:33,895 - INFO - KataGo: nnMutexPoolSizePowerOfTwo = 17
+
+2025-06-09 22:09:33,895 - INFO - KataGo: nnRandomize = true
+
+2025-06-09 22:09:33,895 - INFO - KataGo: numAnalysisThreads = 2
+
+2025-06-09 22:09:33,895 - INFO - KataGo: numSearchThreads = 16
+
+2025-06-09 22:09:33,895 - INFO - KataGo: reportAnalysisWinratesAs = BLACK
+
+2025-06-09 22:09:33,901 - INFO - KataGo: 
+
+2025-06-09 22:09:33,903 - INFO - KataGo: 2025-06-09 22:09:33+0800: Analysis Engine starting...
+
+2025-06-09 22:09:33,904 - INFO - KataGo: 2025-06-09 22:09:33+0800: KataGo v1.16.2
+
+2025-06-09 22:09:34,013 - INFO - KataGo: 2025-06-09 22:09:34+0800: nnRandSeed0 = 4772512342589705077
+
+2025-06-09 22:09:34,013 - INFO - KataGo: 2025-06-09 22:09:34+0800: After dedups: nnModelFile0 = ./katago-v1.16.2-eigenavx2-windows-x64/g170e-b20c256x2.bin.gz useFP16 auto useNHWC auto
+
+2025-06-09 22:09:34,013 - INFO - KataGo: 2025-06-09 22:09:34+0800: Initializing neural net buffer to be size 19 * 19 allowing smaller boards
+
+2025-06-09 22:09:35,813 - INFO - 
+=== 当前棋盘状态 ===
+2025-06-09 22:09:35,814 - INFO - 19  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+18  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+17  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+16  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+15  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+14  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+13  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+12  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+11  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+10  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 9  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 8  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 7  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 6  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 5  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 4  .  .  .  #  o  #  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 3  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 2  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 1  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+    A  B  C  D  E  F  G  H  J  K  L  M  N  O  P  Q  R  S  T
+2025-06-09 22:09:35,814 - INFO - 
+=== 分析结果 ===
+2025-06-09 22:09:36,001 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 1: Model version 8
+
+2025-06-09 22:09:36,001 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 1: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-09 22:09:36,001 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 0: Model version 8
+
+2025-06-09 22:09:36,001 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 0: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-09 22:09:36,001 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 2: Model version 8
+
+2025-06-09 22:09:36,001 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 2: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-09 22:09:36,001 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 6: Model version 8
+
+2025-06-09 22:09:36,009 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 6: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-09 22:09:36,009 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 8: Model version 8
+
+2025-06-09 22:09:36,011 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 8: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-09 22:09:36,012 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 9: Model version 8
+
+2025-06-09 22:09:36,013 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 9: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-09 22:09:36,014 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 12: Model version 8
+
+2025-06-09 22:09:36,017 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 12: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-09 22:09:36,017 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 14: Model version 8
+
+2025-06-09 22:09:36,019 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 14: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-09 22:09:36,019 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 15: Model version 8
+
+2025-06-09 22:09:36,019 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 15: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-09 22:09:36,022 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 18: Model version 8
+
+2025-06-09 22:09:36,023 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 18: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-09 22:09:36,025 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 3: Model version 8
+
+2025-06-09 22:09:36,025 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 3: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-09 22:09:36,025 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 4: Model version 8
+
+2025-06-09 22:09:36,025 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 4: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-09 22:09:36,029 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 7: Model version 8
+
+2025-06-09 22:09:36,029 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 7: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-09 22:09:36,029 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 13: Model version 8
+
+2025-06-09 22:09:36,031 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 13: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-09 22:09:36,031 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 16: Model version 8
+
+2025-06-09 22:09:36,031 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 17: Model version 8
+
+2025-06-09 22:09:36,031 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 17: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-09 22:09:36,034 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 5: Model version 8
+
+2025-06-09 22:09:36,035 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 5: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-09 22:09:36,035 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 10: Model version 8
+
+2025-06-09 22:09:36,037 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 10: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-09 22:09:36,037 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 19: Model version 8
+
+2025-06-09 22:09:36,037 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 19: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-09 22:09:36,039 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 11: Model version 8
+
+2025-06-09 22:09:36,041 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 11: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-09 22:09:36,041 - INFO - KataGo: 2025-06-09 22:09:36+0800: Eigen (CPU) backend thread 16: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-09 22:09:37,268 - INFO - KataGo: 2025-06-09 22:09:37+0800: Loaded config ./katago-v1.16.2-eigenavx2-windows-x64/analysis_example.cfg
+
+2025-06-09 22:09:37,268 - INFO - KataGo: 2025-06-09 22:09:37+0800: Loaded model ./katago-v1.16.2-eigenavx2-windows-x64/g170e-b20c256x2.bin.gz
+
+2025-06-09 22:09:37,295 - INFO - KataGo: 2025-06-09 22:09:37+0800: Analyzing up to 2 positions at a time in parallel
+
+2025-06-09 22:09:37,295 - INFO - KataGo: 2025-06-09 22:09:37+0800: Started, ready to begin handling requests
+
+2025-06-09 22:09:48,403 - INFO - 
+原始分析结果已保存到: analysis_result.json
+2025-06-09 22:09:48,411 - INFO - === 当前局面分析 ===
+当前玩家: 白方
+总节点搜索深度: 515
+当前胜率: 50.20%
+领先分数: -0.54目
+自对弈得分: -0.50目
+得分标准差: 19.09目
+
+=== 最佳着法分析 ===
+
+1. C7点:
+   走这一步后的胜率: 81.02%
+   节点搜索深度: 1
+   先验概率: 0.0000
+   置信区间下界: 206.02%
+   效用值: 0.6770
+   得分期望: 4.79目
+   得分标准差: 19.47目
+   MP格式: MP X 152.35 Y -59.25 Z 0 A 0 S 100#
+
+   后续变化:
+     1. C7
+
+2. C3点:
+   走这一步后的胜率: 78.90%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 203.90%
+   效用值: 0.6273
+   得分期望: 4.11目
+   得分标准差: 19.47目
+   MP格式: MP X 149.60 Y -153.25 Z 0 A 0 S 100#
+
+   后续变化:
+     1. C3
+
+3. C8点:
+   走这一步后的胜率: 78.78%
+   节点搜索深度: 1
+   先验概率: 0.0000
+   置信区间下界: 203.78%
+   效用值: 0.6261
+   得分期望: 4.26目
+   得分标准差: 19.52目
+   MP格式: MP X 153.04 Y -35.75 Z 0 A 0 S 100#
+
+   后续变化:
+     1. C8
+
+4. C6点:
+   走这一步后的胜率: 78.71%
+   节点搜索深度: 1
+   先验概率: 0.0001
+   置信区间下界: 203.71%
+   效用值: 0.6240
+   得分期望: 4.26目
+   得分标准差: 19.48目
+   MP格式: MP X 151.67 Y -82.75 Z 0 A 0 S 100#
+
+   后续变化:
+     1. C6
+
+5. R13点:
+   走这一步后的胜率: 78.04%
+   节点搜索深度: 1
+   先验概率: 0.0000
+   置信区间下界: 203.04%
+   效用值: 0.6114
+   得分期望: 4.21目
+   得分标准差: 19.14目
+   MP格式: MP X 493.65 Y 64.25 Z 0 A 0 S 100#
+
+   后续变化:
+     1. R13
+2025-06-09 22:09:48,414 - INFO - 
+发送最佳着法坐标 C7 到串口...
+2025-06-09 22:09:58,416 - INFO - 指令返回值: <:X 97.0 Y -200.0 Z 0.0 A 0.0 a-108.6 b 99.6 c 0.0 d 9.0 m 15 n 0 e 0 ok
+2025-06-09 22:10:08,418 - INFO - Set 1指令返回值: <:X 97.0 Y -200.0 Z 0.0 A 0.0 a-108.6 b 99.6 c 0.0 d 9.0 m 15 n 1 e 0 ok
+2025-06-09 22:10:23,424 - INFO - 指令返回值: <:X 97.0 Y -200.0 Z 32.5 A 0.0 a-108.6 b 99.6 c 365.6 d 9.0 m 15 n 1 e 0 ok
+2025-06-09 22:10:23,424 - INFO - 发送着法 C7 (MP X 152.35 Y -59.25 Z 0 A 0 S 100#) 到串口...
+2025-06-09 22:10:28,427 - INFO - 指令返回值: <:X 152.3 Y -59.2 Z 0.0 A 0.0 a-74.7 b 123.7 c 0.0 d -49.0 m 15 n 1 e 0 ok
+2025-06-09 22:10:28,427 - INFO - 移动指令执行成功
+2025-06-09 22:10:33,434 - INFO - 指令返回值: <:X 152.3 Y -59.2 Z 0.0 A 0.0 a-74.7 b 123.7 c 0.0 d -49.0 m 15 n 0 e 0 ok
+2025-06-09 22:10:33,434 - INFO - 发送着法 C7 (MP X 152.35 Y -59.25 Z 0 A 0 S 100#) 到串口...
+2025-06-09 22:10:33,434 - INFO - 发送HOME指令，让机械臂回到原点...
+2025-06-09 22:10:38,436 - INFO - 发送指令: HOME#
+2025-06-09 22:10:48,439 - INFO - HOME指令返回值: <:X 343.0 Y 0.0 Z 0.0 A 0.0 a0.0 b 0.0 c 0.0 d 0.0 m 15 n 0 e 0 ok
+2025-06-09 22:10:48,439 - INFO - HOME指令执行成功
+2025-06-09 22:10:48,439 - INFO - 正在关闭KataGo进程...
+2025-06-09 22:10:48,585 - INFO - 正在关闭串口...
+2025-06-09 22:10:48,585 - INFO - 正在关闭KataGo进程...

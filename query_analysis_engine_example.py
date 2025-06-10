@@ -258,7 +258,7 @@ def format_analysis_result(result: Dict[str, Any]) -> str:
         logger.error(f"格式化分析结果时发生错误: {e}")
         raise
 
-def init_serial(serial_port: str = 'COM6', baud_rate: int = 9600) -> Optional[Serial]:
+def init_serial(serial_port: str = 'COM5', baud_rate: int = 9600) -> Optional[Serial]:
     """初始化串口"""
     try:
         uart = Serial(
@@ -517,7 +517,7 @@ def main():
         parser.add_argument(
             "-serial-port",
             help="串口名称 (例如: COM1)",
-            default="COM6",
+            default="COM5",
         )
         parser.add_argument(
             "-baud-rate",

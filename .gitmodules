@@ -1,0 +1,3 @@
+[submodule "go_board_recognition"]
+	path = go_board_recognition
+	url = https://jihulab.com/veeknexus1/go/go_board_recognition.git
