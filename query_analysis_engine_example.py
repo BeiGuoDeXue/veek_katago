@@ -488,10 +488,11 @@ def send_move_to_serial(move: str, uart: Serial) -> bool:
         time.sleep(5)
         response = uart.readline()
         if response:
-           logger.info(f"指令返回值: {response.decode('utf-8', 'ignore').strip()}")     
+           logger.info(f"指令返回值: {response.decode('utf-8', 'ignore').strip()}")
+        
+        # 移动到指定位置
         mp_command = convert_to_mp_format(move)
         logger.info(f"发送着法 {move} ({mp_command.strip()}) 到串口...")
-
         uart.write(mp_command.encode())
         time.sleep(5)
         response = uart.readline()
@@ -533,41 +534,48 @@ def send_move_to_serial(move: str, uart: Serial) -> bool:
            logger.info(f"Set 1指令返回值: {response.decode('utf-8', 'ignore').strip()}")
         
         # 换气阀关闭
-        uart.write(b"Reset 2 #\r\n")
-        time.sleep(1)
+        uart.write(b"Reset 1 #\r\n")
+        time.sleep(2)
         response = uart.readline()
         if response:
            logger.info(f"指令返回值: {response.decode('utf-8', 'ignore').strip()}")  
 
         # 吸气阀关闭
-        uart.write(b"Reset 1 #\r\n")
-        time.sleep(1)
+        uart.write(b"Reset 2 #\r\n")
+        time.sleep(2)
         response = uart.readline()
         if response:
            logger.info(f"指令返回值: {response.decode('utf-8', 'ignore').strip()}")     
-        mp_command = convert_to_mp_format(move)
-        logger.info(f"发送着法 {move} ({mp_command.strip()}) 到串口...")    
-        # 移动完成后，发送HOME指令让机械臂回到原点
-        logger.info("发送HOME指令，让机械臂回到原点...")
-        time.sleep(5)
-        logger.info("发送指令: HOME#")
-        # 回到原点
-        uart.write(b"HOME#\r\n")
+
+       # 机械臂下降到指定深度
+        logger.info("机械臂上升...")
+        # 从当前移动命令中提取X和Y坐标，设置Z为20
+        if "MP X" in mp_command and "Y" in mp_command:
+            # 解析当前坐标
+            parts = mp_command.strip().split()
+            x_coord = parts[2]  # X坐标值
+            y_coord = parts[4]  # Y坐标值
+            down_command = f"MP X {x_coord} Y {y_coord} Z 20 A 0 S 100#\r\n"
+            
+            uart.write(down_command.encode())
+            time.sleep(2)
+            response = uart.readline()
+            if response:
+                logger.info(f"下降指令返回值: {response.decode('utf-8', 'ignore').strip()}")
+            else:
+                logger.warning("下降指令未收到响应")
+
+
+        # # 回到原点
+        # uart.write(b"HOME#\r\n")
+
+        # 回到待吸取棋子位置
+        logger.info("发送待吸取棋子指令，让机械臂回到原点...")
+        uart.write(b"MP X 97 Y -200 Z 20 A 0 S 100#\r\n")
         time.sleep(5)
         response = uart.readline()
         if response:
-            logger.info(f"HOME指令返回值: {response.decode('utf-8', 'ignore').strip()}")
-            # 检查HOME指令响应中是否包含"ok"
-            response_str = response.decode('utf-8', 'ignore').strip()
-            if "ok" in response_str.lower():
-                logger.info("HOME指令执行成功")
-                return True
-            else:
-                logger.warning("HOME指令响应中未包含'ok'，可能执行失败")
-                return True  # 即使HOME失败也返回True，因为主要的移动指令已经执行了
-        else:
-            logger.warning("HOME指令未收到响应")
-            return False
+           logger.info(f"指令返回值: {response.decode('utf-8', 'ignore').strip()}")
 
     except Exception as e:
         logger.error(f"发送着法错误: {e}")
@@ -679,6 +687,95 @@ class KataGo:
             logger.error(f"发送原始查询时发生错误: {e}")
             raise
 
+def execute_one_round(katago, camera_index: int, template_file: str, board_size: int, komi: float, serial_port: Serial, round_count: int):
+    """执行一轮完整的对弈流程
+    
+    Args:
+        katago: KataGo分析引擎
+        camera_index: 摄像头索引
+        template_file: 模板文件路径
+        board_size: 棋盘大小
+        komi: 贴目
+        serial_port: 串口对象
+        round_count: 当前轮数
+        
+    Returns:
+        分析结果，失败时返回None
+    """
+    try:
+        # 执行视觉识别
+        logger.info(f"[拍照] 第{round_count}轮：开始拍照识别...")
+        vision_result = integrate_vision_recognition(
+            camera_index=camera_index,
+            template_file=template_file
+        )
+        
+        # 转换为KataGo格式
+        board, moves, initial_stones = vision_result_to_katago_format(vision_result, board_size)
+        
+        # 显示识别结果
+        logger.info(f"\n=== 第{round_count}轮视觉识别结果 ===")
+        logger.info(f"棋盘大小: {board_size}x{board_size}")
+        logger.info(f"黑子: {vision_result.get('black_stones', [])}")
+        logger.info(f"白子: {vision_result.get('white_stones', [])}")
+        
+        # 创建显示棋盘
+        displayboard = board.copy()
+        for color, pos_str in initial_stones:
+            # pos_str 已经是sgfmill格式，需要转换为数组坐标显示
+            try:
+                if len(pos_str) >= 2:
+                    col_idx = ord(pos_str[0]) - ord('A')
+                    if col_idx > 8:  # 跳过I
+                        col_idx -= 1
+                    row_idx = int(pos_str[1:]) - 1
+                    if 0 <= row_idx < board_size and 0 <= col_idx < board_size:
+                        displayboard.play(row_idx, col_idx, color)
+            except Exception as e:
+                logger.warning(f"棋盘显示时坐标转换失败 {pos_str}: {e}")
+        
+        logger.info(f"\n=== 第{round_count}轮当前棋盘状态 ===")
+        logger.info(f"\n{sgfmill.ascii_boards.render_board(displayboard)}")
+        
+        # 获取分析结果
+        logger.info(f"\n[分析] 第{round_count}轮：KataGo分析中...")
+        result = katago.query(board, moves, komi, initial_stones=initial_stones)
+        
+        # 保存分析结果
+        output_json = f"analysis_result_round_{round_count}.json"
+        with open(output_json, 'w', encoding='utf-8') as f:
+            json.dump(result, f, ensure_ascii=False, indent=2)
+        logger.info(f"第{round_count}轮分析结果已保存到: {output_json}")
+        
+        # 显示格式化的分析结果
+        formatted_result = format_analysis_result(result)
+        logger.info(formatted_result)
+
+        # 获取最佳着法并发送到串口
+        move_infos = result.get('moveInfos', [])
+        if move_infos:
+            sorted_moves = sorted(move_infos, key=lambda x: x.get('winrate', 0), reverse=True)
+            best_move = sorted_moves[0].get('move', '')
+            if best_move:
+                logger.info(f"\n[机械臂] 第{round_count}轮：执行最佳着法 {best_move}...")
+                if not send_move_to_serial(best_move, serial_port):
+                    logger.error(f"第{round_count}轮：发送着法失败")
+                    return None
+                else:
+                    logger.info(f"[完成] 第{round_count}轮：机械臂执行完成")
+            else:
+                logger.warning(f"第{round_count}轮：未找到有效着法")
+                return None
+        else:
+            logger.warning(f"第{round_count}轮：未找到最佳着法")
+            return None
+            
+        return result
+        
+    except Exception as e:
+        logger.error(f"第{round_count}轮执行过程中发生错误: {e}")
+        return None
+
 def main():
     """主函数"""
     try:
@@ -736,6 +833,23 @@ def main():
             help="启用视觉识别模式",
             action="store_true",
         )
+        parser.add_argument(
+            "--loop-mode",
+            help="启用循环对弈模式",
+            action="store_true",
+        )
+        parser.add_argument(
+            "--wait-time",
+            help="等待人下棋的时间（秒）",
+            type=int,
+            default=5,
+        )
+        parser.add_argument(
+            "--max-rounds",
+            help="最大对弈轮数（0为无限制）",
+            type=int,
+            default=0,
+        )
         args = vars(parser.parse_args())
         
         # 验证文件路径
@@ -772,44 +886,65 @@ def main():
                 logger.warning(f"模板文件不存在: {template_file}，将使用默认参数")
                 template_file = None
             
-            # 执行视觉识别
-            vision_result = integrate_vision_recognition(
-                camera_index=args["camera_index"],
-                template_file=template_file
-            )
-            
-            # 转换为KataGo格式
-            board, moves, initial_stones = vision_result_to_katago_format(vision_result, board_size)
-            
-            # 显示识别结果
-            logger.info("\n=== 视觉识别结果 ===")
-            logger.info(f"棋盘大小: {board_size}x{board_size}")
-            logger.info(f"黑子: {vision_result.get('black_stones', [])}")
-            logger.info(f"白子: {vision_result.get('white_stones', [])}")
-            
-            # 创建显示棋盘
-            displayboard = board.copy()
-            for color, pos_str in initial_stones:
-                # pos_str 已经是sgfmill格式，需要转换为数组坐标显示
-                # 先将sgfmill格式转换为围棋坐标再转换为数组坐标
+            if args["loop_mode"]:
+                # 循环对弈模式
+                logger.info(f"\n=== 启动循环对弈模式 ===")
+                max_rounds = args["max_rounds"]
+                wait_time = args["wait_time"]
+                
+                if max_rounds > 0:
+                    logger.info(f"最大对弈轮数: {max_rounds}")
+                else:
+                    logger.info("无限制对弈模式 (按Ctrl+C停止)")
+                    
+                logger.info(f"每轮等待时间: {wait_time}秒")
+                logger.info("=" * 50)
+                
+                round_count = 0
+                
                 try:
-                    # pos_str格式如"D4"，直接用go_coord_to_tuple转换
-                    if len(pos_str) >= 2:
-                        col_idx = ord(pos_str[0]) - ord('A')
-                        if col_idx > 8:  # 跳过I
-                            col_idx -= 1
-                        row_idx = int(pos_str[1:]) - 1
-                        if 0 <= row_idx < board_size and 0 <= col_idx < board_size:
-                            displayboard.play(row_idx, col_idx, color)
-                except Exception as e:
-                    logger.warning(f"棋盘显示时坐标转换失败 {pos_str}: {e}")
-            
-            logger.info("\n=== 当前棋盘状态 ===")
-            logger.info(sgfmill.ascii_boards.render_board(displayboard))
-            
-            # 获取分析结果
-            logger.info("\n=== KataGo分析结果 ===")
-            result = katago.query(board, moves, komi, initial_stones=initial_stones)
+                    while True:
+                        round_count += 1
+                        logger.info(f"\n[循环] === 第 {round_count} 轮对弈 ===")
+                        
+                        # 检查是否达到最大轮数
+                        if max_rounds > 0 and round_count > max_rounds:
+                            logger.info(f"已达到最大轮数 {max_rounds}，结束对弈")
+                            break
+                        
+                        # 执行一轮完整的对弈流程
+                        result = execute_one_round(
+                            katago=katago,
+                            camera_index=args["camera_index"],
+                            template_file=template_file,
+                            board_size=board_size,
+                            komi=komi,
+                            serial_port=serial_port,
+                            round_count=round_count
+                        )
+                        
+                        if result is None:
+                            logger.warning("本轮对弈失败，继续下一轮...")
+                            continue
+                        
+                        # 等待人下棋
+                        logger.info(f"\n[等待] 等待 {wait_time} 秒，给人类时间下棋...")
+                        time.sleep(wait_time)
+                        
+                except KeyboardInterrupt:
+                    logger.info("\n用户中断，结束循环对弈模式")
+                    
+            else:
+                # 单次视觉识别模式
+                result = execute_one_round(
+                    katago=katago,
+                    camera_index=args["camera_index"],
+                    template_file=template_file,
+                    board_size=board_size,
+                    komi=komi,
+                    serial_port=serial_port,
+                    round_count=1
+                )
             
         else:
             # 手动设置模式（原有逻辑）
@@ -824,33 +959,33 @@ def main():
                     row,col = move
                     displayboard.play(row,col,color)
             logger.info("\n=== 当前棋盘状态 ===")
-            logger.info(sgfmill.ascii_boards.render_board(displayboard))
+            logger.info(f"\n{sgfmill.ascii_boards.render_board(displayboard)}")
 
             # 获取分析结果
             logger.info("\n=== 分析结果 ===")
             result = katago.query(board, moves, komi)
-        
-        # 保存原始分析结果
-        output_json = args["output_json"]
-        with open(output_json, 'w', encoding='utf-8') as f:
-            json.dump(result, f, ensure_ascii=False, indent=2)
-        logger.info(f"\n原始分析结果已保存到: {output_json}")
-        
-        # 显示格式化的分析结果
-        formatted_result = format_analysis_result(result)
-        logger.info(formatted_result)
+            
+            # 保存原始分析结果  
+            output_json = args["output_json"]
+            with open(output_json, 'w', encoding='utf-8') as f:
+                json.dump(result, f, ensure_ascii=False, indent=2)
+            logger.info(f"\n原始分析结果已保存到: {output_json}")
+            
+            # 显示格式化的分析结果
+            formatted_result = format_analysis_result(result)
+            logger.info(formatted_result)
 
-        # 获取最佳着法并发送到串口
-        move_infos = result.get('moveInfos', [])
-        if move_infos:
-            sorted_moves = sorted(move_infos, key=lambda x: x.get('winrate', 0), reverse=True)
-            best_move = sorted_moves[0].get('move', '')
-            if best_move:
-                logger.info(f"\n发送最佳着法坐标 {best_move} 到串口...")
-                if not send_move_to_serial(best_move, serial_port):
-                    logger.error("发送着法失败")
-        else:
-            logger.warning("未找到最佳着法")
+            # 获取最佳着法并发送到串口
+            move_infos = result.get('moveInfos', [])
+            if move_infos:
+                sorted_moves = sorted(move_infos, key=lambda x: x.get('winrate', 0), reverse=True)
+                best_move = sorted_moves[0].get('move', '')
+                if best_move:
+                    logger.info(f"\n发送最佳着法坐标 {best_move} 到串口...")
+                    if not send_move_to_serial(best_move, serial_port):
+                        logger.error("发送着法失败")
+            else:
+                logger.warning("未找到最佳着法")
 
     except Exception as e:
         logger.error(f"程序执行过程中发生错误: {e}")

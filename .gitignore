@@ -1,5 +1,6 @@
 katago-v1.16.2-eigenavx2-windows-x64/g170e-b20c256x2.bin.gz
 analysis_result.json
+analysis_result_round_*.json
 go_analysis.log
 analysis_logs/*.log
 tmp

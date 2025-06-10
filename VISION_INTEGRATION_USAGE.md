@@ -11,10 +11,11 @@
 - 支持自定义棋盘大小
 - 支持视觉识别模板配置
 - 完整的机械臂控制集成
+- **🆕 循环对弈模式**：支持持续的人机对弈
 
 ## 使用方法
 
-### 1. 基础视觉识别模式
+### 1. 单次视觉识别模式
 
 ```bash
 python query_analysis_engine_example.py --use-vision
@@ -26,28 +27,46 @@ python query_analysis_engine_example.py --use-vision
 - 将结果传递给KataGo分析
 - 输出最佳着法并控制机械臂执行
 
-### 2. 指定摄像头和棋盘大小
+### 2. **🔄 循环对弈模式（推荐）**
+
+```bash
+python query_analysis_engine_example.py --use-vision --loop-mode
+```
+
+这将启动持续的人机对弈：
+- 拍照识别 → KataGo分析 → 机械臂执行 → 等待人下棋 → 循环
+- 按 `Ctrl+C` 停止
+
+### 3. 自定义循环参数
+
+```bash
+# 设置每轮等待时间为10秒
+python query_analysis_engine_example.py --use-vision --loop-mode --wait-time 10
+
+# 设置最大对弈轮数为20轮
+python query_analysis_engine_example.py --use-vision --loop-mode --max-rounds 20
+
+# 完整参数示例
+python query_analysis_engine_example.py \
+    --use-vision \
+    --loop-mode \
+    --wait-time 8 \
+    --max-rounds 50 \
+    --board-size 9 \
+    --camera-index 0 \
+    --template-file ./go_board_recognition/template.gpar
+```
+
+### 4. 指定摄像头和棋盘大小
 
 ```bash
 python query_analysis_engine_example.py --use-vision --camera-index 1 --board-size 9
 ```
 
-### 3. 使用视觉识别模板
+### 5. 使用视觉识别模板
 
 ```bash
 python query_analysis_engine_example.py --use-vision --template-file ./go_board_recognition/template_dark.gpar
-```
-
-### 4. 完整参数示例
-
-```bash
-python query_analysis_engine_example.py \
-    --use-vision \
-    --camera-index 0 \
-    --board-size 19 \
-    --template-file ./go_board_recognition/template.gpar \
-    --serial-port COM5 \
-    --baud-rate 9600
 ```
 
 ## 参数说明
@@ -55,14 +74,43 @@ python query_analysis_engine_example.py \
 | 参数 | 默认值 | 说明 |
 |------|--------|------|
 | `--use-vision` | False | 启用视觉识别模式 |
+| `--loop-mode` | False | **启用循环对弈模式** |
+| `--wait-time` | 5 | **等待人下棋的时间（秒）** |
+| `--max-rounds` | 0 | **最大对弈轮数（0为无限制）** |
 | `--camera-index` | 0 | 摄像头索引 |
 | `--board-size` | 19 | 棋盘大小 (9, 13, 19) |
 | `--template-file` | template.gpar | 视觉识别模板文件 |
 | `--serial-port` | COM5 | 机械臂串口 |
 | `--baud-rate` | 9600 | 串口波特率 |
 
+## 🔄 循环对弈工作流程
+
+### 完整流程
+```
+1. 系统初始化 (摄像头、串口、KataGo)
+2. 进入循环：
+   ├── [拍照] 拍照识别当前棋盘
+   ├── [分析] KataGo分析最佳着法
+   ├── [机械臂] 机械臂执行落子
+   ├── [等待] 等待指定时间（给人类下棋）
+   └── [循环] 返回步骤2
+3. 达到最大轮数或用户中断时结束
+```
+
+### 每轮输出
+```
+[循环] === 第 1 轮对弈 ===
+[拍照] 第1轮：开始拍照识别...
+=== 第1轮视觉识别结果 ===
+[分析] 第1轮：KataGo分析中...
+[机械臂] 第1轮：执行最佳着法 C3...
+[完成] 第1轮：机械臂执行完成
+[等待] 等待 5 秒，给人类时间下棋...
+```
+
 ## 工作流程
 
+### 单次模式
 1. **系统初始化**
    - 检查KataGo引擎
    - 初始化串口连接
@@ -83,37 +131,69 @@ python query_analysis_engine_example.py \
    - 控制机械臂落子
    - 回到原位等待
 
+### 🆕 循环模式
+- 在单次模式基础上增加循环控制
+- 每轮完成后等待指定时间
+- 支持最大轮数限制
+- 支持手动中断（Ctrl+C）
+
 ## 输出示例
 
+### 循环对弈模式输出
+
 ```
-=== 启动视觉识别模式 ===
-2024-01-01 10:00:00 - INFO - 摄像头初始化成功，分辨率: 1920x1080
-2024-01-01 10:00:01 - INFO - 拍照完成，图片保存到: tmp/board_capture_20240101-100001.jpg
-2024-01-01 10:00:02 - INFO - 开始视觉识别...
-2024-01-01 10:00:03 - INFO - 视觉识别完成: 黑子5个, 白子4个
+=== 启动循环对弈模式 ===
+最大对弈轮数: 10
+每轮等待时间: 5秒
+==================================================
 
-=== 视觉识别结果 ===
-棋盘大小: 19x19
-黑子: ['D4', 'Q16', 'D16', 'Q4', 'P17']
-白子: ['D17', 'Q17', 'D3', 'Q3']
+[循环] === 第 1 轮对弈 ===
+[拍照] 第1轮：开始拍照识别...
+摄像头初始化成功，分辨率: 1280x720
+拍照完成，图片保存到: tmp/board_capture_20240101-100001.jpg
 
-=== 当前棋盘状态 ===
+=== 第1轮视觉识别结果 ===
+棋盘大小: 9x9
+黑子: ['D4', 'F6']
+白子: ['D5', 'E5']
+
+=== 第1轮当前棋盘状态 ===
 [棋盘ASCII显示]
 
-=== KataGo分析结果 ===
+[分析] 第1轮：KataGo分析中...
+第1轮分析结果已保存到: analysis_result_round_1.json
+
 === 当前局面分析 ===
 当前玩家: 黑方
-总节点搜索深度: 1500
 当前胜率: 67.30%
-领先分数: 5.32目
+最佳着法: C3
 
-=== 最佳着法分析 ===
-1. R4点:
-   走这一步后的胜率: 69.50%
-   MP格式: MP X 95.42 Y 180.25 Z 0 A 0 S 100#
+[机械臂] 第1轮：执行最佳着法 C3...
+[完成] 第1轮：机械臂执行完成
+
+[等待] 等待 5 秒，给人类时间下棋...
+
+[循环] === 第 2 轮对弈 ===
+[拍照] 第2轮：开始拍照识别...
+...
 ```
 
 ## 注意事项
+
+### 🔄 循环模式特别注意
+1. **等待时间设置**
+   - 根据人类下棋速度调整 `--wait-time`
+   - 建议设置5-15秒
+
+2. **轮数控制**
+   - 使用 `--max-rounds` 限制最大轮数
+   - 设置为0表示无限制循环
+
+3. **中断处理**
+   - 使用 `Ctrl+C` 安全停止循环
+   - 系统会自动清理资源
+
+### 通用注意事项
 
 1. **摄像头设置**
    - 确保摄像头能清晰拍摄到整个棋盘
@@ -127,6 +207,10 @@ python query_analysis_engine_example.py \
 3. **棋盘识别**
    - 确保棋子摆放清晰，不要重叠
    - 避免手指等遮挡物出现在图像中
+
+4. **机械臂安全**
+   - 确保机械臂工作区域无障碍物
+   - 注意机械臂运动轨迹安全
 
 ## 故障排除
 
@@ -145,6 +229,14 @@ python query_analysis_engine_example.py \
 - 确保棋盘完整出现在图像中
 - 尝试使用或调整模板文件
 
+### 循环模式问题
+```
+第X轮执行过程中发生错误
+```
+- 检查机械臂连接状态
+- 验证摄像头工作正常
+- 查看详细错误日志
+
 ### 坐标转换错误
 ```
 坐标转换错误 D4: ...
@@ -154,9 +246,18 @@ python query_analysis_engine_example.py \
 
 ## 扩展功能
 
+现有功能：
+- ✅ 单次视觉识别分析
+- ✅ 循环对弈模式
+- ✅ 自定义等待时间
+- ✅ 轮数控制
+- ✅ 安全中断机制
+
 未来可能的改进方向：
 - 实时视频流识别
 - 多角度棋盘识别
 - 自动棋盘校准
 - 人工确认机制
-- 游戏状态历史记录 
+- 游戏状态历史记录
+- 胜负判断和统计
+- Web界面监控 
