@@ -8109,3 +8109,1577 @@
 2025-06-09 22:10:48,439 - INFO - 正在关闭KataGo进程...
 2025-06-09 22:10:48,585 - INFO - 正在关闭串口...
 2025-06-09 22:10:48,585 - INFO - 正在关闭KataGo进程...
+2025-06-10 15:03:01,399 - INFO - 串口 COM35 初始化成功
+2025-06-10 15:03:22,435 - INFO - 指令返回值: <:X 343.0 Y 0.0 Z 0.0 A 0.0 a0.0 b 0.0 c 0.0 d 0.0 m 15 n 0 e 0 ok
+2025-06-10 15:03:32,447 - INFO - 拿棋子指令返回值: <:X 97.0 Y -200.0 Z 0.0 A 0.0 a-108.6 b 99.6 c 0.0 d 9.0 m 15 n 0 e 0 ok
+2025-06-10 15:03:32,749 - INFO - KataGo: 2025-06-10 15:03:32+0800: Running with following config:
+
+2025-06-10 15:03:32,749 - INFO - KataGo: logDir = analysis_logs
+
+2025-06-10 15:03:32,749 - INFO - KataGo: maxVisits = 500
+
+2025-06-10 15:03:32,749 - INFO - KataGo: nnCacheSizePowerOfTwo = 23
+
+2025-06-10 15:03:32,749 - INFO - KataGo: nnMaxBatchSize = 64
+
+2025-06-10 15:03:32,750 - INFO - KataGo: nnMutexPoolSizePowerOfTwo = 17
+
+2025-06-10 15:03:32,750 - INFO - KataGo: nnRandomize = true
+
+2025-06-10 15:03:32,750 - INFO - KataGo: numAnalysisThreads = 2
+
+2025-06-10 15:03:32,750 - INFO - KataGo: numSearchThreads = 16
+
+2025-06-10 15:03:32,750 - INFO - KataGo: reportAnalysisWinratesAs = BLACK
+
+2025-06-10 15:03:32,750 - INFO - KataGo: 
+
+2025-06-10 15:03:32,750 - INFO - KataGo: 2025-06-10 15:03:32+0800: Analysis Engine starting...
+
+2025-06-10 15:03:32,750 - INFO - KataGo: 2025-06-10 15:03:32+0800: KataGo v1.16.2
+
+2025-06-10 15:03:32,820 - INFO - KataGo: 2025-06-10 15:03:32+0800: nnRandSeed0 = 1021680803809830782
+
+2025-06-10 15:03:32,820 - INFO - KataGo: 2025-06-10 15:03:32+0800: After dedups: nnModelFile0 = ./katago-v1.16.2-eigenavx2-windows-x64/g170e-b20c256x2.bin.gz useFP16 auto useNHWC auto
+
+2025-06-10 15:03:32,820 - INFO - KataGo: 2025-06-10 15:03:32+0800: Initializing neural net buffer to be size 19 * 19 allowing smaller boards
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 4: Model version 8
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 11: Model version 8
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 11: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 3: Model version 8
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 13: Model version 8
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 2: Model version 8
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 14: Model version 8
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 14: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 0: Model version 8
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 16: Model version 8
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 16: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 18: Model version 8
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 18: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 15: Model version 8
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 19: Model version 8
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 19: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 5: Model version 8
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 1: Model version 8
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 1: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 9: Model version 8
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 4: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 12: Model version 8
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 12: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 13: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 2: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 6: Model version 8
+
+2025-06-10 15:03:33,635 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 6: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:03:33,648 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 17: Model version 8
+
+2025-06-10 15:03:33,648 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 7: Model version 8
+
+2025-06-10 15:03:33,648 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 7: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:03:33,648 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 8: Model version 8
+
+2025-06-10 15:03:33,648 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 5: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:03:33,648 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 9: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:03:33,648 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 10: Model version 8
+
+2025-06-10 15:03:33,648 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 3: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:03:33,649 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 0: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:03:33,649 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 17: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:03:33,649 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 15: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:03:33,649 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 8: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:03:33,649 - INFO - KataGo: 2025-06-10 15:03:33+0800: Eigen (CPU) backend thread 10: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:03:34,304 - INFO - KataGo: 2025-06-10 15:03:34+0800: Loaded config ./katago-v1.16.2-eigenavx2-windows-x64/analysis_example.cfg
+
+2025-06-10 15:03:34,304 - INFO - KataGo: 2025-06-10 15:03:34+0800: Loaded model ./katago-v1.16.2-eigenavx2-windows-x64/g170e-b20c256x2.bin.gz
+
+2025-06-10 15:03:34,316 - INFO - KataGo: 2025-06-10 15:03:34+0800: Analyzing up to 2 positions at a time in parallel
+
+2025-06-10 15:03:34,316 - INFO - KataGo: 2025-06-10 15:03:34+0800: Started, ready to begin handling requests
+
+2025-06-10 15:03:34,721 - INFO - 
+=== 启动视觉识别模式 ===
+2025-06-10 15:03:35,831 - INFO - 摄像头初始化成功，分辨率: 1280x720
+2025-06-10 15:03:35,874 - INFO - 拍照完成，图片保存到: tmp/board_capture_20250610-150334.jpg
+2025-06-10 15:03:35,874 - INFO - 开始视觉识别...
+2025-06-10 15:03:35,874 - INFO - 开始处理图片: tmp/board_capture_20250610-150334.jpg
+2025-06-10 15:03:35,876 - INFO - Loading tmp/board_capture_20250610-150334.jpg
+2025-06-10 15:03:35,884 - INFO - Loading template parameters from ./go_board_recognition/template_6_10.gpar (overriding image-specific params)
+2025-06-10 15:03:35,884 - INFO - 已加载预设参数文件 (使用模板: ./go_board_recognition/template_6_10.gpar)
+2025-06-10 15:03:35,885 - INFO - 正在识别棋子...
+2025-06-10 15:03:35,885 - INFO - Image size is (1280,720)
+2025-06-10 15:03:35,885 - INFO - Area mask is [93, 24, 542, 461]
+2025-06-10 15:03:35,885 - INFO - Predefined board edges: [[112, 61], [502, 429]]
+2025-06-10 15:03:35,886 - INFO - Predefined board size: 9
+2025-06-10 15:03:35,886 - INFO - Detected spacing: [48.75, 46.0]
+2025-06-10 15:03:35,890 - INFO - Applying pre-filter PMF for color B
+2025-06-10 15:03:35,890 - INFO - Filter skipped
+2025-06-10 15:03:35,890 - INFO - Applying pre-filter LUM_EQ for color B
+2025-06-10 15:03:35,891 - INFO - Filter skipped
+2025-06-10 15:03:35,891 - INFO - Applying pre-filter CHANNEL for color B
+2025-06-10 15:03:35,892 - INFO - Applying pre-filter THRESH for color B
+2025-06-10 15:03:35,892 - INFO - Applying pre-filter STONES_DILATE for color B
+2025-06-10 15:03:35,892 - INFO - Applying pre-filter STONES_ERODE for color B
+2025-06-10 15:03:35,893 - INFO - Filter skipped
+2025-06-10 15:03:35,893 - INFO - Applying pre-filter BLUR_MASK for color B
+2025-06-10 15:03:35,893 - INFO - Filter skipped
+2025-06-10 15:03:35,893 - INFO - Applying post-filter HOUGH_C for color B
+2025-06-10 15:03:35,899 - INFO - Filter found 2 stones
+2025-06-10 15:03:35,900 - INFO - Applying post-filter WATERSHED for color B
+2025-06-10 15:03:35,906 - INFO - WATERSHED: Ignoring marker 1: (224.0, 120.5, 253.00059509277344)
+2025-06-10 15:03:35,906 - INFO - WATERSHED: Ignoring marker 2: (224.0, 288.5, 266.8169860839844)
+2025-06-10 15:03:35,907 - INFO - Filter found 0 stones
+2025-06-10 15:03:35,907 - INFO - Stones found: 2 of color B
+2025-06-10 15:03:35,907 - INFO - Applying pre-filter PMF for color W
+2025-06-10 15:03:35,907 - INFO - Filter skipped
+2025-06-10 15:03:35,907 - INFO - Applying pre-filter LUM_EQ for color W
+2025-06-10 15:03:35,908 - INFO - Filter skipped
+2025-06-10 15:03:35,908 - INFO - Applying pre-filter CHANNEL for color W
+2025-06-10 15:03:35,908 - INFO - Applying pre-filter THRESH for color W
+2025-06-10 15:03:35,909 - INFO - Applying pre-filter STONES_DILATE for color W
+2025-06-10 15:03:35,909 - INFO - Applying pre-filter STONES_ERODE for color W
+2025-06-10 15:03:35,909 - INFO - Filter skipped
+2025-06-10 15:03:35,909 - INFO - Applying pre-filter BLUR_MASK for color W
+2025-06-10 15:03:35,909 - INFO - Filter skipped
+2025-06-10 15:03:35,909 - INFO - Applying post-filter HOUGH_C for color W
+2025-06-10 15:03:35,913 - INFO - No new stones found, stopping
+2025-06-10 15:03:35,913 - INFO - Applying post-filter WATERSHED for color W
+2025-06-10 15:03:35,913 - INFO - Filter skipped
+2025-06-10 15:03:35,914 - INFO - No new stones found, stopping
+2025-06-10 15:03:35,914 - INFO - Stones found: 0 of color W
+2025-06-10 15:03:35,914 - INFO - 识别完成: 黑子 2 个, 白子 0 个
+2025-06-10 15:03:35,915 - INFO - 视觉识别完成: 黑子2个, 白子0个
+2025-06-10 15:03:35,915 - INFO - 棋盘转换完成: 黑子2个, 白子0个
+2025-06-10 15:03:35,915 - INFO - 
+=== 视觉识别结果 ===
+2025-06-10 15:03:35,915 - INFO - 棋盘大小: 9x9
+2025-06-10 15:03:35,915 - INFO - 黑子: ['G7', 'H4']
+2025-06-10 15:03:35,916 - INFO - 白子: []
+2025-06-10 15:03:35,916 - INFO - 
+=== 当前棋盘状态 ===
+2025-06-10 15:03:35,916 - INFO - 9  .  .  .  .  .  .  .  .  .
+8  .  .  .  .  .  .  .  .  .
+7  .  .  .  .  .  .  #  .  .
+6  .  .  .  .  .  .  .  .  .
+5  .  .  .  .  .  .  .  .  .
+4  .  .  .  .  .  .  .  #  .
+3  .  .  .  .  .  .  .  .  .
+2  .  .  .  .  .  .  .  .  .
+1  .  .  .  .  .  .  .  .  .
+   A  B  C  D  E  F  G  H  J
+2025-06-10 15:03:35,916 - INFO - 
+=== KataGo分析结果 ===
+2025-06-10 15:03:44,353 - INFO - 
+原始分析结果已保存到: analysis_result.json
+2025-06-10 15:03:44,354 - INFO - === 当前局面分析 ===
+当前玩家: 白方
+总节点搜索深度: 515
+当前胜率: 99.38%
+领先分数: 6.95目
+自对弈得分: 7.37目
+得分标准差: 7.28目
+
+=== 最佳着法分析 ===
+
+1. C3点:
+   走这一步后的胜率: 99.63%
+   节点搜索深度: 13
+   先验概率: 0.0113
+   置信区间下界: 101.32%
+   效用值: 1.0826
+   得分期望: 8.37目
+   得分标准差: 6.91目
+   MP格式: MP X 149.60 Y -153.25 Z 0 A 0 S 100#
+
+   后续变化:
+     1. C3
+     2. D4
+     3. D3
+     4. E4
+     5. B5
+
+2. C7点:
+   走这一步后的胜率: 99.61%
+   节点搜索深度: 3
+   先验概率: 0.0053
+   置信区间下界: 125.99%
+   效用值: 1.0939
+   得分期望: 8.80目
+   得分标准差: 7.71目
+   MP格式: MP X 152.35 Y -59.25 Z 0 A 0 S 100#
+
+   后续变化:
+     1. C7
+     2. D4
+
+3. F3点:
+   走这一步后的胜率: 99.59%
+   节点搜索深度: 3
+   先验概率: 0.0048
+   置信区间下界: 125.97%
+   效用值: 1.0834
+   得分期望: 8.65目
+   得分标准差: 8.02目
+   MP格式: MP X 221.85 Y -157.00 Z 0 A 0 S 100#
+
+   后续变化:
+     1. F3
+     2. D4
+
+4. F7点:
+   走这一步后的胜率: 99.59%
+   节点搜索深度: 13
+   先验概率: 0.0207
+   置信区间下界: 101.41%
+   效用值: 1.0913
+   得分期望: 9.02目
+   得分标准差: 7.69目
+   MP格式: MP X 224.60 Y -63.00 Z 0 A 0 S 100#
+
+   后续变化:
+     1. F7
+     2. F6
+     3. E6
+     4. E7
+     5. F8
+
+5. E3点:
+   走这一步后的胜率: 99.58%
+   节点搜索深度: 8
+   先验概率: 0.0076
+   置信区间下界: 103.50%
+   效用值: 1.0884
+   得分期望: 9.38目
+   得分标准差: 8.39目
+   MP格式: MP X 197.77 Y -155.75 Z 0 A 0 S 100#
+
+   后续变化:
+     1. E3
+     2. D4
+     3. D3
+     4. C4
+     5. F6
+2025-06-10 15:03:44,355 - INFO - 
+发送最佳着法坐标 C3 到串口...
+2025-06-10 15:03:54,356 - INFO - 指令返回值: <:X 97.0 Y -200.0 Z 0.0 A 0.0 a-108.6 b 99.6 c 0.0 d 9.0 m 15 n 0 e 0 ok
+2025-06-10 15:04:04,357 - INFO - Set 1指令返回值: <:X 97.0 Y -200.0 Z 0.0 A 0.0 a-108.6 b 99.6 c 0.0 d 9.0 m 15 n 1 e 0 ok
+2025-06-10 15:04:19,358 - INFO - 指令返回值: <:X 97.0 Y -200.0 Z 32.5 A 0.0 a-108.6 b 99.6 c 365.6 d 9.0 m 15 n 1 e 0 ok
+2025-06-10 15:04:19,359 - INFO - 发送着法 C3 (MP X 149.60 Y -153.25 Z 0 A 0 S 100#) 到串口...
+2025-06-10 15:04:24,361 - INFO - 指令返回值: <:X 149.6 Y -153.3 Z 0.0 A 0.0 a-91.6 b 103.2 c 0.0 d -11.6 m 15 n 1 e 0 ok
+2025-06-10 15:04:24,361 - INFO - 移动指令执行成功
+2025-06-10 15:04:29,362 - INFO - 指令返回值: <:X 149.6 Y -153.3 Z 0.0 A 0.0 a-91.6 b 103.2 c 0.0 d -11.6 m 15 n 0 e 0 ok
+2025-06-10 15:04:29,363 - INFO - 发送着法 C3 (MP X 149.60 Y -153.25 Z 0 A 0 S 100#) 到串口...
+2025-06-10 15:04:29,364 - INFO - 发送HOME指令，让机械臂回到原点...
+2025-06-10 15:04:34,365 - INFO - 发送指令: HOME#
+2025-06-10 15:04:44,367 - INFO - HOME指令返回值: <:X 343.0 Y 0.0 Z 0.0 A 0.0 a0.0 b 0.0 c 0.0 d 0.0 m 15 n 0 e 0 ok
+2025-06-10 15:04:44,367 - INFO - HOME指令执行成功
+2025-06-10 15:04:44,367 - INFO - 正在关闭KataGo进程...
+2025-06-10 15:04:44,419 - INFO - 正在关闭串口...
+2025-06-10 15:04:44,420 - INFO - 正在关闭摄像头...
+2025-06-10 15:04:44,674 - INFO - 正在关闭KataGo进程...
+2025-06-10 15:04:45,096 - ERROR - 串口初始化错误: could not open port 'COM5': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+2025-06-10 15:04:45,096 - ERROR - 串口初始化失败，程序退出
+2025-06-10 15:08:38,307 - INFO - 串口 COM35 初始化成功
+2025-06-10 15:08:59,314 - INFO - 指令返回值: <:X 343.0 Y 0.0 Z 0.0 A 0.0 a0.0 b 0.0 c 0.0 d 0.0 m 15 n 0 e 0 ok
+2025-06-10 15:09:09,315 - INFO - 拿棋子指令返回值: <:X 97.0 Y -200.0 Z 0.0 A 0.0 a-108.6 b 99.6 c 0.0 d 9.0 m 15 n 0 e 0 ok
+2025-06-10 15:09:09,735 - INFO - KataGo: 2025-06-10 15:09:09+0800: Running with following config:
+
+2025-06-10 15:09:09,735 - INFO - KataGo: logDir = analysis_logs
+
+2025-06-10 15:09:09,735 - INFO - KataGo: maxVisits = 500
+
+2025-06-10 15:09:09,735 - INFO - KataGo: nnCacheSizePowerOfTwo = 23
+
+2025-06-10 15:09:09,736 - INFO - KataGo: nnMaxBatchSize = 64
+
+2025-06-10 15:09:09,736 - INFO - KataGo: nnMutexPoolSizePowerOfTwo = 17
+
+2025-06-10 15:09:09,736 - INFO - KataGo: nnRandomize = true
+
+2025-06-10 15:09:09,736 - INFO - KataGo: numAnalysisThreads = 2
+
+2025-06-10 15:09:09,736 - INFO - KataGo: numSearchThreads = 16
+
+2025-06-10 15:09:09,736 - INFO - KataGo: reportAnalysisWinratesAs = BLACK
+
+2025-06-10 15:09:09,736 - INFO - KataGo: 
+
+2025-06-10 15:09:09,737 - INFO - KataGo: 2025-06-10 15:09:09+0800: Analysis Engine starting...
+
+2025-06-10 15:09:09,737 - INFO - KataGo: 2025-06-10 15:09:09+0800: KataGo v1.16.2
+
+2025-06-10 15:09:09,783 - INFO - KataGo: 2025-06-10 15:09:09+0800: nnRandSeed0 = 8594138399311103808
+
+2025-06-10 15:09:09,784 - INFO - KataGo: 2025-06-10 15:09:09+0800: After dedups: nnModelFile0 = ./katago-v1.16.2-eigenavx2-windows-x64/g170e-b20c256x2.bin.gz useFP16 auto useNHWC auto
+
+2025-06-10 15:09:09,784 - INFO - KataGo: 2025-06-10 15:09:09+0800: Initializing neural net buffer to be size 19 * 19 allowing smaller boards
+
+2025-06-10 15:09:10,531 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 16: Model version 8
+
+2025-06-10 15:09:10,531 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 4: Model version 8
+
+2025-06-10 15:09:10,531 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 5: Model version 8
+
+2025-06-10 15:09:10,531 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 6: Model version 8
+
+2025-06-10 15:09:10,531 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 6: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:09:10,531 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 7: Model version 8
+
+2025-06-10 15:09:10,547 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 7: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:09:10,547 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 9: Model version 8
+
+2025-06-10 15:09:10,547 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 9: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:09:10,547 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 12: Model version 8
+
+2025-06-10 15:09:10,547 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 11: Model version 8
+
+2025-06-10 15:09:10,547 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 14: Model version 8
+
+2025-06-10 15:09:10,547 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 15: Model version 8
+
+2025-06-10 15:09:10,547 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 15: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:09:10,547 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 10: Model version 8
+
+2025-06-10 15:09:10,547 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 10: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:09:10,547 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 2: Model version 8
+
+2025-06-10 15:09:10,547 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 2: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:09:10,547 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 17: Model version 8
+
+2025-06-10 15:09:10,547 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 3: Model version 8
+
+2025-06-10 15:09:10,547 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 16: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:09:10,547 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 4: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:09:10,547 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 5: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:09:10,547 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 0: Model version 8
+
+2025-06-10 15:09:10,547 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 8: Model version 8
+
+2025-06-10 15:09:10,547 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 13: Model version 8
+
+2025-06-10 15:09:10,547 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 12: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:09:10,547 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 11: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:09:10,547 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 14: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:09:10,547 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 1: Model version 8
+
+2025-06-10 15:09:10,550 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 1: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:09:10,550 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 19: Model version 8
+
+2025-06-10 15:09:10,550 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 19: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:09:10,550 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 3: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:09:10,550 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 0: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:09:10,550 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 8: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:09:10,550 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 13: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:09:10,550 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 18: Model version 8
+
+2025-06-10 15:09:10,550 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 18: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:09:10,551 - INFO - KataGo: 2025-06-10 15:09:10+0800: Eigen (CPU) backend thread 17: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:09:11,114 - INFO - KataGo: 2025-06-10 15:09:11+0800: Loaded config ./katago-v1.16.2-eigenavx2-windows-x64/analysis_example.cfg
+
+2025-06-10 15:09:11,114 - INFO - KataGo: 2025-06-10 15:09:11+0800: Loaded model ./katago-v1.16.2-eigenavx2-windows-x64/g170e-b20c256x2.bin.gz
+
+2025-06-10 15:09:11,126 - INFO - KataGo: 2025-06-10 15:09:11+0800: Analyzing up to 2 positions at a time in parallel
+
+2025-06-10 15:09:11,126 - INFO - KataGo: 2025-06-10 15:09:11+0800: Started, ready to begin handling requests
+
+2025-06-10 15:09:11,603 - INFO - 
+=== 启动视觉识别模式 ===
+2025-06-10 15:09:13,074 - INFO - 摄像头初始化成功，分辨率: 1280x720
+2025-06-10 15:09:13,111 - INFO - 拍照完成，图片保存到: tmp/board_capture_20250610-150911.jpg
+2025-06-10 15:09:13,112 - INFO - 开始视觉识别...
+2025-06-10 15:09:13,112 - INFO - 开始处理图片: tmp/board_capture_20250610-150911.jpg
+2025-06-10 15:09:13,113 - INFO - Loading tmp/board_capture_20250610-150911.jpg
+2025-06-10 15:09:13,118 - INFO - Loading template parameters from ./go_board_recognition/template_6_10.gpar (overriding image-specific params)
+2025-06-10 15:09:13,119 - INFO - 已加载预设参数文件 (使用模板: ./go_board_recognition/template_6_10.gpar)
+2025-06-10 15:09:13,119 - INFO - 正在识别棋子...
+2025-06-10 15:09:13,119 - INFO - Image size is (1280,720)
+2025-06-10 15:09:13,119 - INFO - Area mask is [93, 24, 542, 461]
+2025-06-10 15:09:13,120 - INFO - Predefined board edges: [[112, 61], [502, 429]]
+2025-06-10 15:09:13,120 - INFO - Predefined board size: 9
+2025-06-10 15:09:13,120 - INFO - Detected spacing: [48.75, 46.0]
+2025-06-10 15:09:13,120 - INFO - Applying pre-filter PMF for color B
+2025-06-10 15:09:13,121 - INFO - Filter skipped
+2025-06-10 15:09:13,121 - INFO - Applying pre-filter LUM_EQ for color B
+2025-06-10 15:09:13,121 - INFO - Filter skipped
+2025-06-10 15:09:13,121 - INFO - Applying pre-filter CHANNEL for color B
+2025-06-10 15:09:13,121 - INFO - Applying pre-filter THRESH for color B
+2025-06-10 15:09:13,122 - INFO - Applying pre-filter STONES_DILATE for color B
+2025-06-10 15:09:13,122 - INFO - Applying pre-filter STONES_ERODE for color B
+2025-06-10 15:09:13,122 - INFO - Filter skipped
+2025-06-10 15:09:13,122 - INFO - Applying pre-filter BLUR_MASK for color B
+2025-06-10 15:09:13,122 - INFO - Filter skipped
+2025-06-10 15:09:13,122 - INFO - Applying post-filter HOUGH_C for color B
+2025-06-10 15:09:13,126 - INFO - No new stones found, stopping
+2025-06-10 15:09:13,126 - INFO - Applying post-filter WATERSHED for color B
+2025-06-10 15:09:13,126 - INFO - Filter skipped
+2025-06-10 15:09:13,126 - INFO - No new stones found, stopping
+2025-06-10 15:09:13,127 - INFO - Stones found: 0 of color B
+2025-06-10 15:09:13,127 - INFO - Applying pre-filter PMF for color W
+2025-06-10 15:09:13,127 - INFO - Filter skipped
+2025-06-10 15:09:13,127 - INFO - Applying pre-filter LUM_EQ for color W
+2025-06-10 15:09:13,127 - INFO - Filter skipped
+2025-06-10 15:09:13,127 - INFO - Applying pre-filter CHANNEL for color W
+2025-06-10 15:09:13,127 - INFO - Applying pre-filter THRESH for color W
+2025-06-10 15:09:13,129 - INFO - Applying pre-filter STONES_DILATE for color W
+2025-06-10 15:09:13,129 - INFO - Applying pre-filter STONES_ERODE for color W
+2025-06-10 15:09:13,129 - INFO - Filter skipped
+2025-06-10 15:09:13,129 - INFO - Applying pre-filter BLUR_MASK for color W
+2025-06-10 15:09:13,129 - INFO - Filter skipped
+2025-06-10 15:09:13,129 - INFO - Applying post-filter HOUGH_C for color W
+2025-06-10 15:09:13,132 - INFO - No new stones found, stopping
+2025-06-10 15:09:13,133 - INFO - Applying post-filter WATERSHED for color W
+2025-06-10 15:09:13,133 - INFO - Filter skipped
+2025-06-10 15:09:13,133 - INFO - No new stones found, stopping
+2025-06-10 15:09:13,133 - INFO - Stones found: 0 of color W
+2025-06-10 15:09:13,134 - INFO - 识别完成: 黑子 0 个, 白子 0 个
+2025-06-10 15:09:13,135 - INFO - 视觉识别完成: 黑子0个, 白子0个
+2025-06-10 15:09:13,135 - INFO - 棋盘转换完成: 黑子0个, 白子0个
+2025-06-10 15:09:13,135 - INFO - 
+=== 视觉识别结果 ===
+2025-06-10 15:09:13,135 - INFO - 棋盘大小: 9x9
+2025-06-10 15:09:13,135 - INFO - 黑子: []
+2025-06-10 15:09:13,135 - INFO - 白子: []
+2025-06-10 15:09:13,135 - INFO - 
+=== 当前棋盘状态 ===
+2025-06-10 15:09:13,136 - INFO - 9  .  .  .  .  .  .  .  .  .
+8  .  .  .  .  .  .  .  .  .
+7  .  .  .  .  .  .  .  .  .
+6  .  .  .  .  .  .  .  .  .
+5  .  .  .  .  .  .  .  .  .
+4  .  .  .  .  .  .  .  .  .
+3  .  .  .  .  .  .  .  .  .
+2  .  .  .  .  .  .  .  .  .
+1  .  .  .  .  .  .  .  .  .
+   A  B  C  D  E  F  G  H  J
+2025-06-10 15:09:13,136 - INFO - 
+=== KataGo分析结果 ===
+2025-06-10 15:09:20,725 - INFO - 
+原始分析结果已保存到: analysis_result.json
+2025-06-10 15:09:20,726 - INFO - === 当前局面分析 ===
+当前玩家: 黑方
+总节点搜索深度: 515
+当前胜率: 71.60%
+领先分数: 0.14目
+自对弈得分: 0.80目
+得分标准差: 8.76目
+
+=== 最佳着法分析 ===
+
+1. E5点:
+   走这一步后的胜率: 71.80%
+   节点搜索深度: 219
+   先验概率: 0.2892
+   置信区间下界: 70.78%
+   效用值: 0.4402
+   得分期望: 0.15目
+   得分标准差: 8.79目
+   MP格式: MP X 227.25 Y 25.88 Z 0 A 0 S 100#
+
+   后续变化:
+     1. E5
+     2. E7
+     3. D3
+     4. G4
+     5. F6
+     6. C6
+     7. F7
+     8. H5
+     9. G2
+     10. H7
+     11. B5
+     12. C5
+     13. B4
+     14. F8
+
+2. F6点:
+   走这一步后的胜率: 70.25%
+   节点搜索深度: 105
+   先验概率: 0.0259
+   置信区间下界: 68.58%
+   效用值: 0.3877
+   得分期望: 0.08目
+   得分标准差: 8.86目
+   MP格式: MP X 202.00 Y 4.50 Z 0 A 0 S 100#
+
+   后续变化:
+     1. F6
+     2. D6
+     3. E4
+     4. C5
+     5. C3
+     6. G3
+     7. F3
+     8. F2
+     9. E2
+     10. G6
+     11. G7
+     12. G5
+
+3. F4点:
+   走这一步后的胜率: 70.25%
+   节点搜索深度: 105
+   先验概率: 0.0259
+   置信区间下界: 68.58%
+   效用值: 0.3877
+   得分期望: 0.08目
+   得分标准差: 8.86目
+   MP格式: MP X 204.50 Y 51.00 Z 0 A 0 S 100#
+
+   后续变化:
+     1. F4
+     2. D4
+     3. E6
+     4. C5
+     5. C7
+     6. G7
+     7. F7
+     8. F8
+     9. E8
+     10. G4
+     11. G3
+     12. G5
+
+4. D6点:
+   走这一步后的胜率: 70.25%
+   节点搜索深度: 105
+   先验概率: 0.0259
+   置信区间下界: 68.58%
+   效用值: 0.3877
+   得分期望: 0.08目
+   得分标准差: 8.86目
+   MP格式: MP X 250.00 Y 0.75 Z 0 A 0 S 100#
+
+   后续变化:
+     1. D6
+     2. F6
+     3. E4
+     4. G5
+     5. G3
+     6. C3
+     7. D3
+     8. D2
+     9. E2
+     10. C6
+     11. C7
+     12. C5
+
+5. D4点:
+   走这一步后的胜率: 70.25%
+   节点搜索深度: 105
+   先验概率: 0.0259
+   置信区间下界: 68.58%
+   效用值: 0.3877
+   得分期望: 0.08目
+   得分标准差: 8.86目
+   MP格式: MP X 252.50 Y 47.25 Z 0 A 0 S 100#
+
+   后续变化:
+     1. D4
+     2. F4
+     3. E6
+     4. G5
+     5. G7
+     6. C7
+     7. D7
+     8. D8
+     9. E8
+     10. C4
+     11. C3
+     12. C5
+2025-06-10 15:09:20,727 - INFO - 
+发送最佳着法坐标 E5 到串口...
+2025-06-10 15:09:30,728 - INFO - 指令返回值: <:X 97.0 Y -200.0 Z 0.0 A 0.0 a-108.6 b 99.6 c 0.0 d 9.0 m 15 n 0 e 0 ok
+2025-06-10 15:09:40,730 - INFO - Set 1指令返回值: <:X 97.0 Y -200.0 Z 0.0 A 0.0 a-108.6 b 99.6 c 0.0 d 9.0 m 15 n 1 e 0 ok
+2025-06-10 15:09:55,732 - INFO - 指令返回值: <:X 97.0 Y -200.0 Z 32.5 A 0.0 a-108.6 b 99.6 c 365.6 d 9.0 m 15 n 1 e 0 ok
+2025-06-10 15:09:55,732 - INFO - 发送着法 E5 (MP X 227.25 Y 25.88 Z 0 A 0 S 100#) 到串口...
+2025-06-10 15:10:00,734 - INFO - 指令返回值: <:X 227.3 Y 25.9 Z 0.0 A 0.0 a-36.8 b 96.8 c 0.0 d -59.9 m 15 n 1 e 0 ok
+2025-06-10 15:10:00,734 - INFO - 移动指令执行成功
+2025-06-10 15:10:05,736 - INFO - 指令返回值: <:X 227.3 Y 25.9 Z 0.0 A 0.0 a-36.8 b 96.8 c 0.0 d -59.9 m 15 n 0 e 0 ok
+2025-06-10 15:10:05,737 - INFO - 发送着法 E5 (MP X 227.25 Y 25.88 Z 0 A 0 S 100#) 到串口...
+2025-06-10 15:10:05,737 - INFO - 发送HOME指令，让机械臂回到原点...
+2025-06-10 15:10:10,738 - INFO - 发送指令: HOME#
+2025-06-10 15:10:20,739 - INFO - HOME指令返回值: <:X 343.0 Y 0.0 Z 0.0 A 0.0 a0.0 b 0.0 c 0.0 d 0.0 m 15 n 0 e 0 ok
+2025-06-10 15:10:20,739 - INFO - HOME指令执行成功
+2025-06-10 15:10:20,739 - INFO - 正在关闭KataGo进程...
+2025-06-10 15:10:20,772 - INFO - 正在关闭串口...
+2025-06-10 15:10:20,772 - INFO - 正在关闭摄像头...
+2025-06-10 15:10:21,070 - INFO - 正在关闭KataGo进程...
+2025-06-10 15:15:30,582 - INFO - 串口 COM35 初始化成功
+2025-06-10 15:15:51,599 - INFO - 指令返回值: <:X 343.0 Y 0.0 Z 0.0 A 0.0 a0.0 b 0.0 c 0.0 d 0.0 m 15 n 0 e 0 ok
+2025-06-10 15:16:01,600 - INFO - 拿棋子指令返回值: <:X 97.0 Y -200.0 Z 0.0 A 0.0 a-108.6 b 99.6 c 0.0 d 9.0 m 15 n 0 e 0 ok
+2025-06-10 15:16:01,849 - INFO - KataGo: 2025-06-10 15:16:01+0800: Running with following config:
+
+2025-06-10 15:16:01,849 - INFO - KataGo: logDir = analysis_logs
+
+2025-06-10 15:16:01,849 - INFO - KataGo: maxVisits = 500
+
+2025-06-10 15:16:01,849 - INFO - KataGo: nnCacheSizePowerOfTwo = 23
+
+2025-06-10 15:16:01,849 - INFO - KataGo: nnMaxBatchSize = 64
+
+2025-06-10 15:16:01,849 - INFO - KataGo: nnMutexPoolSizePowerOfTwo = 17
+
+2025-06-10 15:16:01,849 - INFO - KataGo: nnRandomize = true
+
+2025-06-10 15:16:01,849 - INFO - KataGo: numAnalysisThreads = 2
+
+2025-06-10 15:16:01,849 - INFO - KataGo: numSearchThreads = 16
+
+2025-06-10 15:16:01,849 - INFO - KataGo: reportAnalysisWinratesAs = BLACK
+
+2025-06-10 15:16:01,849 - INFO - KataGo: 
+
+2025-06-10 15:16:01,849 - INFO - KataGo: 2025-06-10 15:16:01+0800: Analysis Engine starting...
+
+2025-06-10 15:16:01,849 - INFO - KataGo: 2025-06-10 15:16:01+0800: KataGo v1.16.2
+
+2025-06-10 15:16:01,911 - INFO - KataGo: 2025-06-10 15:16:01+0800: nnRandSeed0 = 18231837043454027985
+
+2025-06-10 15:16:01,911 - INFO - KataGo: 2025-06-10 15:16:01+0800: After dedups: nnModelFile0 = ./katago-v1.16.2-eigenavx2-windows-x64/g170e-b20c256x2.bin.gz useFP16 auto useNHWC auto
+
+2025-06-10 15:16:01,911 - INFO - KataGo: 2025-06-10 15:16:01+0800: Initializing neural net buffer to be size 19 * 19 allowing smaller boards
+
+2025-06-10 15:16:02,691 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 17: Model version 8
+
+2025-06-10 15:16:02,694 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 1: Model version 8
+
+2025-06-10 15:16:02,694 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 1: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:16:02,694 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 8: Model version 8
+
+2025-06-10 15:16:02,694 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 9: Model version 8
+
+2025-06-10 15:16:02,694 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 0: Model version 8
+
+2025-06-10 15:16:02,694 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 0: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:16:02,694 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 12: Model version 8
+
+2025-06-10 15:16:02,694 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 2: Model version 8
+
+2025-06-10 15:16:02,694 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 2: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:16:02,694 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 14: Model version 8
+
+2025-06-10 15:16:02,694 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 14: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:16:02,694 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 13: Model version 8
+
+2025-06-10 15:16:02,694 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 13: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:16:02,694 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 7: Model version 8
+
+2025-06-10 15:16:02,694 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 7: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:16:02,694 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 18: Model version 8
+
+2025-06-10 15:16:02,694 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 19: Model version 8
+
+2025-06-10 15:16:02,694 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 19: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:16:02,694 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 5: Model version 8
+
+2025-06-10 15:16:02,699 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 17: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:16:02,699 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 8: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:16:02,699 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 9: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:16:02,699 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 10: Model version 8
+
+2025-06-10 15:16:02,699 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 10: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:16:02,699 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 12: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:16:02,699 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 4: Model version 8
+
+2025-06-10 15:16:02,699 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 4: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:16:02,699 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 16: Model version 8
+
+2025-06-10 15:16:02,700 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 6: Model version 8
+
+2025-06-10 15:16:02,700 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 6: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:16:02,700 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 3: Model version 8
+
+2025-06-10 15:16:02,700 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 5: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:16:02,700 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 11: Model version 8
+
+2025-06-10 15:16:02,700 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 11: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:16:02,700 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 16: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:16:02,700 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 18: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:16:02,700 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 3: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:16:02,700 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 15: Model version 8
+
+2025-06-10 15:16:02,700 - INFO - KataGo: 2025-06-10 15:16:02+0800: Eigen (CPU) backend thread 15: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:16:03,244 - INFO - KataGo: 2025-06-10 15:16:03+0800: Loaded config ./katago-v1.16.2-eigenavx2-windows-x64/analysis_example.cfg
+
+2025-06-10 15:16:03,244 - INFO - KataGo: 2025-06-10 15:16:03+0800: Loaded model ./katago-v1.16.2-eigenavx2-windows-x64/g170e-b20c256x2.bin.gz
+
+2025-06-10 15:16:03,256 - INFO - KataGo: 2025-06-10 15:16:03+0800: Analyzing up to 2 positions at a time in parallel
+
+2025-06-10 15:16:03,256 - INFO - KataGo: 2025-06-10 15:16:03+0800: Started, ready to begin handling requests
+
+2025-06-10 15:16:03,825 - INFO - 
+=== 启动视觉识别模式 ===
+2025-06-10 15:16:05,296 - INFO - 摄像头初始化成功，分辨率: 1280x720
+2025-06-10 15:16:05,333 - INFO - 拍照完成，图片保存到: tmp/board_capture_20250610-151603.jpg
+2025-06-10 15:16:05,333 - INFO - 开始视觉识别...
+2025-06-10 15:16:05,333 - INFO - 开始处理图片: tmp/board_capture_20250610-151603.jpg
+2025-06-10 15:16:05,335 - INFO - Loading tmp/board_capture_20250610-151603.jpg
+2025-06-10 15:16:05,337 - INFO - Loading template parameters from ./go_board_recognition/template_6_10.gpar (overriding image-specific params)
+2025-06-10 15:16:05,337 - INFO - 已加载预设参数文件 (使用模板: ./go_board_recognition/template_6_10.gpar)
+2025-06-10 15:16:05,337 - INFO - 正在识别棋子...
+2025-06-10 15:16:05,337 - INFO - Image size is (1280,720)
+2025-06-10 15:16:05,341 - INFO - Area mask is [93, 24, 542, 461]
+2025-06-10 15:16:05,341 - INFO - Predefined board edges: [[112, 61], [502, 429]]
+2025-06-10 15:16:05,341 - INFO - Predefined board size: 9
+2025-06-10 15:16:05,341 - INFO - Detected spacing: [48.75, 46.0]
+2025-06-10 15:16:05,342 - INFO - Applying pre-filter PMF for color B
+2025-06-10 15:16:05,342 - INFO - Filter skipped
+2025-06-10 15:16:05,342 - INFO - Applying pre-filter LUM_EQ for color B
+2025-06-10 15:16:05,342 - INFO - Filter skipped
+2025-06-10 15:16:05,342 - INFO - Applying pre-filter CHANNEL for color B
+2025-06-10 15:16:05,342 - INFO - Applying pre-filter THRESH for color B
+2025-06-10 15:16:05,343 - INFO - Applying pre-filter STONES_DILATE for color B
+2025-06-10 15:16:05,343 - INFO - Applying pre-filter STONES_ERODE for color B
+2025-06-10 15:16:05,344 - INFO - Filter skipped
+2025-06-10 15:16:05,344 - INFO - Applying pre-filter BLUR_MASK for color B
+2025-06-10 15:16:05,344 - INFO - Filter skipped
+2025-06-10 15:16:05,344 - INFO - Applying post-filter HOUGH_C for color B
+2025-06-10 15:16:05,348 - INFO - Filter found 1 stones
+2025-06-10 15:16:05,348 - INFO - Applying post-filter WATERSHED for color B
+2025-06-10 15:16:05,354 - INFO - WATERSHED: Ignoring marker 1: (224.0, 218.0, 311.156005859375)
+2025-06-10 15:16:05,355 - INFO - Filter found 0 stones
+2025-06-10 15:16:05,355 - INFO - Stones found: 1 of color B
+2025-06-10 15:16:05,355 - INFO - Applying pre-filter PMF for color W
+2025-06-10 15:16:05,355 - INFO - Filter skipped
+2025-06-10 15:16:05,356 - INFO - Applying pre-filter LUM_EQ for color W
+2025-06-10 15:16:05,356 - INFO - Filter skipped
+2025-06-10 15:16:05,356 - INFO - Applying pre-filter CHANNEL for color W
+2025-06-10 15:16:05,356 - INFO - Applying pre-filter THRESH for color W
+2025-06-10 15:16:05,356 - INFO - Applying pre-filter STONES_DILATE for color W
+2025-06-10 15:16:05,356 - INFO - Applying pre-filter STONES_ERODE for color W
+2025-06-10 15:16:05,356 - INFO - Filter skipped
+2025-06-10 15:16:05,356 - INFO - Applying pre-filter BLUR_MASK for color W
+2025-06-10 15:16:05,356 - INFO - Filter skipped
+2025-06-10 15:16:05,356 - INFO - Applying post-filter HOUGH_C for color W
+2025-06-10 15:16:05,360 - INFO - No new stones found, stopping
+2025-06-10 15:16:05,361 - INFO - Applying post-filter WATERSHED for color W
+2025-06-10 15:16:05,361 - INFO - Filter skipped
+2025-06-10 15:16:05,362 - INFO - No new stones found, stopping
+2025-06-10 15:16:05,362 - INFO - Stones found: 0 of color W
+2025-06-10 15:16:05,362 - INFO - 识别完成: 黑子 1 个, 白子 0 个
+2025-06-10 15:16:05,362 - INFO - 视觉识别完成: 黑子1个, 白子0个
+2025-06-10 15:16:05,362 - INFO - 棋盘转换完成: 黑子1个, 白子0个
+2025-06-10 15:16:05,363 - INFO - 
+=== 视觉识别结果 ===
+2025-06-10 15:16:05,363 - INFO - 棋盘大小: 9x9
+2025-06-10 15:16:05,363 - INFO - 黑子: ['E9']
+2025-06-10 15:16:05,363 - INFO - 白子: []
+2025-06-10 15:16:05,363 - INFO - 
+=== 当前棋盘状态 ===
+2025-06-10 15:16:05,363 - INFO - 9  .  .  .  .  #  .  .  .  .
+8  .  .  .  .  .  .  .  .  .
+7  .  .  .  .  .  .  .  .  .
+6  .  .  .  .  .  .  .  .  .
+5  .  .  .  .  .  .  .  .  .
+4  .  .  .  .  .  .  .  .  .
+3  .  .  .  .  .  .  .  .  .
+2  .  .  .  .  .  .  .  .  .
+1  .  .  .  .  .  .  .  .  .
+   A  B  C  D  E  F  G  H  J
+2025-06-10 15:16:05,364 - INFO - 
+=== KataGo分析结果 ===
+2025-06-10 15:16:12,713 - INFO - 
+原始分析结果已保存到: analysis_result.json
+2025-06-10 15:16:12,715 - INFO - === 当前局面分析 ===
+当前玩家: 黑方
+总节点搜索深度: 515
+当前胜率: 96.76%
+领先分数: 4.22目
+自对弈得分: 4.97目
+得分标准差: 8.35目
+
+=== 最佳着法分析 ===
+
+1. E5点:
+   走这一步后的胜率: 97.34%
+   节点搜索深度: 45
+   先验概率: 0.0395
+   置信区间下界: 96.48%
+   效用值: 0.9409
+   得分期望: 4.55目
+   得分标准差: 8.42目
+   MP格式: MP X 227.25 Y 25.88 Z 0 A 0 S 100#
+
+   后续变化:
+     1. E5
+     2. C4
+     3. D3
+     4. F3
+     5. D4
+
+2. F5点:
+   走这一步后的胜率: 97.04%
+   节点搜索深度: 56
+   先验概率: 0.0802
+   置信区间下界: 96.23%
+   效用值: 0.9264
+   得分期望: 4.22目
+   得分标准差: 8.10目
+   MP格式: MP X 203.25 Y 27.75 Z 0 A 0 S 100#
+
+   后续变化:
+     1. F5
+     2. D5
+     3. E3
+     4. D7
+     5. E6
+
+3. D5点:
+   走这一步后的胜率: 97.04%
+   节点搜索深度: 56
+   先验概率: 0.0802
+   置信区间下界: 96.23%
+   效用值: 0.9264
+   得分期望: 4.22目
+   得分标准差: 8.10目
+   MP格式: MP X 251.25 Y 24.00 Z 0 A 0 S 100#
+
+   后续变化:
+     1. D5
+     2. F5
+     3. E3
+     4. F7
+     5. E6
+
+4. F4点:
+   走这一步后的胜率: 97.01%
+   节点搜索深度: 77
+   先验概率: 0.1624
+   置信区间下界: 96.43%
+   效用值: 0.9282
+   得分期望: 4.37目
+   得分标准差: 8.41目
+   MP格式: MP X 204.50 Y 51.00 Z 0 A 0 S 100#
+
+   后续变化:
+     1. F4
+     2. D4
+     3. D5
+     4. C5
+     5. D6
+     6. C6
+     7. C4
+     8. D3
+
+5. D4点:
+   走这一步后的胜率: 97.01%
+   节点搜索深度: 77
+   先验概率: 0.1624
+   置信区间下界: 96.43%
+   效用值: 0.9282
+   得分期望: 4.37目
+   得分标准差: 8.41目
+   MP格式: MP X 252.50 Y 47.25 Z 0 A 0 S 100#
+
+   后续变化:
+     1. D4
+     2. F4
+     3. F5
+     4. G5
+     5. F6
+     6. G6
+     7. G4
+     8. F3
+2025-06-10 15:16:12,716 - INFO - 
+发送最佳着法坐标 E5 到串口...
+2025-06-10 15:16:22,717 - INFO - 指令返回值: <:X 97.0 Y -200.0 Z 0.0 A 0.0 a-108.6 b 99.6 c 0.0 d 9.0 m 15 n 0 e 0 ok
+2025-06-10 15:16:32,719 - INFO - Set 1指令返回值: <:X 97.0 Y -200.0 Z 0.0 A 0.0 a-108.6 b 99.6 c 0.0 d 9.0 m 15 n 1 e 0 ok
+2025-06-10 15:16:45,391 - INFO - 收到信号 2，正在清理资源...
+2025-06-10 15:16:45,391 - INFO - 正在关闭KataGo进程...
+2025-06-10 15:16:45,435 - INFO - 正在关闭串口...
+2025-06-10 15:16:45,436 - INFO - 正在关闭摄像头...
+2025-06-10 15:16:45,718 - INFO - 正在关闭KataGo进程...
+2025-06-10 15:16:45,718 - INFO - 正在关闭KataGo进程...
+2025-06-10 15:20:28,177 - INFO - 串口 COM35 初始化成功
+2025-06-10 15:20:49,181 - INFO - 指令返回值: <:X 343.0 Y 0.0 Z 0.0 A 0.0 a0.0 b 0.0 c 0.0 d 0.0 m 15 n 0 e 0 ok
+2025-06-10 15:20:59,182 - INFO - 拿棋子指令返回值: <:X 97.0 Y -200.0 Z 0.0 A 0.0 a-108.6 b 99.6 c 0.0 d 9.0 m 15 n 0 e 0 ok
+2025-06-10 15:20:59,396 - INFO - KataGo: 2025-06-10 15:20:59+0800: Running with following config:
+
+2025-06-10 15:20:59,396 - INFO - KataGo: logDir = analysis_logs
+
+2025-06-10 15:20:59,396 - INFO - KataGo: maxVisits = 500
+
+2025-06-10 15:20:59,396 - INFO - KataGo: nnCacheSizePowerOfTwo = 23
+
+2025-06-10 15:20:59,396 - INFO - KataGo: nnMaxBatchSize = 64
+
+2025-06-10 15:20:59,396 - INFO - KataGo: nnMutexPoolSizePowerOfTwo = 17
+
+2025-06-10 15:20:59,396 - INFO - KataGo: nnRandomize = true
+
+2025-06-10 15:20:59,396 - INFO - KataGo: numAnalysisThreads = 2
+
+2025-06-10 15:20:59,396 - INFO - KataGo: numSearchThreads = 16
+
+2025-06-10 15:20:59,396 - INFO - KataGo: reportAnalysisWinratesAs = BLACK
+
+2025-06-10 15:20:59,396 - INFO - KataGo: 
+
+2025-06-10 15:20:59,396 - INFO - KataGo: 2025-06-10 15:20:59+0800: Analysis Engine starting...
+
+2025-06-10 15:20:59,396 - INFO - KataGo: 2025-06-10 15:20:59+0800: KataGo v1.16.2
+
+2025-06-10 15:20:59,455 - INFO - KataGo: 2025-06-10 15:20:59+0800: nnRandSeed0 = 15200453091607494486
+
+2025-06-10 15:20:59,456 - INFO - KataGo: 2025-06-10 15:20:59+0800: After dedups: nnModelFile0 = ./katago-v1.16.2-eigenavx2-windows-x64/g170e-b20c256x2.bin.gz useFP16 auto useNHWC auto
+
+2025-06-10 15:20:59,456 - INFO - KataGo: 2025-06-10 15:20:59+0800: Initializing neural net buffer to be size 19 * 19 allowing smaller boards
+
+2025-06-10 15:21:00,221 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 1: Model version 8
+
+2025-06-10 15:21:00,225 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 1: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:21:00,225 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 5: Model version 8
+
+2025-06-10 15:21:00,225 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 5: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:21:00,225 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 7: Model version 8
+
+2025-06-10 15:21:00,225 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 7: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:21:00,225 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 9: Model version 8
+
+2025-06-10 15:21:00,226 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 10: Model version 8
+
+2025-06-10 15:21:00,226 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 10: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:21:00,226 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 12: Model version 8
+
+2025-06-10 15:21:00,226 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 12: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:21:00,226 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 13: Model version 8
+
+2025-06-10 15:21:00,226 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 0: Model version 8
+
+2025-06-10 15:21:00,226 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 14: Model version 8
+
+2025-06-10 15:21:00,226 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 14: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:21:00,226 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 15: Model version 8
+
+2025-06-10 15:21:00,226 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 19: Model version 8
+
+2025-06-10 15:21:00,227 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 16: Model version 8
+
+2025-06-10 15:21:00,227 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 17: Model version 8
+
+2025-06-10 15:21:00,227 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 18: Model version 8
+
+2025-06-10 15:21:00,227 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 18: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:21:00,227 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 6: Model version 8
+
+2025-06-10 15:21:00,227 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 6: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:21:00,227 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 9: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:21:00,227 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 11: Model version 8
+
+2025-06-10 15:21:00,227 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 4: Model version 8
+
+2025-06-10 15:21:00,228 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 4: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:21:00,228 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 0: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:21:00,228 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 2: Model version 8
+
+2025-06-10 15:21:00,228 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 15: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:21:00,228 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 19: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:21:00,228 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 16: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:21:00,228 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 17: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:21:00,228 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 3: Model version 8
+
+2025-06-10 15:21:00,228 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 3: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:21:00,228 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 11: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:21:00,229 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 13: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:21:00,229 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 2: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:21:00,229 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 8: Model version 8
+
+2025-06-10 15:21:00,229 - INFO - KataGo: 2025-06-10 15:21:00+0800: Eigen (CPU) backend thread 8: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:21:00,780 - INFO - KataGo: 2025-06-10 15:21:00+0800: Loaded config ./katago-v1.16.2-eigenavx2-windows-x64/analysis_example.cfg
+
+2025-06-10 15:21:00,781 - INFO - KataGo: 2025-06-10 15:21:00+0800: Loaded model ./katago-v1.16.2-eigenavx2-windows-x64/g170e-b20c256x2.bin.gz
+
+2025-06-10 15:21:00,790 - INFO - KataGo: 2025-06-10 15:21:00+0800: Analyzing up to 2 positions at a time in parallel
+
+2025-06-10 15:21:00,790 - INFO - KataGo: 2025-06-10 15:21:00+0800: Started, ready to begin handling requests
+
+2025-06-10 15:21:01,382 - INFO - 
+=== 启动视觉识别模式 ===
+2025-06-10 15:21:02,838 - INFO - 摄像头初始化成功，分辨率: 1280x720
+2025-06-10 15:21:02,878 - INFO - 拍照完成，图片保存到: tmp/board_capture_20250610-152101.jpg
+2025-06-10 15:21:02,878 - INFO - 开始视觉识别...
+2025-06-10 15:21:02,878 - INFO - 开始处理图片: tmp/board_capture_20250610-152101.jpg
+2025-06-10 15:21:02,878 - INFO - Loading tmp/board_capture_20250610-152101.jpg
+2025-06-10 15:21:02,885 - INFO - Loading template parameters from ./go_board_recognition/template_6_10_jpg.gpar (overriding image-specific params)
+2025-06-10 15:21:02,886 - INFO - 已加载预设参数文件 (使用模板: ./go_board_recognition/template_6_10_jpg.gpar)
+2025-06-10 15:21:02,886 - INFO - 正在识别棋子...
+2025-06-10 15:21:02,886 - INFO - Image size is (1280,720)
+2025-06-10 15:21:02,886 - INFO - Area mask is [256, 24, 966, 704]
+2025-06-10 15:21:02,887 - INFO - Predefined board edges: [[328, 88], [914, 640]]
+2025-06-10 15:21:02,887 - INFO - Predefined board size: 9
+2025-06-10 15:21:02,887 - INFO - Detected spacing: [73.25, 69.0]
+2025-06-10 15:21:02,888 - INFO - Applying pre-filter PMF for color B
+2025-06-10 15:21:02,888 - INFO - Filter skipped
+2025-06-10 15:21:02,888 - INFO - Applying pre-filter LUM_EQ for color B
+2025-06-10 15:21:02,888 - INFO - Filter skipped
+2025-06-10 15:21:02,888 - INFO - Applying pre-filter CHANNEL for color B
+2025-06-10 15:21:02,889 - INFO - Applying pre-filter THRESH for color B
+2025-06-10 15:21:02,890 - INFO - Applying pre-filter STONES_DILATE for color B
+2025-06-10 15:21:02,890 - INFO - Applying pre-filter STONES_ERODE for color B
+2025-06-10 15:21:02,890 - INFO - Filter skipped
+2025-06-10 15:21:02,890 - INFO - Applying pre-filter BLUR_MASK for color B
+2025-06-10 15:21:02,890 - INFO - Filter skipped
+2025-06-10 15:21:02,890 - INFO - Applying post-filter HOUGH_C for color B
+2025-06-10 15:21:02,900 - INFO - Filter found 3 stones
+2025-06-10 15:21:02,901 - INFO - Applying post-filter WATERSHED for color B
+2025-06-10 15:21:02,912 - INFO - WATERSHED: Ignoring marker 1: (354.5, 385.1666259765625, 459.03558349609375)
+2025-06-10 15:21:02,913 - INFO - WATERSHED: Ignoring marker 2: (474.5, 381.0, 206.3499298095703)
+2025-06-10 15:21:02,914 - INFO - WATERSHED: Ignoring marker 3: (354.5, 188.94155883789062, 400.35528564453125)
+2025-06-10 15:21:02,914 - INFO - Filter found 0 stones
+2025-06-10 15:21:02,914 - INFO - Stones found: 3 of color B
+2025-06-10 15:21:02,914 - INFO - Applying pre-filter PMF for color W
+2025-06-10 15:21:02,914 - INFO - Filter skipped
+2025-06-10 15:21:02,914 - INFO - Applying pre-filter LUM_EQ for color W
+2025-06-10 15:21:02,914 - INFO - Filter skipped
+2025-06-10 15:21:02,914 - INFO - Applying pre-filter CHANNEL for color W
+2025-06-10 15:21:02,914 - INFO - Applying pre-filter THRESH for color W
+2025-06-10 15:21:02,914 - INFO - Applying pre-filter STONES_DILATE for color W
+2025-06-10 15:21:02,914 - INFO - Applying pre-filter STONES_ERODE for color W
+2025-06-10 15:21:02,914 - INFO - Filter skipped
+2025-06-10 15:21:02,914 - INFO - Applying pre-filter BLUR_MASK for color W
+2025-06-10 15:21:02,914 - INFO - Filter skipped
+2025-06-10 15:21:02,918 - INFO - Applying post-filter HOUGH_C for color W
+2025-06-10 15:21:02,925 - INFO - Filter found 3 stones
+2025-06-10 15:21:02,926 - INFO - Applying post-filter WATERSHED for color W
+2025-06-10 15:21:02,939 - INFO - WATERSHED: Ignoring marker 1: (219.5, 414.5, 96.91500854492188)
+2025-06-10 15:21:02,939 - INFO - WATERSHED: Ignoring marker 2: (354.5, 339.5, 489.43292236328125)
+2025-06-10 15:21:02,941 - INFO - WATERSHED: Ignoring marker 3: (437.53564453125, 346.4403991699219, 96.9000473022461)
+2025-06-10 15:21:02,941 - INFO - Filter found 0 stones
+2025-06-10 15:21:02,941 - INFO - Stones found: 3 of color W
+2025-06-10 15:21:02,942 - INFO - 识别完成: 黑子 3 个, 白子 3 个
+2025-06-10 15:21:02,943 - INFO - 视觉识别完成: 黑子3个, 白子3个
+2025-06-10 15:21:02,943 - INFO - 棋盘转换完成: 黑子3个, 白子3个
+2025-06-10 15:21:02,943 - INFO - 
+=== 视觉识别结果 ===
+2025-06-10 15:21:02,943 - INFO - 棋盘大小: 9x9
+2025-06-10 15:21:02,943 - INFO - 黑子: ['E2', 'E4', 'E8']
+2025-06-10 15:21:02,944 - INFO - 白子: ['C4', 'C6', 'F5']
+2025-06-10 15:21:02,944 - INFO - 
+=== 当前棋盘状态 ===
+2025-06-10 15:21:02,944 - INFO - 9  .  .  .  .  .  .  .  .  .
+8  .  .  .  .  #  .  .  .  .
+7  .  .  .  .  .  .  .  .  .
+6  .  .  o  .  .  .  .  .  .
+5  .  .  .  .  .  o  .  .  .
+4  .  .  o  .  #  .  .  .  .
+3  .  .  .  .  .  .  .  .  .
+2  .  .  .  .  #  .  .  .  .
+1  .  .  .  .  .  .  .  .  .
+   A  B  C  D  E  F  G  H  J
+2025-06-10 15:21:02,944 - INFO - 
+=== KataGo分析结果 ===
+2025-06-10 15:21:09,843 - INFO - 
+原始分析结果已保存到: analysis_result.json
+2025-06-10 15:21:09,843 - INFO - === 当前局面分析 ===
+当前玩家: 黑方
+总节点搜索深度: 515
+当前胜率: 36.06%
+领先分数: -1.83目
+自对弈得分: -2.20目
+得分标准差: 11.79目
+
+=== 最佳着法分析 ===
+
+1. D6点:
+   走这一步后的胜率: 36.58%
+   节点搜索深度: 466
+   先验概率: 0.7474
+   置信区间下界: 33.28%
+   效用值: -0.2358
+   得分期望: -1.81目
+   得分标准差: 11.83目
+   MP格式: MP X 250.00 Y 0.75 Z 0 A 0 S 100#
+
+   后续变化:
+     1. D6
+     2. G3
+     3. C7
+     4. E5
+     5. D5
+     6. D4
+     7. D3
+     8. C5
+     9. F4
+     10. G4
+     11. C3
+     12. D7
+
+2. E5点:
+   走这一步后的胜率: 20.50%
+   节点搜索深度: 9
+   先验概率: 0.0695
+   置信区间下界: 12.35%
+   效用值: -0.5847
+   得分期望: -2.05目
+   得分标准差: 10.75目
+   MP格式: MP X 227.25 Y 25.88 Z 0 A 0 S 100#
+
+   后续变化:
+     1. E5
+     2. F7
+     3. C7
+     4. B7
+
+3. D5点:
+   走这一步后的胜率: 10.68%
+   节点搜索深度: 8
+   先验概率: 0.1131
+   置信区间下界: -0.59%
+   效用值: -0.8043
+   得分期望: -2.99目
+   得分标准差: 9.35目
+   MP格式: MP X 251.25 Y 24.00 Z 0 A 0 S 100#
+
+   后续变化:
+     1. D5
+     2. C5
+     3. F4
+     4. F7
+
+4. F4点:
+   走这一步后的胜率: 5.21%
+   节点搜索深度: 3
+   先验概率: 0.0084
+   置信区间下界: -21.52%
+   效用值: -0.9291
+   得分期望: -3.76目
+   得分标准差: 8.49目
+   MP格式: MP X 204.50 Y 51.00 Z 0 A 0 S 100#
+
+   后续变化:
+     1. F4
+     2. G5
+
+5. F7点:
+   走这一步后的胜率: 4.88%
+   节点搜索深度: 2
+   先验概率: 0.0144
+   置信区间下界: -48.34%
+   效用值: -0.9356
+   得分期望: -3.93目
+   得分标准差: 9.68目
+   MP格式: MP X 200.75 Y -18.75 Z 0 A 0 S 100#
+
+   后续变化:
+     1. F7
+     2. G3
+2025-06-10 15:21:09,843 - INFO - 
+发送最佳着法坐标 D6 到串口...
+2025-06-10 15:21:19,847 - INFO - 指令返回值: <:X 97.0 Y -200.0 Z 0.0 A 0.0 a-108.6 b 99.6 c 0.0 d 9.0 m 15 n 0 e 0 ok
+2025-06-10 15:21:29,849 - INFO - Set 1指令返回值: <:X 97.0 Y -200.0 Z 0.0 A 0.0 a-108.6 b 99.6 c 0.0 d 9.0 m 15 n 1 e 0 ok
+2025-06-10 15:21:44,851 - INFO - 指令返回值: <:X 97.0 Y -200.0 Z 32.5 A 0.0 a-108.6 b 99.6 c 365.6 d 9.0 m 15 n 1 e 0 ok
+2025-06-10 15:21:44,851 - INFO - 发送着法 D6 (MP X 250.00 Y 0.75 Z 0 A 0 S 100#) 到串口...
+2025-06-10 15:21:49,855 - INFO - 指令返回值: <:X 250.0 Y 0.8 Z 0.0 A 0.0 a-39.0 b 86.8 c 0.0 d -47.8 m 15 n 1 e 0 ok
+2025-06-10 15:21:49,855 - INFO - 移动指令执行成功
+2025-06-10 15:21:54,857 - INFO - 指令返回值: <:X 250.0 Y 0.8 Z 0.0 A 0.0 a-39.0 b 86.8 c 0.0 d -47.8 m 15 n 0 e 0 ok
+2025-06-10 15:21:54,857 - INFO - 发送着法 D6 (MP X 250.00 Y 0.75 Z 0 A 0 S 100#) 到串口...
+2025-06-10 15:21:54,857 - INFO - 发送HOME指令，让机械臂回到原点...
+2025-06-10 15:21:59,860 - INFO - 发送指令: HOME#
+2025-06-10 15:22:09,861 - INFO - HOME指令返回值: <:X 343.0 Y 0.0 Z 0.0 A 0.0 a0.0 b 0.0 c 0.0 d 0.0 m 15 n 0 e 0 ok
+2025-06-10 15:22:09,861 - INFO - HOME指令执行成功
+2025-06-10 15:22:09,861 - INFO - 正在关闭KataGo进程...
+2025-06-10 15:22:09,911 - INFO - 正在关闭串口...
+2025-06-10 15:22:09,912 - INFO - 正在关闭摄像头...
+2025-06-10 15:22:10,189 - INFO - 正在关闭KataGo进程...
+2025-06-10 15:24:13,878 - INFO - 串口 COM35 初始化成功
+2025-06-10 15:24:34,891 - INFO - 指令返回值: <:X 343.0 Y 0.0 Z 0.0 A 0.0 a0.0 b 0.0 c 0.0 d 0.0 m 15 n 0 e 0 ok
+2025-06-10 15:24:44,892 - INFO - 拿棋子指令返回值: <:X 97.0 Y -200.0 Z 0.0 A 0.0 a-108.6 b 99.6 c 0.0 d 9.0 m 15 n 0 e 0 ok
+2025-06-10 15:24:45,123 - INFO - KataGo: 2025-06-10 15:24:45+0800: Running with following config:
+
+2025-06-10 15:24:45,123 - INFO - KataGo: logDir = analysis_logs
+
+2025-06-10 15:24:45,123 - INFO - KataGo: maxVisits = 500
+
+2025-06-10 15:24:45,123 - INFO - KataGo: nnCacheSizePowerOfTwo = 23
+
+2025-06-10 15:24:45,123 - INFO - KataGo: nnMaxBatchSize = 64
+
+2025-06-10 15:24:45,123 - INFO - KataGo: nnMutexPoolSizePowerOfTwo = 17
+
+2025-06-10 15:24:45,123 - INFO - KataGo: nnRandomize = true
+
+2025-06-10 15:24:45,123 - INFO - KataGo: numAnalysisThreads = 2
+
+2025-06-10 15:24:45,123 - INFO - KataGo: numSearchThreads = 16
+
+2025-06-10 15:24:45,123 - INFO - KataGo: reportAnalysisWinratesAs = BLACK
+
+2025-06-10 15:24:45,123 - INFO - KataGo: 
+
+2025-06-10 15:24:45,123 - INFO - KataGo: 2025-06-10 15:24:45+0800: Analysis Engine starting...
+
+2025-06-10 15:24:45,123 - INFO - KataGo: 2025-06-10 15:24:45+0800: KataGo v1.16.2
+
+2025-06-10 15:24:45,183 - INFO - KataGo: 2025-06-10 15:24:45+0800: nnRandSeed0 = 11633930712522532862
+
+2025-06-10 15:24:45,183 - INFO - KataGo: 2025-06-10 15:24:45+0800: After dedups: nnModelFile0 = ./katago-v1.16.2-eigenavx2-windows-x64/g170e-b20c256x2.bin.gz useFP16 auto useNHWC auto
+
+2025-06-10 15:24:45,183 - INFO - KataGo: 2025-06-10 15:24:45+0800: Initializing neural net buffer to be size 19 * 19 allowing smaller boards
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 9: Model version 8
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 11: Model version 8
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 0: Model version 8
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 9: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 11: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 2: Model version 8
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 2: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 13: Model version 8
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 13: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 1: Model version 8
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 0: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 1: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 4: Model version 8
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 4: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 14: Model version 8
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 14: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 15: Model version 8
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 15: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 16: Model version 8
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 16: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 17: Model version 8
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 17: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 3: Model version 8
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 3: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 12: Model version 8
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 12: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 18: Model version 8
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 6: Model version 8
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 5: Model version 8
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 5: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 7: Model version 8
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 8: Model version 8
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 8: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 18: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 6: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 19: Model version 8
+
+2025-06-10 15:24:45,935 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 7: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:24:45,946 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 10: Model version 8
+
+2025-06-10 15:24:45,946 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 10: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:24:45,946 - INFO - KataGo: 2025-06-10 15:24:45+0800: Eigen (CPU) backend thread 19: Model name: g170-b20c256x2-s5303129600-d1228401921
+
+2025-06-10 15:24:46,472 - INFO - KataGo: 2025-06-10 15:24:46+0800: Loaded config ./katago-v1.16.2-eigenavx2-windows-x64/analysis_example.cfg
+
+2025-06-10 15:24:46,472 - INFO - KataGo: 2025-06-10 15:24:46+0800: Loaded model ./katago-v1.16.2-eigenavx2-windows-x64/g170e-b20c256x2.bin.gz
+
+2025-06-10 15:24:46,475 - INFO - KataGo: 2025-06-10 15:24:46+0800: Analyzing up to 2 positions at a time in parallel
+
+2025-06-10 15:24:46,475 - INFO - KataGo: 2025-06-10 15:24:46+0800: Started, ready to begin handling requests
+
+2025-06-10 15:24:47,107 - INFO - 
+=== 启动视觉识别模式 ===
+2025-06-10 15:24:48,579 - INFO - 摄像头初始化成功，分辨率: 1280x720
+2025-06-10 15:24:48,612 - INFO - 拍照完成，图片保存到: tmp/board_capture_20250610-152447.jpg
+2025-06-10 15:24:48,612 - INFO - 开始视觉识别...
+2025-06-10 15:24:48,612 - INFO - 开始处理图片: tmp/board_capture_20250610-152447.jpg
+2025-06-10 15:24:48,612 - INFO - Loading tmp/board_capture_20250610-152447.jpg
+2025-06-10 15:24:48,619 - INFO - Loading template parameters from ./go_board_recognition/template_6_10_jpg.gpar (overriding image-specific params)
+2025-06-10 15:24:48,619 - INFO - 已加载预设参数文件 (使用模板: ./go_board_recognition/template_6_10_jpg.gpar)
+2025-06-10 15:24:48,619 - INFO - 正在识别棋子...
+2025-06-10 15:24:48,619 - INFO - Image size is (1280,720)
+2025-06-10 15:24:48,619 - INFO - Area mask is [256, 24, 966, 704]
+2025-06-10 15:24:48,624 - INFO - Predefined board edges: [[328, 88], [914, 640]]
+2025-06-10 15:24:48,624 - INFO - Predefined board size: 9
+2025-06-10 15:24:48,624 - INFO - Detected spacing: [73.25, 69.0]
+2025-06-10 15:24:48,626 - INFO - Applying pre-filter PMF for color B
+2025-06-10 15:24:48,627 - INFO - Filter skipped
+2025-06-10 15:24:48,627 - INFO - Applying pre-filter LUM_EQ for color B
+2025-06-10 15:24:48,627 - INFO - Filter skipped
+2025-06-10 15:24:48,627 - INFO - Applying pre-filter CHANNEL for color B
+2025-06-10 15:24:48,627 - INFO - Applying pre-filter THRESH for color B
+2025-06-10 15:24:48,630 - INFO - Applying pre-filter STONES_DILATE for color B
+2025-06-10 15:24:48,630 - INFO - Applying pre-filter STONES_ERODE for color B
+2025-06-10 15:24:48,630 - INFO - Filter skipped
+2025-06-10 15:24:48,631 - INFO - Applying pre-filter BLUR_MASK for color B
+2025-06-10 15:24:48,631 - INFO - Filter skipped
+2025-06-10 15:24:48,631 - INFO - Applying post-filter HOUGH_C for color B
+2025-06-10 15:24:48,650 - INFO - Filter found 3 stones
+2025-06-10 15:24:48,651 - INFO - Applying post-filter WATERSHED for color B
+2025-06-10 15:24:48,666 - INFO - WATERSHED: Ignoring marker 1: (398.5777893066406, 520.9280395507812, 77.88847351074219)
+2025-06-10 15:24:48,667 - INFO - WATERSHED: Ignoring marker 2: (354.5, 339.5, 489.43292236328125)
+2025-06-10 15:24:48,668 - INFO - WATERSHED: Ignoring marker 3: (329.0, 298.5, 299.7921142578125)
+2025-06-10 15:24:48,669 - INFO - Filter found 0 stones
+2025-06-10 15:24:48,670 - INFO - Stones found: 3 of color B
+2025-06-10 15:24:48,670 - INFO - Applying pre-filter PMF for color W
+2025-06-10 15:24:48,671 - INFO - Filter skipped
+2025-06-10 15:24:48,671 - INFO - Applying pre-filter LUM_EQ for color W
+2025-06-10 15:24:48,671 - INFO - Filter skipped
+2025-06-10 15:24:48,671 - INFO - Applying pre-filter CHANNEL for color W
+2025-06-10 15:24:48,672 - INFO - Applying pre-filter THRESH for color W
+2025-06-10 15:24:48,672 - INFO - Applying pre-filter STONES_DILATE for color W
+2025-06-10 15:24:48,673 - INFO - Applying pre-filter STONES_ERODE for color W
+2025-06-10 15:24:48,673 - INFO - Filter skipped
+2025-06-10 15:24:48,673 - INFO - Applying pre-filter BLUR_MASK for color W
+2025-06-10 15:24:48,673 - INFO - Filter skipped
+2025-06-10 15:24:48,673 - INFO - Applying post-filter HOUGH_C for color W
+2025-06-10 15:24:48,685 - INFO - Filter found 3 stones
+2025-06-10 15:24:48,685 - INFO - Applying post-filter WATERSHED for color W
+2025-06-10 15:24:48,699 - INFO - WATERSHED: Ignoring marker 1: (219.5, 414.5, 96.91500854492188)
+2025-06-10 15:24:48,700 - INFO - WATERSHED: Ignoring marker 2: (354.5, 339.5, 489.43292236328125)
+2025-06-10 15:24:48,701 - INFO - WATERSHED: Ignoring marker 3: (438.0, 346.46295166015625, 97.25401306152344)
+2025-06-10 15:24:48,701 - INFO - Filter found 0 stones
+2025-06-10 15:24:48,701 - INFO - Stones found: 3 of color W
+2025-06-10 15:24:48,702 - INFO - 识别完成: 黑子 3 个, 白子 3 个
+2025-06-10 15:24:48,703 - INFO - 视觉识别完成: 黑子3个, 白子3个
+2025-06-10 15:24:48,703 - INFO - 棋盘转换完成: 黑子3个, 白子3个
+2025-06-10 15:24:48,703 - INFO - 
+=== 视觉识别结果 ===
+2025-06-10 15:24:48,703 - INFO - 棋盘大小: 9x9
+2025-06-10 15:24:48,703 - INFO - 黑子: ['E2', 'E4', 'E8']
+2025-06-10 15:24:48,703 - INFO - 白子: ['C4', 'C6', 'F5']
+2025-06-10 15:24:48,706 - INFO - 
+=== 当前棋盘状态 ===
+2025-06-10 15:24:48,706 - INFO - 9  .  .  .  .  .  .  .  .  .
+8  .  .  .  .  #  .  .  .  .
+7  .  .  .  .  .  .  .  .  .
+6  .  .  o  .  .  .  .  .  .
+5  .  .  .  .  .  o  .  .  .
+4  .  .  o  .  #  .  .  .  .
+3  .  .  .  .  .  .  .  .  .
+2  .  .  .  .  #  .  .  .  .
+1  .  .  .  .  .  .  .  .  .
+   A  B  C  D  E  F  G  H  J
+2025-06-10 15:24:48,706 - INFO - 
+=== KataGo分析结果 ===
+2025-06-10 15:24:56,045 - INFO - 
+原始分析结果已保存到: analysis_result.json
+2025-06-10 15:24:56,060 - INFO - === 当前局面分析 ===
+当前玩家: 黑方
+总节点搜索深度: 515
+当前胜率: 37.70%
+领先分数: -1.59目
+自对弈得分: -1.91目
+得分标准差: 11.56目
+
+=== 最佳着法分析 ===
+
+1. D6点:
+   走这一步后的胜率: 38.54%
+   节点搜索深度: 454
+   先验概率: 0.6425
+   置信区间下界: 35.39%
+   效用值: -0.2090
+   得分期望: -1.56目
+   得分标准差: 11.61目
+   MP格式: MP X 224.75 Y -20.62 Z 0 A 0 S 100#
+
+   后续变化:
+     1. D6
+     2. G3
+     3. F3
+     4. D7
+     5. E6
+     6. C7
+     7. G7
+     8. G6
+
+2. D5点:
+   走这一步后的胜率: 20.80%
+   节点搜索深度: 27
+   先验概率: 0.2737
+   置信区间下界: 14.02%
+   效用值: -0.5682
+   得分期望: -2.22目
+   得分标准差: 10.50目
+   MP格式: MP X 226.00 Y 2.62 Z 0 A 0 S 100#
+
+   后续变化:
+     1. D5
+     2. C5
+     3. D6
+     4. H5
+     5. G4
+     6. H4
+
+3. E5点:
+   走这一步后的胜率: 17.31%
+   节点搜索深度: 4
+   先验概率: 0.0266
+   置信区间下界: -4.76%
+   效用值: -0.6350
+   得分期望: -2.52目
+   得分标准差: 10.33目
+   MP格式: MP X 202.00 Y 4.50 Z 0 A 0 S 100#
+
+   后续变化:
+     1. E5
+     2. F7
+     3. C7
+
+4. E6点:
+   走这一步后的胜率: 5.44%
+   节点搜索深度: 1
+   先验概率: 0.0017
+   置信区间下界: -119.56%
+   效用值: -0.9585
+   得分期望: -5.77目
+   得分标准差: 10.13目
+   MP格式: MP X 200.75 Y -18.75 Z 0 A 0 S 100#
+
+   后续变化:
+     1. E6
+
+5. F7点:
+   走这一步后的胜率: 4.74%
+   节点搜索深度: 2
+   先验概率: 0.0093
+   置信区间下界: -48.55%
+   效用值: -0.9492
+   得分期望: -3.85目
+   得分标准差: 9.17目
+   MP格式: MP X 175.50 Y -40.12 Z 0 A 0 S 100#
+
+   后续变化:
+     1. F7
+     2. G3
+2025-06-10 15:24:56,061 - INFO - 
+发送最佳着法坐标 D6 到串口...
+2025-06-10 15:25:06,062 - INFO - 指令返回值: <:X 97.0 Y -200.0 Z 0.0 A 0.0 a-108.6 b 99.6 c 0.0 d 9.0 m 15 n 0 e 0 ok
+2025-06-10 15:25:16,064 - INFO - Set 1指令返回值: <:X 97.0 Y -200.0 Z 0.0 A 0.0 a-108.6 b 99.6 c 0.0 d 9.0 m 15 n 1 e 0 ok
+2025-06-10 15:25:31,066 - INFO - 指令返回值: <:X 97.0 Y -200.0 Z 32.5 A 0.0 a-108.6 b 99.6 c 365.6 d 9.0 m 15 n 1 e 0 ok
+2025-06-10 15:25:31,067 - INFO - 发送着法 D6 (MP X 224.75 Y -20.62 Z 0 A 0 S 100#) 到串口...
+2025-06-10 15:25:36,068 - INFO - 指令返回值: <:X 224.8 Y -20.6 Z 0.0 A 0.0 a-49.1 b 98.1 c 0.0 d -49.0 m 15 n 1 e 0 ok
+2025-06-10 15:25:36,068 - INFO - 移动指令执行成功
+2025-06-10 15:25:41,070 - INFO - 指令返回值: <:X 224.8 Y -20.6 Z 0.0 A 0.0 a-49.1 b 98.1 c 0.0 d -49.0 m 15 n 0 e 0 ok
+2025-06-10 15:25:41,070 - INFO - 发送着法 D6 (MP X 224.75 Y -20.62 Z 0 A 0 S 100#) 到串口...
+2025-06-10 15:25:41,070 - INFO - 发送HOME指令，让机械臂回到原点...
+2025-06-10 15:25:46,073 - INFO - 发送指令: HOME#
+2025-06-10 15:25:56,074 - INFO - HOME指令返回值: <:X 343.0 Y 0.0 Z 0.0 A 0.0 a0.0 b 0.0 c 0.0 d 0.0 m 15 n 0 e 0 ok
+2025-06-10 15:25:56,074 - INFO - HOME指令执行成功
+2025-06-10 15:25:56,074 - INFO - 正在关闭KataGo进程...
+2025-06-10 15:25:56,128 - INFO - 正在关闭串口...
+2025-06-10 15:25:56,129 - INFO - 正在关闭摄像头...
+2025-06-10 15:25:56,414 - INFO - 正在关闭KataGo进程...

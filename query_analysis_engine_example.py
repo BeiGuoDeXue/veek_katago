@@ -91,6 +91,12 @@ import logging
 from pathlib import Path
 import signal
 import atexit
+import cv2
+from datetime import datetime
+
+# 导入视觉识别模块
+sys.path.append('./go_board_recognition')
+from go_board_recognition.gbr_cli import process_image
 
 # 配置日志
 logging.basicConfig(
@@ -106,10 +112,11 @@ logger = logging.getLogger(__name__)
 # 全局变量用于清理资源
 katago_process = None
 serial_port = None
+camera = None
 
 def cleanup_resources():
     """清理所有资源"""
-    global katago_process, serial_port
+    global katago_process, serial_port, camera
     try:
         if katago_process:
             logger.info("正在关闭KataGo进程...")
@@ -118,6 +125,9 @@ def cleanup_resources():
         if serial_port and serial_port.is_open:
             logger.info("正在关闭串口...")
             serial_port.close()
+        if camera and camera.isOpened():
+            logger.info("正在关闭摄像头...")
+            camera.release()
     except Exception as e:
         logger.error(f"清理资源时发生错误: {e}")
 
@@ -143,6 +153,28 @@ def validate_path(path: str, description: str) -> str:
         raise FileNotFoundError(f"{description}不存在: {path}")
     return path
 
+def go_coord_to_tuple(coord: str) -> Tuple[int, int]:
+    """将围棋坐标(如'D4')转换为数组坐标(如(3,3))"""
+    try:
+        if coord.lower() == "pass":
+            return None
+        
+        col_letter = coord[0].upper()
+        row_number = int(coord[1:])
+        
+        # 将字母转换为列索引 (A=0, B=1, ..., 跳过I)
+        col = ord(col_letter) - ord('A')
+        if col > 8:  # 跳过I
+            col -= 1
+        
+        # 将行号转换为行索引 (1=0, 2=1, ...)
+        row = row_number - 1
+        
+        return (row, col)
+    except Exception as e:
+        logger.error(f"坐标转换错误 {coord}: {e}")
+        raise
+
 def sgfmill_to_str(move: Move) -> str:
     """围棋坐标转换"""
     if move is None:
@@ -158,22 +190,145 @@ def sgfmill_to_str(move: Move) -> str:
         logger.error(f"坐标转换错误: {e}")
         raise
 
+def vision_result_to_katago_format(vision_result: Dict[str, Any], board_size: int = 19) -> Tuple[sgfmill.boards.Board, List[Tuple[Color, Move]], List[Tuple[Color, str]]]:
+    """将视觉识别结果转换为KataGo输入格式
+    
+    Args:
+        vision_result: 视觉识别的结果
+        board_size: 棋盘大小
+        
+    Returns:
+        (board, moves, initial_stones): 棋盘对象、着法序列、初始石子列表
+    """
+    try:
+        # 创建空棋盘
+        board = sgfmill.boards.Board(board_size)
+        
+        # 着法序列设为空（暂时简化处理）
+        moves = []
+        
+        # 初始石子列表
+        initial_stones = []
+        
+        # 处理黑子
+        black_stones = vision_result.get('black_stones', [])
+        for stone_pos in black_stones:
+            coord = go_coord_to_tuple(stone_pos)
+            if coord:
+                row, col = coord
+                initial_stones.append(("b", sgfmill_to_str((row, col))))
+        
+        # 处理白子
+        white_stones = vision_result.get('white_stones', [])
+        for stone_pos in white_stones:
+            coord = go_coord_to_tuple(stone_pos)
+            if coord:
+                row, col = coord
+                initial_stones.append(("w", sgfmill_to_str((row, col))))
+        
+        logger.info(f"棋盘转换完成: 黑子{len(black_stones)}个, 白子{len(white_stones)}个")
+        return board, moves, initial_stones
+        
+    except Exception as e:
+        logger.error(f"视觉结果转换为KataGo格式时出错: {e}")
+        raise
+
+def capture_image_from_camera(camera_index: int = 0, save_path: str = "tmp/current_board.jpg") -> str:
+    """从摄像头拍照并保存
+    
+    Args:
+        camera_index: 摄像头索引
+        save_path: 保存路径
+        
+    Returns:
+        保存的图片路径
+    """
+    try:
+        global camera
+        
+        # 确保tmp目录存在
+        os.makedirs(os.path.dirname(save_path), exist_ok=True)
+        
+        # 初始化摄像头（如果还未初始化）
+        if camera is None or not camera.isOpened():
+            camera = cv2.VideoCapture(camera_index)
+            if not camera.isOpened():
+                raise Exception(f"无法打开摄像头 {camera_index}")
+            
+            # 设置摄像头参数
+            camera.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
+            camera.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
+            
+            # 预热摄像头
+            for _ in range(5):
+                camera.read()
+            
+            logger.info(f"摄像头初始化成功，分辨率: {int(camera.get(cv2.CAP_PROP_FRAME_WIDTH))}x{int(camera.get(cv2.CAP_PROP_FRAME_HEIGHT))}")
+        
+        # 拍照
+        ret, frame = camera.read()
+        if not ret:
+            raise Exception("无法从摄像头读取图像")
+        
+        # 保存图片
+        cv2.imwrite(save_path, frame)
+        logger.info(f"拍照完成，图片保存到: {save_path}")
+        
+        return save_path
+        
+    except Exception as e:
+        logger.error(f"拍照失败: {e}")
+        raise
+
+def integrate_vision_recognition(camera_index: int = 0, template_file: str = None) -> Dict[str, Any]:
+    """集成视觉识别流程
+    
+    Args:
+        camera_index: 摄像头索引
+        template_file: 模板文件路径
+        
+    Returns:
+        视觉识别结果
+    """
+    try:
+        # 拍照
+        timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
+        image_path = f"tmp/board_capture_{timestamp}.jpg"
+        capture_image_from_camera(camera_index, image_path)
+        
+        # 视觉识别
+        logger.info("开始视觉识别...")
+        vision_result = process_image(
+            image_path=image_path,
+            output_format="json",
+            verbose=False,
+            template_file=template_file
+        )
+        
+        logger.info(f"视觉识别完成: 黑子{len(vision_result.get('black_stones', []))}个, 白子{len(vision_result.get('white_stones', []))}个")
+        
+        return vision_result
+        
+    except Exception as e:
+        logger.error(f"视觉识别集成失败: {e}")
+        raise
+
 def convert_to_robot_coordinates(board_x: int, board_y: int) -> Tuple[float, float]:
     """
     将棋盘坐标转换为机械臂坐标
     棋盘坐标: (x, y) 范围 0-18
     机械臂坐标: (a, b)
     转换公式:
-    a = (289/12)x + (11/16)y + 1807/24
-    b = -(5/4)x + (47/2)y - 220
+    机械臂_X = -24 × 棋盘列 - 1.25 × 棋盘行 + 328.25
+    机械臂_Y = 1.875 × 棋盘列 - 23.25 × 棋盘行 + 111.375
     """
     # 将棋盘坐标加1
     board_x += 1
     board_y += 1
-    
-    a = (289/12) * board_x + (11/16) * board_y + 1807/24
-    b = -(5/4) * board_x + (47/2) * board_y - 220
-    print(f"棋盘坐标(x,y): ({board_x}, {board_y}) -> 机械臂坐标(a,b): ({a:.2f}, {b:.2f})")
+
+    a = -24 * board_x - 1.25 * board_y + 328.25
+    b = 1.875 * board_x - 23.25 * board_y + 111.375
+    print(f"棋盘坐标(列,行): ({board_x}, {board_y}) -> 机械臂坐标(X,Y): ({a:.2f}, {b:.2f})")
     return a, b
 
 def convert_to_mp_format(move: str) -> str:
@@ -434,7 +589,7 @@ class KataGo:
         except Exception as e:
             logger.error(f"关闭KataGo引擎时发生错误: {e}")
 
-    def query(self, initial_board: sgfmill.boards.Board, moves: List[Tuple[Color,Move]], komi: float, max_visits=None):
+    def query(self, initial_board: sgfmill.boards.Board, moves: List[Tuple[Color,Move]], komi: float, max_visits=None, initial_stones=None):
         """发送查询到KataGo引擎"""
         try:
             query = {
@@ -450,11 +605,16 @@ class KataGo:
             
             self.query_counter += 1
             
-            for y in range(initial_board.side):
-                for x in range(initial_board.side):
-                    color = initial_board.get(y,x)
-                    if color:
-                        query["initialStones"].append((color,sgfmill_to_str((y,x))))
+            # 如果提供了initial_stones，直接使用
+            if initial_stones:
+                query["initialStones"] = initial_stones
+            else:
+                # 否则从棋盘状态提取
+                for y in range(initial_board.side):
+                    for x in range(initial_board.side):
+                        color = initial_board.get(y,x)
+                        if color:
+                            query["initialStones"].append((color,sgfmill_to_str((y,x))))
                         
             if max_visits is not None:
                 query["maxVisits"] = max_visits
@@ -495,35 +655,57 @@ def main():
     try:
         parser = argparse.ArgumentParser(description="围棋分析引擎示例程序")
         parser.add_argument(
-            "-katago-path",
+            "--katago-path",
             help="KataGo可执行文件路径",
             default="./katago-v1.16.2-eigenavx2-windows-x64/katago.exe",
         )
         parser.add_argument(
-            "-config-path",
+            "--config-path",
             help="KataGo配置文件路径",
             default="./katago-v1.16.2-eigenavx2-windows-x64/analysis_example.cfg",
         )
         parser.add_argument(
-            "-model-path",
+            "--model-path",
             help="神经网络模型文件路径",
             default="./katago-v1.16.2-eigenavx2-windows-x64/g170e-b20c256x2.bin.gz",
         )
         parser.add_argument(
-            "-output-json",
+            "--output-json",
             help="分析结果JSON文件保存路径",
             default="analysis_result.json",
         )
         parser.add_argument(
-            "-serial-port",
+            "--serial-port",
             help="串口名称 (例如: COM1)",
             default="COM5",
         )
         parser.add_argument(
-            "-baud-rate",
+            "--baud-rate",
             help="波特率",
             type=int,
             default=9600,
+        )
+        parser.add_argument(
+            "--camera-index",
+            help="摄像头索引",
+            type=int,
+            default=0,
+        )
+        parser.add_argument(
+            "--template-file",
+            help="视觉识别模板文件路径",
+            default="./go_board_recognition/template.gpar",
+        )
+        parser.add_argument(
+            "--board-size",
+            help="棋盘大小",
+            type=int,
+            default=19,
+        )
+        parser.add_argument(
+            "--use-vision",
+            help="启用视觉识别模式",
+            action="store_true",
         )
         args = vars(parser.parse_args())
         
@@ -547,23 +729,77 @@ def main():
         # 初始化KataGo
         katago = KataGo(katago_path, config_path, model_path)
 
-        # 设置棋盘
-        board = sgfmill.boards.Board(19)
+        # 设置棋盘参数
+        board_size = args["board_size"]
         komi = 6.5
-        moves = [("b",(3,3)),("w",(3,4)),("b",(3,5))]
+        
+        if args["use_vision"]:
+            # 视觉识别模式
+            logger.info("\n=== 启动视觉识别模式 ===")
+            
+            # 检查模板文件
+            template_file = args["template_file"]
+            if template_file and not os.path.exists(template_file):
+                logger.warning(f"模板文件不存在: {template_file}，将使用默认参数")
+                template_file = None
+            
+            # 执行视觉识别
+            vision_result = integrate_vision_recognition(
+                camera_index=args["camera_index"],
+                template_file=template_file
+            )
+            
+            # 转换为KataGo格式
+            board, moves, initial_stones = vision_result_to_katago_format(vision_result, board_size)
+            
+            # 显示识别结果
+            logger.info("\n=== 视觉识别结果 ===")
+            logger.info(f"棋盘大小: {board_size}x{board_size}")
+            logger.info(f"黑子: {vision_result.get('black_stones', [])}")
+            logger.info(f"白子: {vision_result.get('white_stones', [])}")
+            
+            # 创建显示棋盘
+            displayboard = board.copy()
+            for color, pos_str in initial_stones:
+                # pos_str 已经是sgfmill格式，需要转换为数组坐标显示
+                # 先将sgfmill格式转换为围棋坐标再转换为数组坐标
+                try:
+                    # pos_str格式如"D4"，直接用go_coord_to_tuple转换
+                    if len(pos_str) >= 2:
+                        col_idx = ord(pos_str[0]) - ord('A')
+                        if col_idx > 8:  # 跳过I
+                            col_idx -= 1
+                        row_idx = int(pos_str[1:]) - 1
+                        if 0 <= row_idx < board_size and 0 <= col_idx < board_size:
+                            displayboard.play(row_idx, col_idx, color)
+                except Exception as e:
+                    logger.warning(f"棋盘显示时坐标转换失败 {pos_str}: {e}")
+            
+            logger.info("\n=== 当前棋盘状态 ===")
+            logger.info(sgfmill.ascii_boards.render_board(displayboard))
+            
+            # 获取分析结果
+            logger.info("\n=== KataGo分析结果 ===")
+            result = katago.query(board, moves, komi, initial_stones=initial_stones)
+            
+        else:
+            # 手动设置模式（原有逻辑）
+            logger.info("\n=== 手动设置模式 ===")
+            board = sgfmill.boards.Board(board_size)
+            moves = [("b",(3,3)),("w",(3,4)),("b",(3,5))]
 
-        # 显示当前棋盘状态
-        displayboard = board.copy()
-        for color, move in moves:
-            if move != "pass":
-                row,col = move
-                displayboard.play(row,col,color)
-        logger.info("\n=== 当前棋盘状态 ===")
-        logger.info(sgfmill.ascii_boards.render_board(displayboard))
+            # 显示当前棋盘状态
+            displayboard = board.copy()
+            for color, move in moves:
+                if move != "pass":
+                    row,col = move
+                    displayboard.play(row,col,color)
+            logger.info("\n=== 当前棋盘状态 ===")
+            logger.info(sgfmill.ascii_boards.render_board(displayboard))
 
-        # 获取分析结果
-        logger.info("\n=== 分析结果 ===")
-        result = katago.query(board, moves, komi)
+            # 获取分析结果
+            logger.info("\n=== 分析结果 ===")
+            result = katago.query(board, moves, komi)
         
         # 保存原始分析结果
         output_json = args["output_json"]
