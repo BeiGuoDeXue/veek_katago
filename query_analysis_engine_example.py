@@ -93,6 +93,7 @@ import signal
 import atexit
 import cv2
 from datetime import datetime
+import msvcrt
 
 # 导入视觉识别模块
 sys.path.append('./go_board_recognition')
@@ -118,6 +119,19 @@ def cleanup_resources():
     """清理所有资源"""
     global katago_process, serial_port, camera
     try:
+        # 先让机械臂回到原点
+        if serial_port and serial_port.is_open:
+            try:
+                logger.info("正在让机械臂回到原点...")
+                serial_port.write(b"HOME#\r\n")
+                time.sleep(3)
+                response = serial_port.readline()
+                if response:
+                    logger.info(f"HOME指令返回值: {response.decode('utf-8', 'ignore').strip()}")
+                logger.info("机械臂已回到原点")
+            except Exception as e:
+                logger.error(f"发送HOME指令失败: {e}")
+        
         if katago_process:
             logger.info("正在关闭KataGo进程...")
             katago_process.terminate()
@@ -130,6 +144,38 @@ def cleanup_resources():
             camera.release()
     except Exception as e:
         logger.error(f"清理资源时发生错误: {e}")
+
+def wait_for_space_key(serial_port=None):
+    """等待用户按下空格键继续"""
+    logger.info("(按 'q' 退出程序)")
+    
+    while True:
+        if msvcrt.kbhit():
+            key = msvcrt.getch()
+            if key == b' ':  # 空格键
+                logger.info("收到空格键，开始拍照分析...")
+                return True
+            elif key == b'q' or key == b'Q':  # q键退出
+                logger.info("收到退出指令，正在让机械臂回到原点...")
+                if serial_port and serial_port.is_open:
+                    try:
+                        # 发送HOME指令
+                        serial_port.write(b"HOME#\r\n")
+                        time.sleep(3)
+                        response = serial_port.readline()
+                        if response:
+                            logger.info(f"HOME指令返回值: {response.decode('utf-8', 'ignore').strip()}")
+                        else:
+                            logger.warning("HOME指令未收到响应")
+                        logger.info("机械臂已回到原点")
+                    except Exception as e:
+                        logger.error(f"发送HOME指令失败: {e}")
+                else:
+                    logger.warning("串口不可用，无法发送HOME指令")
+                return False
+            elif key == b'\x03':  # Ctrl+C
+                raise KeyboardInterrupt
+        time.sleep(0.1)  # 避免过度占用CPU
 
 # 注册清理函数
 atexit.register(cleanup_resources)
@@ -487,7 +533,7 @@ def send_move_to_serial(move: str, uart: Serial) -> bool:
            logger.info(f"Set 1指令返回值: {response.decode('utf-8', 'ignore').strip()}")
 
         uart.write(b"MP X 97 Y -200 Z 35 A 0 S 100#\r\n")
-        time.sleep(5)
+        time.sleep(1)
         response = uart.readline()
         if response:
            logger.info(f"指令返回值: {response.decode('utf-8', 'ignore').strip()}")
@@ -496,20 +542,14 @@ def send_move_to_serial(move: str, uart: Serial) -> bool:
         mp_command = convert_to_mp_format(move)
         logger.info(f"发送着法 {move} ({mp_command.strip()}) 到串口...")
         uart.write(mp_command.encode())
-        time.sleep(5)
+        time.sleep(1)
         response = uart.readline()
         if response:
-            logger.info(f"移动指令返回值: {response.decode('utf-8', 'ignore').strip()}")
-            # 检查响应中是否包含"ok"，如果有就认为执行成功
-            response_str = response.decode('utf-8', 'ignore').strip()
-            if "ok" in response_str.lower():
-                logger.info("移动指令执行成功")
-            else:
-                logger.warning("移动指令响应中未包含'ok'，可能执行失败")
+            logger.info(f"下降指令返回值: {response.decode('utf-8', 'ignore').strip()}")
         else:
-            logger.warning("未收到响应")
-            return False
-        
+            logger.warning("下降指令未收到响应")
+
+       
         # 机械臂下降到指定深度
         logger.info("机械臂下降到放棋子位置...")
         # 从当前移动命令中提取X和Y坐标，设置Z为33
@@ -521,7 +561,7 @@ def send_move_to_serial(move: str, uart: Serial) -> bool:
             down_command = f"MP X {x_coord} Y {y_coord} Z 33 A 0 S 100#\r\n"
             
             uart.write(down_command.encode())
-            time.sleep(5)
+            time.sleep(2)
             response = uart.readline()
             if response:
                 logger.info(f"下降指令返回值: {response.decode('utf-8', 'ignore').strip()}")
@@ -530,21 +570,23 @@ def send_move_to_serial(move: str, uart: Serial) -> bool:
 
         # 换气阀开启
         uart.write(b"Set 2 #\r\n")
-        time.sleep(1)
+        time.sleep(1)  
         response = uart.readline()
         if response:
            logger.info(f"Set 1指令返回值: {response.decode('utf-8', 'ignore').strip()}")
         
         # 换气阀关闭
+        logger.info("换气阀关闭...")
         uart.write(b"Reset 1 #\r\n")
-        time.sleep(2)
+        time.sleep(1)
         response = uart.readline()
         if response:
            logger.info(f"指令返回值: {response.decode('utf-8', 'ignore').strip()}")  
 
         # 吸气阀关闭
+        logger.info("吸气阀关闭...")
         uart.write(b"Reset 2 #\r\n")
-        time.sleep(2)
+        time.sleep(1)
         response = uart.readline()
         if response:
            logger.info(f"指令返回值: {response.decode('utf-8', 'ignore').strip()}")     
@@ -560,7 +602,7 @@ def send_move_to_serial(move: str, uart: Serial) -> bool:
             down_command = f"MP X {x_coord} Y {y_coord} Z 20 A 0 S 100#\r\n"
             
             uart.write(down_command.encode())
-            time.sleep(2)
+           # time.sleep(1)
             response = uart.readline()
             if response:
                 logger.info(f"下降指令返回值: {response.decode('utf-8', 'ignore').strip()}")
@@ -574,10 +616,13 @@ def send_move_to_serial(move: str, uart: Serial) -> bool:
         # 回到待吸取棋子位置
         logger.info("发送待吸取棋子指令，让机械臂回到原点...")
         uart.write(b"MP X 97 Y -200 Z 20 A 0 S 100#\r\n")
-        time.sleep(5)
+        #time.sleep(2)
         response = uart.readline()
         if response:
            logger.info(f"指令返回值: {response.decode('utf-8', 'ignore').strip()}")
+
+        # 所有指令执行完成，返回成功
+        return True
 
     except Exception as e:
         logger.error(f"发送着法错误: {e}")
@@ -898,7 +943,7 @@ def main():
         )
         parser.add_argument(
             "--wait-time",
-            help="等待人下棋的时间（秒）",
+            help="等待人下棋的时间（秒）- 已弃用，现在使用空格键控制",
             type=int,
             default=5,
         )
@@ -948,14 +993,13 @@ def main():
                 # 循环对弈模式
                 logger.info(f"\n=== 启动循环对弈模式 ===")
                 max_rounds = args["max_rounds"]
-                wait_time = args["wait_time"]
                 
                 if max_rounds > 0:
                     logger.info(f"最大对弈轮数: {max_rounds}")
                 else:
                     logger.info("无限制对弈模式 (按Ctrl+C停止)")
                     
-                logger.info(f"每轮等待时间: {wait_time}秒")
+                logger.info("控制方式: 您下棋后按空格键 -> 程序拍照分析 -> 机械臂下棋 -> 重复循环")
                 logger.info("=" * 50)
                 
                 round_count = 0
@@ -968,6 +1012,18 @@ def main():
                         # 检查是否达到最大轮数
                         if max_rounds > 0 and round_count > max_rounds:
                             logger.info(f"已达到最大轮数 {max_rounds}，结束对弈")
+                            break
+                        
+                        # 在拍照分析之前等待用户确认
+                        if round_count == 1:
+                            logger.info("\n[开始] 准备开始第一轮对弈")
+                            logger.info("请确保您已经准备好，然后按空格键开始拍照分析...")
+                        else:
+                            logger.info(f"\n[等待] 第{round_count}轮：请您下棋...")
+                            logger.info("下完棋后，请按空格键继续拍照分析")
+                        
+                        if not wait_for_space_key(serial_port):
+                            logger.info("用户选择退出程序")
                             break
                         
                         # 执行一轮完整的对弈流程
@@ -984,10 +1040,6 @@ def main():
                         if result is None:
                             logger.warning("本轮对弈失败，继续下一轮...")
                             continue
-                        
-                        # 等待人下棋
-                        logger.info(f"\n[等待] 等待 {wait_time} 秒，给人类时间下棋...")
-                        time.sleep(wait_time)
                         
                 except KeyboardInterrupt:
                     logger.info("\n用户中断，结束循环对弈模式")
